@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+    <style>
+        @import url(http://fonts.googleapis.com/earlyaccess/jejuhallasan.css);
+        @font-face {
+            font-family: balloons;
+            src: url('fonts/balloons.woff');
+        }
+        
+        @font-face {
+            font-family: '양재깨비';
+            src: url('fonts/ygbi08.woff');
+        }
+        
+        @font-face {
+            font-family: 'wadag';
+            src: url('fonts/ywda05.woff');
+        }
+        p {
+            width: 700px;
+        }
+        
+        fieldset {
+            border: 2px solid navy;
+            background-color: lightcyan;
+                    }
+    </style>
+</head>
+
+<body>
+    <p id="aa">Hello Font 대한민국</p>
+    <fieldset>
+        <legend>font-Family</legend>
+        <select id="job" onchange="changeFont(event)">
+          <option>--선택--</option>
+          <option value="balloons">balloons</option>
+          <option value="wadag">와닥</option>
+          <option value="양재깨비">양재깨비</option>
+          <option value="Pacifico">Pacifico</option>
+          <option value="jeju hallasan">jeju hallasan</option>
+
+        </select>
+    </fieldset>
+
+    
+    <fieldset>
+        <legend>font-size</legend>
+        <label style="width:50px; display: inline-block;"></label>
+        <input style="width:70%" type="range" value="0 " min="0" max="255" oninput="changeSize(value)">
+    </fieldset>
+
+<fieldset>
+    <legend>font-style</legend>
+    <label>
+        <input onchange="changeStyle(value)" type="radio" name="style" value="normal">normal</label>
+        <input onchange="changeStyle(value)" type="radio" name="style" value="italic">italic</label>
+    </fieldset>
+    <fieldset>
+        <legend>font-weight</legend>
+            <label>
+                <input onchange="changeWeight(value)" type="radio" name="style" value="normal">normal
+            </label>
+            <label>
+                <input onchange="changeWeight(value)" type="radio" name="style" value="bold">bold
+            </label>
+            <label><input onchange="changeWeight(value)" type="radio" name="style" value="bolder">bolder</label>
+            <label><input onchange="changeWeight(value)" type="radio" name="style" value="lighter">lighter</label>    
+            <br>
+            <label for="bbname">100~900까지 입력</label>
+            <input id="bbname" size="30" oninput="changeWeightByNumber(event)"></fieldset>
+    
+    <fieldset>
+           <legend>Font-variant</legend>
+            <label>
+              <input onchange="changeVariant(value)" type="radio" name="style" value="normal">normal 
+            </label>
+            <label>
+                <input onchange="changeVariant(value)" type="radio" name="style" value="small-caps">small-caps
+            </label>
+    </fieldset>
+<fieldset>
+    <legend>input box</legend>
+    <label>입력</label>
+        <input type="text" id="bbname" size="20" oninput="changeAll(event)">
+    </label>
+</fieldset>
+
+    <script>
+    function changeFont(event) {
+        console.log(event.target.value);
+        aa.style['font-family']=event.target.value;
+    }
+    function changeSize(value){
+        console.log(value);
+        aa.style['font-size']=value + "px";
+    }
+    function changeStyle(value){
+        console.log(value);
+        aa.style['font-style']=value;
+    }
+    function changeWeight(value){
+        console.log(value);
+        aa.style['font-weight']=value;
+    }
+    function changeWeightByNumber(value){
+        console.log(event.target.value);
+        aa.style['font-weight']=event.target.value;
+    }
+    function changeVariant(value){
+        console.log(value);
+        aa.style['font-variant']=value;
+    }
+    function changeAll(value){
+        var value=event.target.value;
+        console.log(value);
+        aa.style.font=value;
+    }
+        
+       </script>
+
+</body>
+
+</html>

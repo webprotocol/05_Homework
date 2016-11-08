@@ -1,0 +1,36 @@
+div#Container01{
+	clear: none;
+	float: left;
+    border: 20px solid red;
+    width:500px;
+    height:664px;
+    padding: 20px;
+    margin: 20px;
+	background:linear-gradient( 45deg, #FFFF88, #FFFFFF );
+}
+
+h1.NameBox {
+	color:Green;
+}
+
+span.ImageURLHelper {
+	color:#888888;
+}
+
+div#Container02{
+	clear: none;
+	float: left;
+    border: 1px solid darkgrey;
+    width:400px;
+    height:700px;
+    padding: 20px;
+    margin: 20px;
+}
+
+h1 {
+    color:rgba( 192, 128, 0, 0.75);
+}
+
+figcaption {
+    border: 1px solid black;
+}

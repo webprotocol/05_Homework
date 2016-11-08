@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="css/style.css" rel="stylesheet">
+</head>
+
+<style>
+    fieldset {
+     border: 1px solid wheat;
+        width: 500px;
+        color:black;
+        background-color:bisque;
+    }
+
+
+@font-face {
+		font-family : balloons;
+		src : url('fonts/balloons.ttf'); 
+	}
+
+	@font-face {
+		font-family : 'ygbi';
+		src : url('fonts/ygbi08.ttf');
+	}
+	@font-face {
+		font-family : 'wadag';
+		src : url('fonts/ywda05.ttf');
+	}
+</style>
+
+<body>
+
+<form>
+    <fieldset>
+<p id="Hello_out">Hello font 대한민국</p>
+</fieldset>
+
+    <fieldset>
+
+<select onchange="xxx(event)">
+    <option value="">font-Family</option>
+    <option value="italic">italic</option>s
+    <option  value="balloons">balloon</option>
+    <option  value="wadag">wadag</option>
+    <option  value="ygbi">양재깨비</option>
+ 
+
+</select><br>
+ </fieldset>
+        <fieldset>
+
+<rable>크기조절<input type="range" min="0" max="100" value="50" name="Hello_ut" onclick="font2(event)"></rable><br>
+    
+<lable><input type="radio" onclick="italic2(event)"name="x" value="italic">기울기
+        <input type="radio" onclick="italic2(event)"name="x" value="">안기울기</lable><br>
+    
+<lable> <input type="radio" onclick="bold2(event)"name="xx" value="bold">굵게</lable>
+<lable> <input type="radio" onclick="bold2(event)"name="xx" value="">안굵게</lable><br>
+    <input type="text" oninput="text2(event)" placeholder="style variant size family" >
+  </fieldset>
+   
+    </form>
+<script>
+    function xxx(event){
+        var value = event.target.value;
+        console.log(value);
+        Hello_out.style.fontStyle = value;
+        Hello_out.style.fontFamily = value;
+
+    }
+    function font2(event) {
+      var value = event.target.value;
+        Hello_out.style.fontSize = value +'px';
+    }
+    function italic2(event) {
+        var value = event.target.value;
+        Hello_out.style.fontStyle=value;
+    }
+    function bold2(event){
+        var value = event.target.value;
+        console.log(event)
+        Hello_out.style.fontWeight=value;
+    }
+    function text2(event){
+        var value = event.target.value;
+       
+        Hello_out.style.font= value;
+    }
+   
+
+
+</script>
+</body>
+
+</html>

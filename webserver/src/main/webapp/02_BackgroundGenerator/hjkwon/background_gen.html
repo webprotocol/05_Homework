@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="css/background_gen.css" rel="stylesheet">
+</head>
+
+<body>
+	<header>
+		<h1 class="NameBox">5강의실 권혁준</h1>
+	</header>
+
+	<div id="Container01">
+		<h1 class="HelloBox">Hello Background!</h1>
+	</div>
+
+	<div id="Container02">
+		<fieldset>
+			<legend>Attributes</legend>
+			<p>
+				Background Img URL :
+				<input type="text" size="30" id="ImageURL" value="/img/bg2.png">
+				<button onclick="ChangeBackgroundImage()">변경하기</button><br>
+				<span class="ImageURLHelper">Example : /img/bg2.png</span>
+			</p>
+
+			<p>
+				Background Clip:
+				<BR>
+				<label><input onchange="ChangeClip(value)" type="radio" name="Clip" value="border-box" checked>border-box</label>
+				<label><input onchange="ChangeClip(value)" type="radio" name="Clip" value="padding-box" >padding-box</label>
+				<label><input onchange="ChangeClip(value)" type="radio" name="Clip" value="content-box" >content-box</label>
+			</p>
+
+			<p>
+				Background Origin:
+				<BR>
+				<label><input onchange="ChangeOrigin(value)" type="radio" name="Origin" value="border-box" checked>border-box</label>
+				<label><input onchange="ChangeOrigin(value)" type="radio" name="Origin" value="padding-box" >padding-box</label>
+				<label><input onchange="ChangeOrigin(value)" type="radio" name="Origin" value="content-box" >content-box</label>
+			</p>
+
+			<p>
+				Background Repeat:
+				<BR>
+				<label><input onchange="ChangeRepeat(value)" type="radio" name="Repeat" value="repeat" checked>Repeat</label>
+				<label><input onchange="ChangeRepeat(value)" type="radio" name="Repeat" value="no-repeat" >No-Repeat</label>
+				<label><input onchange="ChangeRepeat(value)" type="radio" name="Repeat" value="repeat-x" >Repeat-X</label>
+				<label><input onchange="ChangeRepeat(value)" type="radio" name="Repeat" value="repeat-y" >Repeat-Y</label>
+			</p>
+
+			<p>
+				Background Size:
+				<BR>
+				<label><input onchange="ChangeSize(value)" type="radio" name="Size" value="auto" checked>Auto</label>
+				<label><input onchange="ChangeSize(value)" type="radio" name="Size" value="contain">Contain</label>
+				<label><input onchange="ChangeSize(value)" type="radio" name="Size" value="cover" >Cover</label>
+				<label><input oninput="ChangeSizeScale(value)" type="range" name="Size" value="100" min=10 max=250 ><span id=ScaleSize>100</span>%</label>
+			</p>
+
+			<p>
+				Background Position H:
+				<BR>
+				<label><input onchange="ChangePositionH(value)" type="radio" name="ChangePositionH" value="left" checked>Left</label>
+				<label><input onchange="ChangePositionH(value)" type="radio" name="ChangePositionH" value="center">Center</label>
+				<label><input onchange="ChangePositionH(value)" type="radio" name="ChangePositionH" value="right">Right</label>
+				<label><input oninput="ChangePositionHRange(value)" type="range" name="ChangePositionHRange" value="0" min=0 max=100 ><span id=ScaleSizeHRange>0</span>%</label>
+			</p>
+
+			<p>
+				Background Position V:
+				<BR>
+				<label><input onchange="ChangePositionV(value)" type="radio" name="ChangePositionV" value="top" checked>Top</label>
+				<label><input onchange="ChangePositionV(value)" type="radio" name="ChangePositionV" value="center">Center</label>
+				<label><input onchange="ChangePositionV(value)" type="radio" name="ChangePositionV" value="bottom">Bottom</label>
+				<label><input oninput="ChangePositionVRange(value)" type="range" name="ChangePositionVRange" value="0" min=0 max=100 ><span id=ScaleSizeVRange>0</span>%</label>
+			</p>
+
+			<p>
+				Background Attachment:
+				<label><input onchange="ChangeAttachment(value)" type="radio" name="ChangeAttachment" value="scroll" checked>scroll</label>
+				<label><input onchange="ChangeAttachment(value)" type="radio" name="ChangeAttachment" value="fixed">fixed</label>
+				<label><input onchange="ChangeAttachment(value)" type="radio" name="ChangeAttachment" value="local">local</label>
+			</p>
+
+			<p>
+				Backgrounds:<BR>
+				<input type="text" size="50" id="Backgrounds" placeholder="여기에 Background 속성을 입력하세요"><BR>
+				<button onclick="ChangeBackgroundAttrs()">변경하기</button><br>
+			</p>
+		</fieldset>
+	</div>
+
+	<script src="js/background_gen.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<title>background_gen.html</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--<link href="css/style.css" rel="stylesheet">-->
+	<style>
+		div {
+			border: 15px dotted red;
+			height: 500px;
+			background-image: url(img/bg2.png);
+			padding: 30px;
+		}
+		
+		h1 {
+			color: aqua;
+			font-size: 50px;
+		}
+	</style>
+
+
+</head>
+
+<body>
+	<header>
+		<h1>5강의실 김현준</h1>
+	</header>
+	<fieldset>
+		<legend>background property</legend>
+		<figure>
+			<figcaption>backgournd-clip</figcaption>
+			<label><input onchange="background_Clip(event)" type="radio" name="clip" value="border-box">border-box</label>
+			<label><input onchange="background_Clip(event)" type="radio" name="clip" value="padding-box">padding-box</label>
+			<label><input onchange="background_Clip(event)" type="radio" name="clip" value="content-box">content-box</label>
+
+		</figure>
+		<figure>
+			<figcaption>background-origin</figcaption>
+			<label><input onchange="change_Origin(event)" name="origin" type="radio" value="border-box">bodrder</label>
+			<label><input onchange="change_Origin(event)" name="origin" type="radio" value="padding-box">padding</label>
+			<label><input onchange="change_Origin(event)" name="origin" type="radio" value="content-box">content</label>
+		</figure>
+		<figure>
+			<figcaption>background-size</figcaption>
+			<label><input onchange="background_Size(event)" type="radio" name="size" value="auto">auto</label>
+			<label><input onchange="background_Size(event)" type="radio" name="size" value="contain">contain</label>
+			<label><input onchange="background_Size(event)" type="radio" name="size" value="cover">cover</label>
+		</figure>
+		<figure>
+			<figcaption>background-Repeat</figcaption>
+			<label><input onchange="background_Repeat(event)"type="radio" name="repeat" value="repeat">repeat</label>
+			<label><input onchange="background_Repeat(event)"type="radio" name="repeat" value="repeat-x">repeat-x</label>
+			<label><input onchange="background_Repeat(event)"type="radio" name="repeat" value="repeat-y">repeat-y</label>
+			<label><input onchange="background_Repeat(event)"type="radio" name="repeat" value="no-repeat">no-repeat</label>
+		</figure>
+		<figure>
+			
+			<label><input onchange="fontsize(event)"type="range" name="range"  value="0"><span id="persent">0</span>%</label>
+		</figure>
+		<figure>
+		<figcaption>background-positon:</figcaption>
+		<label><input onchange="changePosition(event)" type="radio" name="positon" value="left top" >left top</label>
+		<label><input onchange="changePosition(event)" type="radio" name="positon" value="left bottom">left bottom</label>
+		<label><input onchange="changePosition(event)" type="radio" name="positon" value="right top">right top</label>
+		<label><input onchange="changePosition(event)" type="radio" name="positon" value="right bottom">right bottom</label>
+		<label><input onchange="changePosition(event)" type="radio" name="positon" value="center center">center center</label>
+	</figure>
+	<figure>
+		
+		<label><input id="positon2"onchange="changePosition2(event)" type="range" name="positon" value="0">X = <span id="persentX">0</span>%</label>
+		<label><input id="positon3"onchange="changePosition2(event)" type="range" name="positon" value="0">Y = <span id="persentY">0</span>%</label>
+	</figure>
+
+	<figure>
+		<figcaption>background:</figcaption>
+		<label for="back"> image repeat position attachment : </label>
+		<input id="back" oninput="changeBackground(event)" type="text" size="30">
+	</figure>
+
+
+
+
+	</fieldset>
+	<div id="xxx">
+		<h1 id=>Hello Background!</h1>
+	</div>
+	<script src="js/backgrond.js"></script>
+</body>
+
+</html>

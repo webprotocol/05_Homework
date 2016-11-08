@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko"><head>
+<title>backgrund_gen.html</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+	div {
+		height: 500px;
+		padding: 30px;
+		border: 30px dotted red;
+		background-image: url(img/bg2.png);
+	}
+
+	h1 {
+		color: rgba(0, 0, 255, 1);
+		background-color: transparent/* default */
+	}
+</style>
+</head>
+<body>
+	<header>
+		<h1>5강의실 이동근</h1>
+	</header>
+<fieldset>
+	<legend>background property</legend>
+	<figure>
+		<figcaption>background-clip:</figcaption>
+		<label><input onchange="changeClip(event)" name="clip" value="border-box" checked="" type="radio">border-box</label>
+		<label><input onchange="changeClip(event)" name="clip" value="padding-box" type="radio">padding-box</label>
+		<label><input onchange="changeClip(event)" name="clip" value="content-box" type="radio">content-box</label>
+	</figure>
+	<figure>
+		<figcaption>background-origin:</figcaption>
+		<label><input onchange="changeOrigin(event)" name="origin" value="border-box" type="radio">border-box</label>
+		<label><input onchange="changeOrigin(event)" name="origin" value="padding-box" checked="" type="radio">padding-box</label>
+		<label><input onchange="changeOrigin(event)" name="origin" value="content-box" type="radio">content-box</label>
+	</figure>
+	<figure>
+		<figcaption>background-repeat:</figcaption>
+		<label><input onchange="changeRepeat(event)" name="repeat" value="repeat" checked="" type="radio">repeat</label>
+		<label><input onchange="changeRepeat(event)" name="repeat" value="no-repeat" type="radio">no-repeat</label>
+		<label><input onchange="changeRepeat(event)" name="repeat" value="repeat-x" type="radio">repeat-x</label>
+		<label><input onchange="changeRepeat(event)" name="repeat" value="repeat-y" type="radio">repeat-y</label>
+	</figure>
+	<figure>
+		<figcaption>background-size:</figcaption>
+		<label><input onchange="changeSize(event)" name="size" value="auto" checked="" type="radio">auto</label>
+		<label><input onchange="changeSize(event)" name="size" value="contain" type="radio">contain</label>
+		<label><input onchange="changeSize(event)" name="size" value="cover" type="radio">cover</label>
+		<label><input onchange="changeSize(event)" name="size" value="0" type="range"><span id="persent">0</span>%</label>
+	</figure>
+	<figure>
+		<figcaption>background-positon:</figcaption>
+		<label><input onchange="changePosition(event)" name="positon" value="left top" checked="" type="radio">left top</label>
+		<label><input onchange="changePosition(event)" name="positon" value="left bottom" type="radio">left bottom</label>
+		<label><input onchange="changePosition(event)" name="positon" value="right top" type="radio">right top</label>
+		<label><input onchange="changePosition(event)" name="positon" value="right bottom" type="radio">right bottom</label>
+		<label><input onchange="changePosition(event)" name="positon" value="center center" type="radio">center center</label>
+		<label><input onchange="changePosition(event)" id= "xx" type="range" name="positon" value="0">X = <span id="persentX">0</span>%</label>
+		<label><input onchange="changePosition(event)" id= "yy" type="range" name="positon" value="0">Y = <span id="persentY">0</span>%</label>
+	</figure>
+	<figure>
+		<figcaption>background-attachment</figcaption>
+		<label><input onchange="changeAttachment(event)" type="radio" name="attachment" value="scroll">scroll</label>
+		<label><input onchange="changeAttachment(event)" type="radio" name="attachment" value="fixed">fixed</label>
+	</figure>
+	<figure>
+		<figcaption>background:</figcaption>
+		<label for="back"> image repeat position attachment : </label>
+		<input id="back" oninput="changeBackground(event)" size="30" type="text">
+	</figure>
+
+</fieldset>
+
+<div id="result">
+	<h1>Hello Background</h1>
+</div>
+
+
+<script src="js/background_gen.js"></script>
+
+</body></html>

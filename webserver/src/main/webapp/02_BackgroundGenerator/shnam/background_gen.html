@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <title>background_gen.html</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<style>
+    div {
+        height: 500px;
+        padding: 30px;
+        border: 30px dotted red;
+        background-image: url(img/bg2.png);
+    }
+
+    h1 {
+        color: rgba(0, 0, 255, 0.5);
+        background-color: transparent;
+    }
+</style>
+<body>
+    <header>
+        <h1>5강의실 남상혁</h1>
+    </header>
+    <fieldset>
+        <legend>Background property</legend>
+        <figure>
+            <figcaption>background-clip:</figcaption>
+            <label><input onchange="changeClip(event)" type="radio" name="clip" value="border-box" checked>border-box</label>
+            <label><input onchange="changeClip(event)" type="radio" name="clip" value="padding-box">padding-box</label>
+            <label><input onchange="changeClip(event)" type="radio" name="clip" value="content-box">content-box</label>
+        </figure>
+        <figure>
+            <figcaption>background-origin:</figcaption>
+            <label><input onchange="changeOrigin(event)" type="radio" name="origin" value="border-box">border-box</label>
+            <label><input onchange="changeOrigin(event)" type="radio" name="origin" value="padding-box" checked>padding-box</label>
+            <label><input onchange="changeOrigin(event)" type="radio" name="origin" value="content-box">content-box</label>
+        </figure>
+        <figure>
+            <figcaption>background-repeat:</figcaption>
+            <label><input onchange="changeRepeat(event)" type="radio" name="repeat" value="repeat"checked>repeat</label>
+            <label><input onchange="changeRepeat(event)" type="radio" name="repeat" value="no-repeat">no-repeat</label>
+            <label><input onchange="changeRepeat(event)" type="radio" name="repeat" value="repeat-x">repeat-x</label>
+            <label><input onchange="changeRepeat(event)" type="radio" name="repeat" value="repeat-y">repeat-y</label>
+        </figure>
+        <figure>
+            <figcaption>background-size:</figcaption>
+            <label><input onchange="changeSize(event)" type="radio" name="size" value="auto" checked>auto</label>
+            <label><input onchange="changeSize(event)" type="radio" name="size" value="contain">contain</label>
+            <label><input onchange="changeSize(event)" type="radio" name="size" value="cover">cover</label>
+           <br><label><input onchange="changeSize(event)" type="range" name="size" value="0"><span id="percent">0</span></label>
+        </figure>
+         <figure>
+            <figcaption>background-position:</figcaption>
+            <label><input onchange="changePosition(event)" type="radio" name="position" value="left top" checked>left top</label>
+            <label><input onchange="changePosition(event)" type="radio" name="position" value="left bottom">left bottom</label>
+            <label><input onchange="changePosition(event)" type="radio" name="position" value="right top">right top</label>
+            <label><input onchange="changePosition(event)" type="radio" name="position" value="right bottom">right bottom</label>
+            <label><input onchange="changePosition(event)" type="radio" name="position" value="center center">center center</label>
+            <br><label><input id="posX"onchange="changePosition(event)" type="range" name="position" value="0"><span>0%</span> </label>
+            x<label><input id="posY" onchange="changePosition(event)" type="range" name="position" value="0"><span>0%</span></label>
+        </figure>
+        <figure>
+            <figcaption>background:</figcaption>
+            <label for="back"> image repeat position attatchment </label>
+            <input id="back" oninput="changeBackground(event)" type="text" size="30">
+        </figure>
+        <figure>
+        <figcaption>background-attachment:</figcaption>
+            <label><input onchange="changeAttachment(event)" type="radio" name="attach" value="scroll" checked>scroll</label>
+            <label><input onchange="changeAttachment(event)" type="radio" name="attach" value="fixed">fixed</label>
+        </figure>
+
+
+    </fieldset>
+    <div id="result">
+        <h1>Hello Background</h1>
+    </div>
+
+
+    <script src="js/background_gen.js"></script>
+</body>
+
+</html>
