@@ -18,10 +18,22 @@ function changeDir(event) {
 
 function changeShape(event) {
 	shape = event.target.value;
-	result.style.backgroundImage = 'radial-gradient(' + shape+',' +color + ')';
+	result.style.backgroundImage = 'radial-gradient(' + shape +',' + color + ')';
 }
 
 function changeDirec(event) {
 	direc = event.target.value;
-	result.style.backgroundImage = 'radial-gradient(' + direc+',' +color + ')';
+	result.style.backgroundImage = 'radial-gradient('  + direc+',' +color + ')';
 }
+
+// function clearAll() {
+// 	color_out.style.backgroundImage = '';
+// 	dir_out.style.backgroundImage = '';
+// 	shape_out.innerHTML = ''; 
+// 	dir2_out.innerHTML = '';
+
+// 	color.value = ""; 
+// 	dir.velue = "";
+// 	shape.value = "";
+// 	dir2.value = "";
+// }

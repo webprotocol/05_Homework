@@ -19,7 +19,7 @@ div{
     margin: 20px;
 }
 div:nth-of-type(1){
-    background-image: linear-gradient(to right , orange,white);
+    background-image: linear-gradient(to right , orange,yellow,white);
     left: 100px;
     top: 100px;
 }
@@ -28,19 +28,19 @@ div:nth-of-type(2){
     position: relative;
 }
 div:nth-of-type(3){
-    background-image: radial-gradient(ellipse at 40% 40%,purple 20%,hotpink 70%,pink);
+    background-image: radial-gradient(ellipse closest-corner at 40% 40%,purple 20%,hotpink 70%,pink);
     position: fixed;
     left: 150px;
     top:70px;
 }
 #absolute{
-    background-image: radial-gradient(circle at 30% 70%,blue 10%, skyblue 50%,transparent);
+    background-image: radial-gradient(circle farthest-corner at 30% 70%,blue 10%, skyblue 50%,transparent);
     position: absolute;
     left: 100px;
     top:0px;
 }
 .scroll{
-    background-image: radial-gradient(circle at 30% 70%, skyblue 50%,transparent);
+    background-image: radial-gradient(circle farthest-corner at 30% 70%, skyblue 50%,transparent);
 }
 
 </style>

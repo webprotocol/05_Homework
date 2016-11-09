@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--<link href="css/style.css" rel="stylesheet">-->
+	<style>
+		div {
+			width: 200px;
+			height: 100px;
+			border: 1px solid red;
+			padding: 10px;
+			margin: 10px;
+		}
+		
+		div:nth-child(1) {
+			background-image: linear-gradient(red, white)
+		}
+	</style>
+</head>
+
+
+<body>
+	<header>
+		<h1>5강의실 김현준</h1>
+	</header>
+	<fieldset>
+		<figure>
+			<figcaption>linear-gradient</figcaption>
+				<label>	<input onchange="radio1(event)" type="radio" name="radio" value="gradient(to top).">to top </label>
+				<label>	<input onchange="radio1(event)"type="radio" name="radio" value="gradient(to left)">to left </label>
+				<label>	<input onchange="radio1(event)"type="radio" name="radio" value="gradient(to right)">to right </label>
+				<label>	<input onchange="radio1(event)"type="radio" name="radio" value="gradient(to bottom)">to bottom </label>
+		</figure>    <figure>
+			<figcaption>linear-color</figcaption>
+				<label>	<input onchange="radio2(event)" type="text" name="radio2" value="linear-gradient(">linear-gradient </label>
+				<label>	<input onchange="radio2(event)"type="text" name="radio2" value="radial-gradient()">to left </label>
+		</figure>
+	</fieldset>
+	<div id=gradient_out></div>
+	<script src="js/g2.js"></script>
+</body>
+
+</html>

@@ -73,8 +73,6 @@ var Gradient = {};
 
 	};
 
-
-
 	Gradient.changeColor = function() {
 		var target = event.target;
 		var direc = hdnDirec.value;
@@ -112,11 +110,10 @@ var Gradient = {};
 		var str = _getStartStyleStr();
 		if(v) {
 			str += v + '' + ' at ' + ranges[0].value + '% ' + ranges[1].value + '%'
-			str += ', red, white'
-			str += ')';
+			str += ', ' + _makeRgbStr();
+			str += _getEndStyleStr();
 		}
 
-		//console.log(str)
 		result.style.backgroundImage = str;
 	}
 
@@ -130,8 +127,8 @@ var Gradient = {};
 
 		str += '(';
 		str += selV + '' + ' at ' + ranges[0].value + '% ' + ranges[1].value + '%'
-		str += ', red, white'
-		str += ')';
+		str += ', ' + _makeRgbStr();
+		str += _getEndStyleStr();
 
 		//console.log(str)
 		result.style.backgroundImage = str;

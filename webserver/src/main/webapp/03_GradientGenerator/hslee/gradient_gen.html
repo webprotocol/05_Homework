@@ -8,8 +8,8 @@
 <style>
 	div {
 		border : 1px solid darkslategray;
-		height : 400px; 
-		width: 400px;
+		height : 500px; 
+		width: 500px;
 	}
 	hr {
 		border : 1px dotted gray;
@@ -42,6 +42,7 @@
 		<option value="orange,#CD5C5C">Orange,IndianRed</option>
 		<option value="#FFA07A,yellow">LightSalmon,Yellow</option>
 		<option value="#6A5ACD,white">SlateBlue,White</option>
+		<pre id="color_out"></pre>
 	</select>
 	</figure><hr>
 
@@ -52,6 +53,7 @@
 		<option value="to left">to left</option>
 		<option value="to right">to right</option>
 		<option value="to bottom">to bottom</option>
+		<pre id="dir_out"></pre>
 	</select>
 	</figure><hr>
 
@@ -60,6 +62,7 @@
 	<select onchange="changeShape(event)">
 		<option value="circle">circle</option>
 		<option value="ellipse">ellipse</option>
+		<pre id="shape_out"></pre>
 	</select>
 	</figure>
 
@@ -70,8 +73,11 @@
 		<option value="closese-corner at 50% 20%">closese-corner at 50% 20%</option>
 		<option value="farthest-side at 20% 10%">farthest-side at 20% 10%</option>
 		<option value="farthest-corner at 20% 20%">farthest-corner at 20% 20%</option>
+		<pre id="dir2_out"></pre>
 	</select>
 	</figure>
+
+	<!--<button onclick="clearAll();">지우개</button>-->
 
 <div id="result"></div>
 </fieldset>
