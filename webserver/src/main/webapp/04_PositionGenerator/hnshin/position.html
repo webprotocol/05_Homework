@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+<title>position.html</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+h1{
+    color : saddlebrown;
+}
+
+div{
+    width: 100px;
+    height: 100px;
+    border: 8px solid mediumvioletred;
+    color : white;
+    font-weight: bold;
+    margin: 20px;
+}
+div:nth-of-type(1){
+    background-image: linear-gradient(to right , orange,white);
+    left: 100px;
+    top: 100px;
+}
+div:nth-of-type(2){
+    background-image: linear-gradient(to right ,darkred,red,white);
+    position: relative;
+}
+div:nth-of-type(3){
+    background-image: radial-gradient(ellipse at 40% 40%,purple 20%,hotpink 70%,pink);
+    position: fixed;
+    left: 150px;
+    top:70px;
+}
+#absolute{
+    background-image: radial-gradient(circle at 30% 70%,blue 10%, skyblue 50%,transparent);
+    position: absolute;
+    left: 100px;
+    top:0px;
+}
+.scroll{
+    background-image: radial-gradient(circle at 30% 70%, skyblue 50%,transparent);
+}
+
+</style>
+</head>
+<body>
+    <header><h1>5강의실 신한나</h1></header>
+<h1>static</h1>
+<div>static</div>
+<hr>
+<h1>relative</h1>
+<div>relative</div>
+<label>X<input oninput="changeRelativeLeft(event)" type="range" min="-200" max="500" value="0"><span id="RelX">0PX</span></label>
+<label>Y<input oninput="changeRelativeTop(event)" type="range" min="-200" max="500" value="0"><span id="RelY">0PX</span></label>
+<hr>
+<h1>fixed</h1>
+<div>fixed</div>
+<label>X<input oninput="changeFixedLeft(event)" type="range" min="-200" max="500" value="150"><span id="FixX">150PX</span></label>
+<label>Y<input oninput="changeFixedTop(event)" type="range" min="-200" max="500" value="70"><span id="FixY">70PX</span></label>
+<hr>
+<h1>absolute</h1>
+<section style="height:300px;border:2px dotted lime; position:relative; overflow:hidden;">
+<div id="absolute">absolute</div>
+</section>
+<label>X<input oninput="changeAbsoluteLeft(event)" type="range" min="-200" max="500" value="0"><span id="AbsX">0PX</span></label>
+<label>Y<input oninput="changeAbsoluteTop(event)" type="range" min="-200" max="500" value="0"><span id="AbsY">0PX</span></label>
+<hr>
+
+<hr>
+<div class="scroll">for scroll</div>
+<div class="scroll">for scroll</div>
+<div class="scroll">for scroll</div>
+<div class="scroll">for scroll</div>
+<div class="scroll">for scroll</div>
+<div class="scroll">for scroll</div>
+
+
+
+<script>
+
+    /*
+    *   Relative
+    */
+    function changeRelativeLeft(event){
+        var value = event.target.value;
+        document.querySelector('div:nth-of-type(2)')
+        .style.left = value +'px';
+        
+        RelX.innerHTML = value + 'PX';
+    }
+    function changeRelativeTop(event){
+        var value = event.target.value;
+        document.querySelector('div:nth-of-type(2)')
+        .style.top = value +'px';
+        
+        RelY.innerHTML = value +'PX';
+    } 
+
+    /*
+    *   fixed
+    */
+    function changeFixedLeft(event){
+        var value = event.target.value;
+        document.querySelector('div:nth-of-type(3)')
+        .style.left = value +'px';
+        
+        FixX.innerHTML = value + 'PX';
+    }
+    function changeFixedTop(event){
+        var value = event.target.value;
+        document.querySelector('div:nth-of-type(3)')
+        .style.top = value +'px';
+        
+        FixY.innerHTML = value +'PX';
+    }    
+    /*
+    *   absolute
+    */
+    function changeAbsoluteLeft(event){
+        var value = event.target.value;
+        document.querySelector('#absolute')
+        .style.left = value +'px';
+        
+        AbsX.innerHTML = value + 'PX';
+    }
+    function changeAbsoluteTop(event){
+        var value = event.target.value;
+        document.querySelector('#absolute')
+        .style.top = value +'px';
+        
+        AbsY.innerHTML = value +'PX';
+    }   
+</script>
+</body>
+
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>position.html</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+		div {
+			width: 100px;
+			height: 100px;
+			border: 10px solid red;
+			margin: 20px;
+		}
+		div:nth-of-type(1) {
+			background-image: linear-gradient(yellow, white);
+			left: 100px;
+			top: 100px;
+		}
+		div:nth-of-type(2) {
+			background-image: linear-gradient(red, white);
+			position: relative;
+		}
+		div:nth-of-type(3) {
+			background-image: linear-gradient(red, white);
+			position: fixed;
+			left: 0px;
+			top: 0px;
+		}
+		#absolute {
+			background-image: linear-gradient(purple, transparent);
+			position: absolute;
+			left: 100px;
+			top: 0px;
+		}
+
+
+	</style>
+</head>
+<body>
+<header>
+	<h1>5강의실 김진곤</h1>
+</header>
+<div>static</div>
+<h1>static</h1>
+<hr>
+<div>relative</div>
+<h1>relative</h1>
+<label><input oninput="changeRelativeLeft(event)" type="range" min="-200" max="500" value="100"> X <span name="s1x">100</span></label>
+<label><input oninput="changeRelativeTop(event)" type="range" min="-200" max="500" value="100"> Y <span name="s1y">100</span></label>
+<hr>
+<div>fixed</div>
+<h1>fixed</h1>
+<label><input oninput="changeFixedLeft(event)" type="range" min="-200" max="500" value="0"> X <span name="s2x">100</span></label>
+<label><input oninput="changeFixedTop(event)" type="range" min="-200" max="500" value="0"> Y <span name="s2y">100</span></label>
+<hr>
+<section style="height: 300px; border: 2px dotted lime; position: relative; overflow: hidden;">
+	<div id="absolute">absolute</div>
+</section>
+<h1>absolute</h1>
+<label><input oninput="changeAbsoluteLeft(event)" type="range" min="-200" max="500" value="0"> X <span name="s3x">100</span></label>
+<label><input oninput="changeAbsoluteTop(event)" type="range" min="-200" max="500" value="0"> Y <span name="s3y">100</span></label>
+<hr>
+
+<hr>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+
+<script>
+
+	/*
+	 * Relative
+	 */
+	function changeRelativeLeft(event) {
+		var value = event.target.value;
+		document.querySelector("div:nth-of-type(2)")
+				.style.left = value + 'px';
+		document.querySelector("span[name=s1x]").innerText = value;
+	}
+	function changeRelativeTop(event) {
+		var value = event.target.value;
+		document.querySelector("div:nth-of-type(2)")
+				.style.top = value + 'px';
+		document.querySelector("span[name=s1y]").innerText = value;
+	}
+	/*
+	 * Fixed
+	 */
+	function changeFixedLeft(event) {
+		var value = event.target.value;
+		document.querySelector("div:nth-of-type(3)")
+				.style.left = value + 'px';
+		document.querySelector("span[name=s2x]").innerText = value;
+	}
+	function changeFixedTop(event) {
+		var value = event.target.value;
+		document.querySelector("div:nth-of-type(3)")
+				.style.top = value + 'px';
+		document.querySelector("span[name=s2y]").innerText = value;
+	}
+	/*
+	 * Absolute
+	 */
+	function changeAbsoluteLeft(event) {
+		var value = event.target.value;
+		document.querySelector("#absolute")
+				.style.left = value + 'px';
+		document.querySelector("span[name=s3x]").innerText = value;
+	}
+	function changeAbsoluteTop(event) {
+		var value = event.target.value;
+		document.querySelector("#absolute")
+				.style.top = value + 'px';
+		document.querySelector("span[name=s3y]").innerText = value;
+	}
+
+
+</script>
+
+</body>
+</html>

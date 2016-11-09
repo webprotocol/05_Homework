@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title>gradient-gen.html</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<style>
+			div#result {
+				width : 300px;
+				height : 300px;
+				background-image : linear-gradient(rgb(0,0,0), rgb(0,0,0));
+			}
+
+			div {
+				margin : 10px;
+				/*border : 2px solid green;*/
+			}
+
+		</style>
+		<script src="js/gradient.js"></script>
+	</head>
+	<body>
+		<header>
+			<h1>5강의실 남기훈</h1>
+		</header>
+		<fieldset>
+			<legend>Gradient Excercise</legend>
+			<label><input type="radio" name="gradient" value="linear-gradient" checked onclick="Gradient.selectGradi(this)">linear-gradient</label>
+			<label><input type="radio" name="gradient" value="radial-gradient" onclick="Gradient.selectGradi(this)">radial-gradient</label>
+			<input id="hdnGrient" type="hidden" value="linear-gradient">
+
+			<div id="dvLinear">
+				<label>Direction :</label>
+				<select id="selDirec" onchange="Gradient.changeDirec(this)">
+					<option value="to top">to top</option>
+					<option value="to right">to right</option>
+					<option value="to bottom">to bottom</option>
+					<option value="to left">to left</option>
+					<option value="">직접입력</option>
+				</select>
+				<input type="hidden" id="hdnDirec" value="to top">
+				<input id="txtDirec" type="text" placeholder="직접입력" size="20" disabled oninput="Gradient.changeDirec(this)">
+				<br/>
+				<input type="button" value="Color Add" onclick="Gradient.addColor()"> <input type="button" value="Color Del" onclick="Gradient.delColor()">
+				<div id="dvColorBox">
+					<div>
+					<input type="range" min="0" max="255" value="0" oninput="Gradient.changeColor()"><span>0</span>
+					<input type="range" min="0" max="255" value="0" oninput="Gradient.changeColor()"><span>0</span>
+					<input type="range" min="0" max="255" value="0" oninput="Gradient.changeColor()"><span>0</span>
+					</div>
+
+					<div>
+					<input type="range" min="0" max="255" value="0" oninput="Gradient.changeColor()"><span>0</span>
+					<input type="range" min="0" max="255" value="0" oninput="Gradient.changeColor()"><span>0</span>
+					<input type="range" min="0" max="255" value="0" oninput="Gradient.changeColor()"><span>0</span>
+					</div>
+				</div>
+			</div>
+
+			<div id="dvRadial" style="display:none;">
+				<label>Shape :</label>
+				<select id="selShape" onchange="Gradient.changeShape(this)">
+					<option value="">---선택---</option>
+					<option value="circle">circle</option>
+					<option value="ellipse">ellipse</option>
+				</select>
+				X : <input type="range" min="0" max="100" value="0" oninput="Gradient.changeStart(this)"><span> 0%</span>
+				Y : <input type="range" min="0" max="100" value="0" oninput="Gradient.changeStart(this)"><span> 0%</span>
+			</div>
+
+			<div id="result"></div>
+		</fieldset>
+	</body>
+</html>

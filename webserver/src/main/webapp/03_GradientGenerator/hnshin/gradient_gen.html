@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+<title>gradient_gen.html</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+	h1{
+		color:rgba(220,20,60,0.5);
+	}
+	div{
+		border:5px solid mediumpurple;
+		width:300px;
+		height:200px;
+	}
+	legend{
+		font-weight:bold;
+	}
+
+</style>
+</head>
+
+<body>
+<header><h1>5강의실 신한나</h1></header>
+
+<fieldset>
+	<legend>linear-gradient</legend>
+	<!--linear-gradient input-->
+	<figure>
+	<label><input onchange="changeDirection(event)" type="radio" name="linear" value="to top" >to top</label>
+	<label><input onchange="changeDirection(event)" type="radio" name="linear" value="to bottom" checked>to bottom</label>
+	<label><input onchange="changeDirection(event)" type="radio" name="linear" value="to left" >to left</label>
+	<label><input onchange="changeDirection(event)" type="radio" name="linear" value="to right">to right</label>
+	<hr>
+	<label for="linearColor">color : </label>
+	<input oninput="changeDirection(event)" id="linearColor" type="text" name="linear" placeholder="ex)color --%,color --%">
+	</figure>
+</fieldset>
+<!--radial-gradient input-->
+<fieldset>
+	<legend>radial-gradient</legend>
+	<label><input onchange="changeShape(event)" type="radio" name="radial1" value="ellipse" checked>ellipse</label>
+	<label><input onchange="changeShape(event)" type="radio" name="radial1" value="circle">circle</label>
+	<hr>
+	<label><input onchange="changeShape(event)" type="radio" name="radial2" value="farthest-side" checked>farthest-side</label>
+	<label><input onchange="changeShape(event)" type="radio" name="radial2" value="closest-side">closest-side</label>
+	<label><input onchange="changeShape(event)" type="radio" name="radial2" value="farthest-corner" >farthest-corner</label>
+	<label><input onchange="changeShape(event)" type="radio" name="radial2" value="closest-corner">closest-corner</label>
+	<hr>
+	<label for="radialColor">color : </label>
+	<input oninput="changeShape(event)" id="radialColor" type="text" name="linear" placeholder="ex)color --%,color --%">
+</fieldset>
+<!--linear, radial output-->
+<fieldset>
+	<figcaption>linear-gradient</figcaption>
+<div id="linearoutPut"></div>
+	<figcaption>radial-gradient</figcaption>
+<div id="radialoutPut"></div>
+</fieldset>
+
+<script>
+// linear 변수
+	var direction = 'to bottom';
+	var Lcolor ;
+// radial 변수
+	var shape = 'ellipse';
+	var side = 'farthest-side';
+	var Rcolor ;
+
+// linear 구현 => background-image:linear-gradient(225deg , red,orange, white);
+	function changeDirection(event){
+		var value = event.target.value;
+		if(value == 'to top' || value == 'to bottom' || value == 'to left' || value == 'to right'){
+			direction = value;
+		linearoutPut.style.backgroundImage = 'linear-gradient('+ direction + ',' + Lcolor + ')';	
+		console.log('linear-gradient('+ direction + ',' + Lcolor + ')');
+		}else{
+			Lcolor = value;
+		linearoutPut.style.backgroundImage = 'linear-gradient('+ direction + ',' + Lcolor + ')';
+		console.log('linear-gradient('+ direction + ',' + Lcolor + ')');
+		}	
+	}
+// radial 구현 =>  background-image:radial-gradient( circle farthest-side at 40% 40% , red,purple, white);
+	function changeShape(event){
+		var value = event.target.value;
+		console.log(value);
+		if(value == 'ellipse' || value == 'circle'){
+			shape = value;
+			radialoutPut.style.backgroundImage = 'radial-gradient('+ shape + ' ' + side + ' ,' + Rcolor + ')';
+			console.log('radial-gradient('+ shape + ' ' + side + ' ,' + Rcolor + ')');
+		}else if(value == 'farthest-side' || value == 'closest-side' ||  value == 'farthest-corner' || value == 'closest-corner'){
+			side = value;
+			radialoutPut.style.backgroundImage = 'radial-gradient('+ shape + ' ' + side + ' ,' + Rcolor + ')';
+			console.log('radial-gradient('+ shape + ' ' + side + ' ,' + Rcolor + ')');
+		}else{
+			Rcolor = value;
+			radialoutPut.style.backgroundImage = 'radial-gradient('+ shape + ' ' + side + ' ,' + Rcolor + ')';
+			console.log('radial-gradient('+ shape + ' ' + side + ' ,' + Rcolor + ')');
+		}
+			
+
+	}
+
+
+</script>
+</body>
+
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+<title>gradiant_gen.html</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+	div {
+		display: inline-block;
+		width: 400px;
+		height: 300px;
+		border: 1px solid slategray;
+
+		padding: 10px;
+		margin: 50px;
+	}
+</style>
+</head>
+<body>
+<header>
+	<h1>5강의실 민혜진</h1>
+</header>
+<section>
+<fieldset>
+	<legend>Gradient Effect</legend>
+	<figure>
+		<figcaption><span class="line">linear-gradient:</span>
+		<label><input id="gra_deg" oninput="changeLindirec(event)" type="range" min="0" max="360" value="0">Deg = <span id = "lin_deg">0</span>º</label>
+		<select id="linear_color1" onchange="changeLindirec(event)">
+			<option value="">color</option>
+			<option value="red">red</option>
+			<option value="orangered">orangered</option>
+			<option value="yellow">yellow</option>
+			<option value="green">green</option>
+			<option value="blue">blue</option>
+			<option value="navy">navy</option>
+			<option value="purple">purple</option>
+		</select>
+		<select id="linear_color2" onchange="changeLindirec(event)">
+			<option value="">color</option>
+			<option value="red">red</option>
+			<option value="orangered">orangered</option>
+			<option value="yellow">yellow</option>
+			<option value="green">green</option>
+			<option value="blue">blue</option>
+			<option value="navy">navy</option>
+			<option value="purple">purple</option>
+		</select>
+		</figcaption>
+		<hr>
+		<figcaption><span class="line">radial-gradient:</span>
+		<select id="radial_shape" onchange="changeRadial(event)">
+			<option value="">shape</option>
+			<option value="circle">circle</option>
+			<option value="ellipse">ellipse</option>
+		</select>
+		<select id="radial_size" onchange="changeRadial(event)">
+			<option value="">size</option>
+			<option value="closest-side">closest-side</option>
+			<option value="closest-corner">closest-corner</option>
+			<option value="farthest-side">farthest-side</option>
+			<option value="farthest-corner">farthest-corner</option>
+		</select>
+		<label><input id="gra_direc1" oninput="changeRadial(event)" type="range" min="0" max="100" value="0"><span id = "rad_direc1">0</span>%</label>
+		<label><input id="gra_direc2" oninput="changeRadial(event)" type="range" min="0" max="100" value="0"><span id = "rad_direc2">0</span>%</label>
+		<select id="radial_color1" onchange="changeRadial(event)">
+			<option value="">color</option>
+			<option value="red">red</option>
+			<option value="orangered">orangered</option>
+			<option value="yellow">yellow</option>
+			<option value="green">green</option>
+			<option value="blue">blue</option>
+			<option value="navy">navy</option>
+			<option value="purple">purple</option>
+		</select>
+		<select id="radial_color2" onchange="changeRadial(event)">
+			<option value="">color</option>
+			<option value="red">red</option>
+			<option value="orangered">orangered</option>
+			<option value="yellow">yellow</option>
+			<option value="green">green</option>
+			<option value="blue">blue</option>
+			<option value="navy">navy</option>
+			<option value="purple">purple</option>
+		</select>
+		</figcaption>
+	</figure>
+</fieldset>
+<div id="result"><legend>&lt;linear-gradient&gt;</legend></div>
+<div id="result1"><legend>&lt;radial-gradient&gt;</legend></div>
+<script src="js/gradient_gen.js"></script>
+</section>
+</body>
+</html>
