@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<style>
+	div {
+		width: 500px;
+		height: 100px;
+	
+		padding: 10px;
+		margin: 10px;
+	}
+	
+	.dd {
+		width: 200px;
+		height: 100px;
+	}
+</style>
+
+<body>
+	<header>
+		<h1>5강의실 박성현</h1>
+	</header>
+
+	<fieldset>
+		<legend>
+			<p>Linear-Gradient</p>
+		</legend>
+		<figure>
+			<label>Color:<input id="wo" size="20" oninput="wiChange(event)"></label>&nbsp;&nbsp;
+			<label for="wi">Option:</label>
+			<select id="wi" onchange="wiChange(event)">
+            <option value="  " selected>선택</option>
+            <option value="to top">to top</option>
+            <option value="to left">to left</option>
+            <option value="to right">to right</option>
+            <option value="to bottom">to bottom</option>
+            </select>
+			<label>&nbsp;&nbsp;&nbsp;<input id="deg" onchange="wiChange(event)" type="range" max="360" min="0" value="0">DEG=<span id="deg1">0º</span></label>
+		</figure>
+		<hr>
+		<div id="box1"> </div>
+	</fieldset>
+
+	<fieldset>
+		<legend>
+			<p> Radial-Gradient</p>
+		</legend>
+		<figure>
+			<label>	Color:<label><input id="co" size="20" oninput="clChange(event)" ></label>&nbsp;&nbsp;
+			<label>Option:</label>
+			<select id="ch" oninput="clChange(event)">
+				 <option value="circle" selected>선택1</option>
+                <option value="ellipse">ellipse</option>
+                <option value="circle">circle</option>
+            </select>
+
+			<select id="cl" onchange="clChange(event)">
+				 <option value=" " selected>선택2</option>
+                <option value="closest-side">closest-side</option>
+                <option value="closest-corner">closest-corner</option>
+                <option value="farthest-side">farthest-side</option>
+                <option value="farthest-corner">farthest-corner</option>
+            </select> &nbsp;&nbsp;&nbsp;
+
+
+			<input id="cp1" type="range" min="0" max="100" oninput="clChange(event)" value="50"><span id="pas1">0%</span>
+			<input id="cp2" type="range" min="0" max="100" oninput="clChange(event)" value="50"><span id="pas2">0%</span>
+		</figure>
+		<hr>
+		<div id="box2"> </div>
+
+	</fieldset>
+	<script src="js/gradiant_gen.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="js/gradient_gen.js"></script>
+	<!--<link href="css/style.css" rel="stylesheet">-->
+	<style>
+		#result {
+			width: 300px;
+			height: 300px;
+			border: 1px solid black;
+			margin: 10px;
+			background: linear-gradient(yellow, red)
+		}
+	</style>
+</head>
+
+<body>
+	<header>
+		<h1>5강의실 황수연</h1>
+	</header>
+	<fieldset>
+		<!--그림-->
+		<div id="result"></div>
+		<legend>
+			<h3>Gradient Exersise</h3>
+		</legend>
+		<!--색깔-->
+		<div>
+			<label for="linearColor">Color :<br>
+				<input id="colorX" type="text" oninput="changeColor(event)">
+				<input id="colorY" type="text" oninput="changeColor(event)">
+			</label>
+			<!--방향-->
+		</div>
+		<label>Linear-Gradient</label>
+		<!--range degree-->
+		<input type="range" oninput="changeDirection(event)" value="0" min="0" max="360"><span id="degree">0deg</span>
+		<!--label degree-->
+		<select id="selDir" onchange="changeDirection(event)">
+				<option value="to top">to top</option>
+				<option value="to right">to right</option>
+				<option value="to left">to left</option>
+				<option value="to bottom">to bottom</option>
+				<option value="">직접 입력</option>
+		</select>
+		<input oninput="changeDirection(event)" type="text" name="" placeholder="직접 입력(ex: 200deg)">
+		</div>
+	</fieldset>
+
+
+</body>
+
+</html>

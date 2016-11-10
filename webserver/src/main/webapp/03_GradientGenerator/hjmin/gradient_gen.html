@@ -26,7 +26,14 @@
 	<legend>Gradient Effect</legend>
 	<figure>
 		<figcaption><span class="line">linear-gradient:</span>
-		<label><input id="gra_deg" oninput="changeLindirec(event)" type="range" min="0" max="360" value="0">Deg = <span id = "lin_deg">0</span>º</label>
+		<select id="linear_direc" onchange="changeLindirec(event)">
+			<option value="">direction</option>
+			<option value="to top">to Top</option>
+			<option value="to right">to Right</option>
+			<option value="to bottom">to Bottom</option>
+			<option value="to left">to Left</option>
+		</select>
+		<label><input id="gra_deg" oninput="changeLindirec(event)" type="range" min="0" max="360" value="0">Deg = <span id = "lin_deg">0º</span></label>
 		<select id="linear_color1" onchange="changeLindirec(event)">
 			<option value="">color</option>
 			<option value="red">red</option>

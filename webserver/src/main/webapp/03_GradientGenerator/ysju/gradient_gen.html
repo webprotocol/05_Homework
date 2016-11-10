@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<title>gradient_gen.html</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--<link href="css/style.css" rel="stylesheet">-->
+<style>
+	div{
+		width: 500px;
+		height: 300px;
+		border: 2px solid black;
+		padding: 20px;
+
+		/*background:linear-gradient(to top, red,white);*/
+	}
+</style>
+</head>
+<body>
+<header>
+	<h1>5강의실 주요섭</h1>
+</header>
+<div id="result">gradient</div>
+<fieldset>
+<legend>gradient_gen</legend>
+<figure>
+	<!--color-->
+	<label for="linearColor">color : <input id="colorX" type="text" oninput="colorChange(event)">
+	                                 <input id="colorY" type="text" oninput="colorChange(event)"></label>
+	<br><br><br>
+	<figcaption>linear-gradient</figcaption>
+	<!--range degree-->
+	<label>deg : <input id="degr" type="range" name="deg" value="0" min="0" max="360" oninput="degChange(event)"><span id="degX"></span></label><br>
+	<!--radio degree-->
+	<label>deg select : <input type="radio" name="degR" value="to top" checked onchange="degRChange(event)">to top</label>
+	<label><input type="radio" name="degR" value="to left" onchange="degRChange(event)">to left</label>
+	<label><input type="radio" name="degR" value="to right" onchange="degRChange(event)">to right</label>
+	<label><input type="radio" name="degR" value="to bottom" onchange="degRChange(event)">to bottom</label>
+	<br><br><br>
+	
+	<figcaption>radial-gradient</figcaption>
+	<!--type select-->
+	<!--<label>select : </label> 
+	<label><input id="ellipseType" type="radio" name="typeSel" value="ellipse" onchange="typeChange(event)">ellipse</label>
+	<label><input id="circleType" type="radio" name="typeSel" value="circle" onchange="typeChange(event)">circle</label><br>-->
+	<label for="type">select : </label>
+		<select id="type" onchange="typeChange(event)">
+		<option value=" ">-- 선택하세요. --</option>
+		<option value="ellipse">ellipse</option>
+		<option value="circle">circle</option>
+		</select><br>
+	<!--size select-->
+	<label for="size">size : </label>
+		<select id="size" onchange="sizeChange(event)">
+		<option value=" ">-- 선택하세요. --</option>
+		<option value="closest-side">closest-side</option>
+		<option value="closest-corner">closest-corner</option>
+		<option value="farthest-side">farthest-side</option>
+		<option value="farthest-corner">farthest-corner</option>
+	</select><br>
+	<!--move-->
+	<label>x : <input id="moveX" type="range"  value="0" oninput="xyMove(event)"><span id="xx"></span></label><br>
+	<label>y : <input id="moveY" type="range"  value="0" oninput="xyMove(event)"><span id="yy"></span></label>
+	
+</figure>
+</fieldset>
+<script src="js/gradient_gen.js"></script>
+</body>
+
+</html>

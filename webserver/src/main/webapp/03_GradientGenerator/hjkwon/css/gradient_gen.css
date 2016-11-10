@@ -1,0 +1,65 @@
+body {
+	background:#FFF;
+
+	width: 960px;
+	height: 1080px;
+}
+
+header {
+	color: #000;
+}
+
+div#OptionContainer {
+	position: absolute;
+	border: 2px solid white;
+	width:200px;
+	padding: 20px;
+
+	background:#000;
+}
+
+fieldset {
+	border: 1px solid darkgray;
+	width: 180px;
+	color:white;
+}
+
+fieldset span {
+	clear: none;
+	float: left;
+}
+fieldset span:nth-child(2n) {
+	clear: both;
+}
+
+fieldset#Position input {
+	clear: none;
+	float: left;
+	width: 120px;
+}
+fieldset input:nth-child(2n) {
+	clear: both;
+}
+
+#ColorBox input {
+	width: 95px;
+	clear: both;
+}
+
+#ColorBox span {
+	height: 30px;
+	margin: 2px;
+	clear: both;
+}
+
+#GradientAttributes input {
+	width:60px;
+}
+
+#InputGradientColor input.ColorCode {
+	width:50px;
+}
+
+#InputGradientColor input.ColorCodeSpot {
+	width:20px;
+}

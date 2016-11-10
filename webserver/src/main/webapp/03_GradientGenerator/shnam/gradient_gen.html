@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<title>gradient-gen.html</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css?family=Coiny" rel="stylesheet">
+</head>
+
+<style>
+	@import url(http://fonts.googleapis.com/earlyaccess/jejuhallasan.css);
+	.font {
+		font-family: 'Jeju Hallasan', cursive;
+	}
+
+	div {
+		height: 150px;
+		padding: 30px;
+
+	}
+
+	body {
+		font-family: 'Coiny', cursive;
+	}
+
+	select {
+		font-family: 'Coiny', cursive;
+	}
+
+	input {
+		font-family: 'Jeju Hallasan', cursive
+	}
+</style>
+<header>
+	<h1 class="font">5강의실 남상혁</h1>
+</header>
+
+<body>
+	<fieldset>
+		<legend>Gradient</legend>
+		<figure>
+			<figcaption>change color</figcaption>
+			<label><input id="color1"type="text" name="color" oninput="changeColor(event)"placeholder="색깔을 입력하세요"></label>
+			<label><input id="color2"type="text" name="color" oninput="changeColor(event)"placeholder="색깔을 입력하세요"></label>
+			<label><input id="color3"type="text" name="color" oninput="changeColor(event)"placeholder="색깔을 입력하세요"></label>
+
+		</figure>
+		<figure>
+			<figcaption>linear-gradient</figcaption>
+			<label><input oninput="linearChange(event)" type="range" name="linear" value="0" min="0" max="360"><span id="degree">0deg</span></label>
+			<br>
+			<label><input onchange="linearChange(event)" type="radio" name="linear" value="to right">to right</label>
+			<label><input onchange="linearChange(event)" type="radio" name="linear" value="to bottom">to bottom</label>
+			<label><input onchange="linearChange(event)" type="radio" name="linear" value="to left">to left</label>
+			<label><input onchange="linearChange(event)" type="radio" name="linear" value="to top">to top</label>
+		</figure>
+		<figure>
+			<figcaption>radial-gradient</figcaption>
+			<select onchange="radialChange1(event)" id="radial">
+            <option value="circle">circle</option>
+            <option value="ellipse">ellipse</opion>
+        </select>
+			<label><input oninput="radialChange2(event)" type="range" name="radial" value="0" id="percent3"><span id="percent1">0%</span></label>
+			<label><input oninput="radialChange3(event)" type="range" name="radial" value="0"id="percent4"><span id="percent2">0%</span></label>
+		</figure>
+
+		<div id="result"></div>
+	</fieldset>
+	<script src="js/gradient_gen.js"></script>
+</body>
+
+</html>

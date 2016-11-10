@@ -3,9 +3,14 @@ function changeLindirec(event) {
 	var value = event.target.value;
 	console.log(value);
 
+	if(value == 'to top' || value == 'to right' || value == 'to bottom' || value == 'to left') {
+		result.style.background = 'linear-gradient('+ linear_direc.value + ',' + linear_color1.value + ',' + linear_color2.value + ')';
+		console.log('linear-gradient('+ linear_direc.value + ',' + linear_color1.value + ',' + linear_color2.value + ')');
+	} else {
 	result.style.background = 'linear-gradient('+ gra_deg.value + 'deg,' + linear_color1.value + ',' + linear_color2.value + ')';
 	
-	lin_deg.innerHTML = gra_deg.value;
+	lin_deg.innerHTML = gra_deg.value + 'º';
+	}
 }
 
 function changeRadial(event) {

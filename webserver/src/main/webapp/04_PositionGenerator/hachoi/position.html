@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<title>position.html</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+		div {
+			width: 100px;
+			height: 100px;
+			border: 5px solid red;
+			margin: 5px;
+		}
+		
+		div:nth-of-type(1) {
+			background-image: linear-gradient(to top, yellow, white);
+			left: 100px;
+			top: 100px;
+		
+		}
+		
+		div:nth-of-type(2) {
+			background-image: linear-gradient(to top, red, white);
+			position: relative;
+			/*left: 20px;
+			top: 20px;*/
+		}
+		div:nth-of-type(3) {
+			background-image: linear-gradient(to top, lightblue, white);
+			position: Fixed;
+			left: 0px;
+			top: 0px;
+		}
+		#absolute {
+			background-image: linear-gradient(to top, purple,transparent);
+			position: absolute;
+			left: 100px;
+			top: 0px;
+		}
+	</style>
+</head>
+
+<body>
+	<header>
+		<h1>5강의실 최효아</h1>
+	</header>
+	<div>static</div>
+	<h1>static</h1>
+	<hr>
+	<div>relative</div>
+	<h1>relative</h1>
+	<label><input id=aa oninput="changeRelativeLeft(event)" type="range" min="-200" max="500" value="0">X=<sapn id="persent1">0</span>%</label>
+	<label><input id=bb oninput="changeRelativeTop(event)" type="range" min="-200" max="500" value="0">Y=<sapn id="persent2">0</span>%</label>
+	<hr>
+	<div>fixed</div>
+	<h1>fixed</h1>
+	<label><input id=cc oninput="changeFixedLeft(event)" type="range" min="-200" max="500" value="0">X=<sapn id="persent3">0</span>%</label>
+	<label><input id=dd oninput="changeFixedTop(event)" type="range" min="-200" max="500" value="0">X=<sapn id="persent4">0</span>%</label>
+	<hr>
+	<section style="height:300px; border:2px dotted lime; position: relative; overflow: hidden;">
+	<div id="absolute">Absolute</div>
+	</section>
+	<h1>Absolute</h1>
+	<label><input id=ee oninput="changeAbsoluteLeft(event)" type="range" min="-200" max="500" value="0">X=<sapn id="persent5">0</span>%</label>
+	<label><input id=ff oninput="changeAbsoluteTop(event)" type="range" min="-200" max="500" value="0">X=<sapn id="persent6">0</span>%</label>
+		<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+
+	<script>
+	/*
+	* relative
+	*/	
+
+	function changeRelativeLeft(event) {
+		var value = event.target.value;
+		document.querySelector("persent1")
+		.style.persent=value+'%';
+
+	}
+	/function changeRelativeTop(event) {
+		var value = event.target.value;
+		persent.querySelector("div:nth-of-type(2)")
+		.style.persent2=value+'%';
+	}
+
+	  function changeSize(event) {
+	var value = event.target.value;
+	console.log("div:nth-of-type(2)" + value);
+
+  	if (value == 'persent1' || value == 'persent2') {
+		result.style.backgroundSize = value;
+	} else {
+		result.style.backgroundSize = value + '%';
+		persent.innerHTML = value + '%';
+	}
+}
+	
+	/*
+	* Fixed
+	*/
+
+	function changeFixedLeft(event) {
+		var value = event.target.value;
+		document.querySelector("div:nth-of-type(3)")
+		.style.left=value+'px';
+	}
+	function changeFixedTop(event) {
+		var value = event.target.value;
+		document.querySelector("div:nth-of-type(3)")
+		.style.top=value+'px';
+	}
+
+	/*
+	* absolute
+	*/
+
+	function changeAbsoluteLeft(event) {
+		var value = event.target.value;
+		document.querySelector("#absolute")
+		.style.left=value+'px';
+	}
+	function changeAbsoluteTop(event) {
+		var value = event.target.value;
+		document.querySelector("#absolute")
+		.style.top=value+'px';
+	}
+		
+	
+</script>
+</body>
+
+</html>

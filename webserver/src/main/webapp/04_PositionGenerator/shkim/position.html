@@ -1,0 +1,112 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>position.html</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+	div {
+		width: 100px;
+		height: 100px;
+		border: 10px solid #99cc00;
+		margin: 20px;
+	}
+	div:nth-of-type(1) {	
+		background-image: linear-gradient(white, blue);
+		left: 100px;
+		top: 100px;
+	}
+	div:nth-of-type(2) {	
+		background-image: linear-gradient(white, black);
+		position: relative;
+	}
+	div:nth-of-type(3) {	
+		background-image: linear-gradient(white, red);
+		position: fixed;
+		left: 0px;
+		top: 0px;
+	}	
+	#absolute {	
+		background-image: linear-gradient(purple, transparent);
+		position: absolute;
+		left: 100px;
+		top: 0px;
+	}
+</style>
+</head>
+<body>
+    <header>
+	<h2> 5강의실 김석하  </h2>
+    </header>
+    
+<div>static</div>
+<h1>static</h1>
+<hr>
+<div>relative</div>
+<h1>relative</h1>
+<label><input oninput="changeRelativeLeft(event)" type="range" 
+min="-200" max="500" value="0"><span id="rel">0</span> X </label>
+<label><input oninput="changeRelativeTop(event)"  type="range" 
+min="-200" max="500" value="0"><span id="rel2">0</span> Y </label>
+<hr>	
+<div>fixed</div>
+<h1>fixed</h1>
+<label><input oninput="changeFixedLeft(event)" type="range" 
+min="-200" max="500" value="0"><span id="fix">0</span> X </label>
+<label><input oninput="changeFixedTop(event)"  type="range" 
+min="-200" max="500" value="0"><span id="fix2">0</span> Y </label>
+<hr>
+<section style="height: 300px; border: 3px dotted blue; position:relative; overflow: hidden;">
+	<div id="absolute">absolute</div>
+</section>
+<h1>absolute</h1>
+<label><input oninput="changeAbsoluteLeft(event)" type="range" 
+min="-200" max="500" value="0"><span id="abs">0</span> X </label>
+<label><input oninput="changeAbsoluteTop(event)"  type="range" 
+min="-200" max="500" value="0"><span id="abs2">0</span> Y </label>
+<hr>
+
+<script>	
+	/*  Relative  */
+	function changeRelativeLeft(event) {
+		var value = event.target.value;
+		document.querySelector("div:nth-of-type(2)")
+		.style.left = value + 'px';
+		rel.innerHTML =value;
+	}
+	function changeRelativeTop(event) {
+		var value = event.target.value;
+		document.querySelector("div:nth-of-type(2)")
+		.style.top = value + 'px';
+		rel2.innerHTML =value;
+	}
+	/*  Fixed  */
+	function changeFixedLeft(event) {
+		var value = event.target.value;
+		document.querySelector("div:nth-of-type(3)")
+		.style.left = value + 'px';
+		fix.innerHTML =value;
+	}
+	function changeFixedTop(event) {
+		var value = event.target.value;
+		document.querySelector("div:nth-of-type(3)")
+		.style.top = value + 'px';
+		fix2.innerHTML =value;
+	}
+	/*  Absolute  */
+	function changeAbsoluteLeft(event) {
+		var value = event.target.value;
+		document.querySelector("#absolute")
+		.style.left = value + 'px';
+		abs.innerHTML =value;
+	}
+	function changeAbsoluteTop(event) {
+		var value = event.target.value;
+		document.querySelector("#absolute")
+		.style.top = value + 'px';
+		abs2.innerHTML =value;
+	}
+</script>
+</body>
+</html>

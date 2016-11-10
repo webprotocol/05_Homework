@@ -49,6 +49,10 @@
             <option value="to left">to left</option>
         </select>
 
+	<label>
+	<input id="one1" oninput="linear(event)" type="range" min="-360" max="360" value="0"><span id="position2Y"></span>deg&nbsp;&nbsp;	</label>
+
+
 		<label for="bcolor" style="font-size:14px">color-stop</label>
 		<input id="two" type="text" size="7" onchange="linear(event)">
 
@@ -90,10 +94,10 @@
         </select>
 
 		<label for="bwidth" style="font-size:14px">at</label>
-		<input id="six" type="number" min="0" max="100" value="10" oninput="radial(event)">
+		<input id="six" type="number" min="0" max="100" value="50" oninput="radial(event)">
 
 		<label for="bwidth"></label>
-		<input id="six1" type="number" min="0" max="100" value="10" oninput="radial(event)">
+		<input id="six1" type="number" min="0" max="100" value="50" oninput="radial(event)">
 		<!--		
 		<select id="six" onchange="radial(event)">
 			<option value="">at&nbsp;&nbsp;&nbsp;&nbsp; </option>

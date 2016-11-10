@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+<title></title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="css/style.css" rel="stylesheet">
+
+<style>
+div{
+	border : 2px solid red;
+	width : 300px;
+	height : 300px;
+
+	padding: 10px;
+	margin: 10px;
+	/*background-image: linear-gradient(red, white);*/
+}
+</style>
+</head>
+
+<body>
+	<header>
+		<h1>5강의실 김종순</h1>
+	</header>
+<div id="gradient_out"></div>
+
+<fieldset>
+	<legend>linear-gradient</legend>
+    <label for="g1">1. linear-gradient(각도 or 위치, color-stop, color-stop) : <input id="g1" oninput="gradiantLinear(event)" type="text" value="linear-gradient(" ></label><br>
+	<label for="g2">2. radial-gradient(shape at % %, color-stop, color-stop) : <input id="g2" oninput="gradiantLinear(event)" type="text" value="radial-gradient(" ></label><br>
+	<!--<select onchange="gradiantLinear1(event)">
+		<option value="to top">to top</option>
+		<option value="to left">to left</option>
+		<option value="to right">to right</option>
+		<option value="to bottom">to bottom</option>
+	</select>-->
+</fieldset>
+<script src="js/gradient.js"></script>
+</body>
+
+</html>
