@@ -1,0 +1,68 @@
+fieldset.Cube_Fieldset {
+    width: 400px;
+    padding: 100px;
+
+    perspective: 800px; /* Distance Layer */
+}
+
+div.Cube {
+    width: 200px;
+    height: 200px;
+
+    position: relative;
+    transform-style: preserve-3d;
+}
+
+/* Y/Z */
+span#Face { 
+   transform: translateZ(100px);
+}
+
+/* Y/Z */
+span#Back {
+   transform: translateZ(-100px) rotateY(-180deg);
+}
+
+/* X/Y */
+span#Right{
+    transform: translateX(100px) rotateY(-270deg);
+}
+
+/* X/Y */
+span#Left{
+    transform: translateX(-100px) rotateY(270deg);
+}
+
+span#Top{
+    transform: translateY(-100px) rotateX(90deg);
+}
+
+span#Bottom{
+    transform: translateY(100px) rotateX(-90deg);
+}
+
+span.Cube_Face {
+    display: block;
+    width: 200px;
+    height: 200px;
+
+    background-color: rgba( 255, 0, 0, 0.80 );
+    border: 1px solid black;
+
+    text-align:center;
+    line-height:200px;
+    font-size:40px;
+
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+input[type=range] {
+    width:300px;
+}
+
+label {
+    clear:both;
+    float:left;
+}

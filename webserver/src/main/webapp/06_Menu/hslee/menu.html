@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title></title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+	ul#menu {
+		background-image: linear-gradient(to right,LightCoral ,transparent);
+		height: 50px;
+		width: 900px;
+		margin : 10px;
+		border-radius: 5px 20px;
+	}
+	ul#menu, ul#menu ul {
+		list-style-type: none;
+	}
+
+	#menu a {
+		text-decoration: none;
+	}
+
+	#menu > li {
+		float : left;
+		border : 1px solid lightgray;
+		margin : 10px;
+		text-shadow: 2px 2px 2px lightgray;
+		height: 1.3em;
+		overflow: hidden;
+	}
+
+	#menu > li:hover {
+		font-size: 1.3em;
+		box-shadow: 2px 2px 2px lightgray;
+		height : auto;
+	}
+/*
+ *
+ *여기부터 self작업
+ *
+ *
+ */
+
+/*bg*/
+	ul#menu2 {
+			background-color:MistyRose ;
+			height:60px;
+			width: 900px;
+			margin : 10px;
+			border-radius: 5px 5px;
+		}
+
+/*list style*/
+	#menu2 ul,ul#menu2  {
+		list-style-type : none;
+	}
+	#menu2 ul{
+		display: inline;
+		margin : 0;
+		padding : 0;
+	}
+/*a style*/
+	#menu2 a {
+		text-decoration: none;
+		text-shadow: 2px 2px 2px whitesmoke;
+		text-decoration-line: whitesmoke;
+		display: inline-block;
+		color : DimGrey ;
+		margin: 5px;
+
+		
+	}
+	
+/*li*/
+	#menu2 > li {
+		float : left;
+		margin : 18px;
+		overflow : hidden;
+		height : 2em;
+		
+	}
+
+/*hover*/
+	#menu2 > li:hover{
+		color : DarkSlateGrey;
+		background-color: OldLace;
+		box-shadow:2px 2px 2px OldLace;
+		height : auto;
+		font-size : 1.3em;
+		/*background-image:linear-gradient( DarkSlateGrey, transparent);*/
+		display: block;
+	}
+	
+	#menu2 li ul li :hover {
+		background: MistyRose;
+		background-size: 
+	}
+
+</style>
+</head>
+<body>
+
+<header>
+	<h1>5강의실 이희수</h1>
+</header>
+<hr>
+
+<ul id="menu">
+	<li><a href="#">Home</a></li>
+	<li>
+		<a href="#">Ranguage</a>
+		<ul>
+		<li><a href="#">JAVA</a></li>
+		<li><a href="#">JAVASCRIPT</a></li>
+		<li><a href="#">HTML5</a></li>
+		<li><a href="#">CSS3</a></li>
+		</ul>
+	</li>
+	<li>
+		<a href="#">OS</a>
+		<ul>
+		<li><a href="#">Linux</a></li>
+		<li><a href="#">Windows</a></li>
+		<li><a href="#">Unix OS X</a></li>
+		<li><a href="#">Mac OS</a></li>
+		<li><a href="#">HTML5 OS</a></li>
+		</ul>
+	</li>
+	<li>
+		<a href="#">DBMS</a>
+		<ul>
+		<li><a href="#">Oracle 12g</a></li>
+		<li><a href="#">Sysbase</a></li>
+		<li><a href="#">Infomix</a></li>
+		<li><a href="#">MySQL</a></li>
+		<li><a href="#">SQL Lite</a></li>
+		</ul>
+	</li>
+</ul>
+<br><br><br><br><br>
+<ul id="menu2">
+	<li>
+		<a href="#">Home</a></li>
+	<li>
+		<a id="test" href="#">Portfolio</a>
+		<ul>
+		<li><a href="#">Web＆Mobile</a></li>
+		<li><a href="#">AD</a></li>
+		<li><a href="#">Product</a></li>
+		<li><a href="#">Edit</a></li>
+		</ul>
+	</li>
+	<li>
+		<a href="#">Image</a>
+		<ul>
+		<li><a href="#">Travel</a></li>
+		<li><a href="#">Design</a></li>
+		<li><a href="#">Daily</a></li>
+		</ul>
+	</li>
+</ul>
+</body>
+</html>

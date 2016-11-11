@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/transform.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <h1>5강의실 권혁준</h1>
+    </header>
+
+    <fieldset>
+        <legend>Transform: Translate(tx,ty)</legend>
+        <div class=content>
+            <div class=Box id=m_Translate>
+                Translate
+                <BR> Box
+            </div>
+        </div>
+        <div class=controller>
+            <div class=properties>
+                TX : <input id=m_TX_Range type="range" min=0 max=100 value=0 oninput=TranslateBox()><span id=m_TX>0</span>%
+            </div>
+            <div class=properties>
+                TY : <input id=m_TY_Range type="range" min=0 max=100 value=0 oninput=TranslateBox()><span id=m_TY>0</span>%
+            </div>
+            <div>
+                <fieldset>
+                    <legend>Set Origin</legend>
+                    <div class=properties>
+                        OriginX : <input id=m_Transform_OX_Range type="range" min=-100 max=100 value=0 oninput=SetOriginBox(1)><span id=m_TOX>0</span>
+                    </div>
+                    <div class=properties>
+                        OriginY : <input id=m_Transform_OY_Range type="range" min=-100 max=100 value=0 oninput=SetOriginBox(1)><span id=m_TOY>0</span>
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+    </fieldset>
+    <hr>
+    <fieldset>
+        <legend>Transform: Scale(sx,sy)</legend>
+        <div class=content>
+            <div class=Box id=m_Scale>
+                Scale
+                <BR> Box
+            </div>
+        </div>
+        <div class=controller>
+            <div class=properties>
+                SX : <input id=m_SX_Range type="range" min=0 max=400 value=100 oninput=ScaleBox()><span id=m_SX>100</span>%
+            </div>
+            <div class=properties>
+                SY : <input id=m_SY_Range type="range" min=0 max=400 value=100 oninput=ScaleBox()><span id=m_SY>100</span>%
+            </div>
+            <div>
+                <fieldset>
+                    <legend>Set Origin</legend>
+                    <div class=properties>
+                        OriginX : <input id=m_Scale_OX_Range type="range" min=-100 max=100 value=0 oninput=SetOriginBox(2)><span id=m_SOX>0</span>
+                    </div>
+                    <div class=properties>
+                        OriginY : <input id=m_Scale_OY_Range type="range" min=-100 max=100 value=0 oninput=SetOriginBox(2)><span id=m_SOY>0</span>
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+    </fieldset>
+    <hr>
+    <fieldset>
+        <legend>Transform: Rotate(angle)</legend>
+        <div class=content>
+            <div class=Box id=m_Rotate>
+                Rotate
+                <BR> Box
+            </div>
+        </div>
+        <div class=controller>
+            <div class=properties>
+                Angle : <input id=m_Rotate_Angle type="range" min=0 max=360 value=0 oninput=RotateBox()><span id=m_Angle>0</span>˚
+            </div>
+            <div>
+                <fieldset>
+                    <legend>Set Origin</legend>
+                    <div class=properties>
+                        OriginX : <input id=m_Rotate_OX_Range type="range" min=-100 max=100 value=0 oninput=SetOriginBox(3)><span id=m_ROX>0</span>
+                    </div>
+                    <div class=properties>
+                        OriginY : <input id=m_Rotate_OY_Range type="range" min=-100 max=100 value=0 oninput=SetOriginBox(3)><span id=m_ROY>0</span>
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+    </fieldset>
+    <hr>
+    <fieldset>
+        <legend>Transform: skew(angle,angle)</legend>
+        <div class=content>
+            <div class=Box id=m_Skew>
+                Skew
+                <BR> Box
+            </div>
+        </div>
+        <div class=controller>
+            <div class=properties>
+                Angle1 : <input id=m_Skew_Angle1 type="range" min=0 max=360 value=0 oninput=SkewBox()><span id=m_Skew1>0</span>˚
+            </div>
+            <div class=properties>
+                Angle2 : <input id=m_Skew_Angle2 type="range" min=0 max=360 value=0 oninput=SkewBox()><span id=m_Skew2>0</span>˚
+            </div>
+            <div>
+                <fieldset>
+                    <legend>Set Origin</legend>
+                    <div class=properties>
+                        OriginX : <input id=m_Skew_OX_Range type="range" min=-100 max=100 value=0 oninput=SetOriginBox(4)><span id=m_SkOX>0</span>
+                    </div>
+                    <div class=properties>
+                        OriginY : <input id=m_Skew_OY_Range type="range" min=-100 max=100 value=0 oninput=SetOriginBox(4)><span id=m_SkOY>0</span>
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+    </fieldset>
+
+
+    <script src="js/transform.js"></script>
+</body>
+
+</html>

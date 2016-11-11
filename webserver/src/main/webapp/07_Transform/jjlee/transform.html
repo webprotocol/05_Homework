@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+		div.box {
+			width: 100px;
+			height: 100px;
+			border: 1px solid red;
+			background: linear-gradient(blue, transparent);
+		}
+		
+		.move {
+			transform: translate(0px, 0px);
+		}
+		
+		.zoom {
+			transform: scale(1, 1);
+			transform-origin: left top;
+		}
+		
+		.clock {
+			transform: rotate(0deg);
+			/*transform-origin:left bottom;*/
+		}
+		
+		.skew {
+			transform: skew(0deg, 20deg);
+		}
+		
+		article div {
+			float: left;
+			margin: 10px;
+		}
+		
+		article hr {
+			clear: both;
+		}
+	
+	</style>
+</head>
+
+<body>
+	<header>
+		<h1>5강의실 이진주</h1>
+	</header>
+	<article>
+		<h1>transform:translate(tx,ty)</h1>
+		<hr>
+		<div class="box move" id="squareForTranslate"></div>
+		<div>
+			<label><input id="translatex" oninput="changeTranslate(event)" type="range" min="-100" max="+500" value="0"><span id="movex"></span>px=x</label>
+			<label><input id="translatey" oninput="changeTranslate(event)" type="range" min="-100" max="+500" value="0"><span id="movey"></span>px=y</label>
+		</div>
+
+		<!--<label for="bwidth" style="font-size:14px">x,y값 입력</label>
+		<input id="textone" type="number" min="-100" max="500" value="50" oninput="changeTranslateText(event)">
+		<input id="texttwo" type="number" min="-100" max="500" value="50" oninput="changeTranslateText(event)">-->
+
+		<hr>
+	</article>
+	<article>
+		<h1>transform:scale(sx,sy)</h1>
+		<hr>
+		<div class="box zoom" id="squareForScale"></div>
+		<div>
+			<label><input id="scalex" oninput="changeScale(event)" type="range" min="1" max="10" value="0"><span id="zoomx"></span>px=x</label>
+			<label><input id="scaley" oninput="changeScale(event)" type="range" min="1" max="10" value="0"><span id="zoomy"></span>px=y</label>
+		</div>
+
+		<hr>
+	</article>
+	<article>
+		<h1>transform:rotate(angle)</h1>
+		<hr>
+		<div class="box clock" id="squareForRotate"></div>
+		<div>
+			<label><input oninput="changeRotate(event)" type="range" min="-360" max="360" value="0"><span id="clock"></span>deg</label>
+		</div>
+		<hr>
+	</article>
+	<article>
+		<h1>transform:skew(angle,angle)</h1>
+		<hr>
+		<div class="box skew" style="font-size:2em;" id="squareForSkew" >Hello Transform</div>
+		<div>
+			<label><input id="skewx" oninput="changeSkew(event)" type="range" min="-360" max="360" value="0"><span id="skew1"></span>deg</label>
+			<label><input id="skewy" oninput="changeSkew(event)" type="range" min="-360" max="360" value="0"><span id="skew2"></span>deg</label>
+		</div>
+
+		<hr>
+	</article>
+	<script>
+
+	
+
+		function changeTranslate(event){
+			var value=event.target.value;
+			movex.innerHTML=translatex.value;
+			movey.innerHTML=translatey.value;
+
+			var div=document.querySelector("#squareForTranslate");
+			div.style.transform="translate("+translatex.value+"px,"+translatey.value+"px)";
+		}
+
+		// function changeTranslateText(event) {
+	    //     var value = event.target.value;
+	    //     // console.log("change-direction:" + value);
+		// 	var div=document.querySelector("#squareForTranslate");
+		// 	div.style.transform="translate("+textone.value+"px,"+texttwo.value+"px)";
+
+
+        function changeScale(event){
+			var value=event.target.value;
+			zoomx.innerHTML=scalex.value;
+			zoomy.innerHTML=scaley.value;
+
+			var div=document.querySelector("#squareForScale");
+			div.style.transform="scale("+scalex.value+","+scaley.value+")";
+
+
+       }
+		function changeRotate(event){
+			var value=event.target.value;
+			clock.innerHTML=value;
+
+			var div=document.querySelector("#squareForRotate");
+			div.style.transform="rotate("+value+"deg)";
+		}
+		
+		function changeSkew(event){
+			var value=event.target.value;
+			skew1.innerHTML=skewx.value;
+			skew2.innerHTML=skewy.value;
+
+			var div=document.querySelector("#squareForSkew");
+			div.style.transform="skew("+skewx.value+"deg,"+skewy.value+"deg)";
+		}
+
+
+	</script>
+</body>
+
+</html>

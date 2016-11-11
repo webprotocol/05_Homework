@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <title>tranaform.html</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        div.box {
+            width: 100px;
+            height: 100px;
+            border: 1px solid red;
+            background-image: linear-gradient(black, transparent);
+        }
+        
+        .move {
+            transform: translate(0, 0);
+        }
+        
+        .zoom {
+            transform: scale(1, 1);
+            transform-origin: left top;
+        }
+        
+        .clock {
+            transform: rotate(45deg);
+            transform-origin: none;
+        }
+        
+        .skew {
+            transform: skew(0deg, 0deg);
+        }
+        
+        article div {
+            float: left;
+            margin: 10px;
+        }
+        
+        article hr {
+            clear: both;
+        }
+        
+        .di {
+            position: absolute;
+            top: 200px;
+            left: 600px;
+            border: 1px solid red;
+            width: 500px;
+            height: 500px;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <header>
+        <h1>5강의실 박성현</h1>
+    </header>
+
+
+    <article>
+        <h1>tranaform : translate(tx,ty)</h1>
+        <hr>
+        <div class="box move"> </div>
+        <hr>
+        <label><input id="mo1" oninput="changeTranslate(event)" type="range" min="0" max="200" value="0"> <span id="move1"></span>px</label>
+        <label><input id="mo2" oninput="changeTranslate(event)" type="range" min="0" max="200" value="0"> <span id="move2"></span>px</label>
+    </article>
+
+
+    <article>
+        <h1>tranaform : scare(sx,sy)</h1>
+        <hr>
+        <div class="box zoom"> </div>
+        <hr>
+        <label><input id="sc1" oninput="changeScare(event)" type="range" min="0" max="20" value="1"> <span id="zoom1"></span>x</label>
+        <label><input id="sc2" oninput="changeScare(event)" type="range" min="0" max="20" value="1"> <span id="zoom2"></span>y</label>
+
+    </article>
+
+
+    <article>
+        <h1>tranaform : rotate(angle)</h1>
+        <hr>
+        <div class="box clock"> </div>
+        <hr>
+
+        <label><input id="ro_ro" oninput="changeRotate(event)" type="range" min="-360" max="360" value="0"> <span id="clock"></span>deg</label>
+        <label>
+        <select id="ro_se1" onchange="changeRotate(event)">
+            <option value="center">선택</option>
+            <option value="left top">왼쪽상단</option>
+            <option value="right top">오른쪽상단</option>
+            <option value="left bottom">왼쪽하단</option>
+            <option value="right bottom">오른쪽하단</option>
+        </select>
+         
+         </label>
+    </article>
+
+
+    <article>
+        <h1>tranaform : skew(angle,angle)</h1>
+        <hr>
+        <label><input id="sk1" oninput="changeSkew(event)" type="range" min="-360" max="360" value="0"> <span id="skew1"></span>deg</label>
+        <label><input  id="sk2" oninput="changeSkew(event)" type="range" min="-360" max="360" value="0"> <span id="skew2"></span>deg</label>
+        <hr>
+        <div class="box skew " style="font-size:2em;">Hello tranaform</div>
+
+        <hr>
+    </article>
+
+    <!--
+<div class="di">
+    <hr>
+    <div class="box skew clock zoom move">Hello tranaform<div>
+        <hr>
+</div>-->
+
+
+
+
+    <script>
+    function changeRotate(event){
+        var value = event.target.value;
+        var div = document.querySelector(".clock");
+  
+        clock.innerHTML=ro_ro.value;
+        div.style.transform = "rotate("+ro_ro.value + "deg)";
+        div.style.transformOrigin = ro_se1.value;
+  }
+
+   function changeSkew(event){
+        var value = event.target.value;
+        var div = document.querySelector(".skew");
+        div.style.transform = "skew("+sk1.value + "deg,"+ sk2.value +"deg)";
+        skew1.innerHTML=sk1.value;
+        skew2.innerHTML=sk2.value;
+ 
+        
+}
+
+   function changeScare(event){
+      var value = event.target.value;
+        var div = document.querySelector(".zoom");
+        div.style.transform = "scale("+sc1.value + ","+ sc2.value +")";
+        zoom1.innerHTML=sc1.value;
+        zoom2.innerHTML=sc2.value;
+}
+
+
+   function changeTranslate(event){
+        var value = event.target.value;
+        var div = document.querySelector(".move");
+        div.style.transform = "translate("+mo1.value + "px,"+ mo2.value +"px)";
+          move1.innerHTML=mo1.value;
+        move2.innerHTML=mo2.value;
+}
+</script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>transform.html</title>
+	<link rel="stylesheet" href="css/transform.css">
+</head>
+<body>
+<header>
+	<h1>5강의실 김진곤</h1>
+</header>
+
+<article>
+	<h1>transform: translate(tx, ty)</h1>
+	<hr>
+	<div id="tranBox" class="box move">마우스로 드래</div>
+	<div>
+		<label>
+			<!--<input id="tranXCtr" type="range" value="0" min="-360" max="360">-->
+			<span>X:</span>
+			<span id="tranXOut">0</span>
+			<!--<input id="tranYCtr" type="range" value="0" min="-360" max="360">-->
+			<span>X:</span>
+			<span id="tranYOut">0</span>
+		</label>
+	</div>
+	<hr>
+</article>
+
+<article>
+	<h1>transform: scale(sx, sy)</h1>
+	<hr>
+	<div id="scaleBox" class="box zoom"></div>
+	<div>
+		<label>
+			<input id="scaleXCtr" type="range" value="1" min="0.1" max="2" step="0.1">
+			<span id="scaleXOut">1</span>
+			<span>X</span>
+			<input id="scaleYCtr" type="range" value="1" min="0.1" max="2" step="0.1">
+			<span id="scaleYOut">1</span>
+			<span>X</span>
+		</label>
+		<br>
+		<label>
+			<input id="ctr-scalex" name="origin" type="range" value="50" min="0" max="100" data-target="scaleBox" data-dir="0">
+			<span>50</span>
+			<span>%</span>
+			<input id="ctr-scaley" name="origin" type="range" value="50" min="0" max="100" data-target="scaleBox" data-dir="1">
+			<span>50</span>
+			<span>%</span>
+		</label>
+	</div>
+	<hr>
+</article>
+
+<article>
+	<h1>transform: rotate(degree)</h1>
+	<hr>
+	<div id="rotBox" class="box clock"></div>
+	<div>
+		<label>
+			<input id="rotCtr" type="range" value="0" min="-360" max="360">
+			<span id="degreeOut">0</span>
+			<span> degree</span>
+		</label>
+		<br>
+		<label>
+			<input id="ctr-rotx" name="origin" type="range" value="50" min="0" max="100" data-target="rotBox" data-dir="0">
+			<span>50</span>
+			<span>%</span>
+			<input id="ctr-roty" name="origin" type="range" value="50" min="0" max="100" data-target="rotBox" data-dir="1">
+			<span>50</span>
+			<span>%</span>
+		</label>
+	</div>
+	<hr>
+</article>
+
+<article>
+	<h1>transform: skew(degree, degree)</h1>
+	<hr>
+	<div id="skewBox" class="box skew" style="font-size: 2em;">Hello Transform</div>
+	<label>
+		<input id="skewXCtr" type="range" value="0" min="-360" max="360">
+		<span id="skewXOut">0</span>
+		<span>X degree</span>
+		<input id="skewYCtr" type="range" value="0" min="-360" max="360">
+		<span id="skewYOut">0</span>
+		<span>Y degree</span>
+	</label>
+	<hr>
+</article>
+
+<script src="js/transform.js"></script>
+</body>
+</html>

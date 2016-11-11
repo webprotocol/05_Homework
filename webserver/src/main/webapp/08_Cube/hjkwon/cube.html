@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/cube.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>5강의실 권혁준</h1>
+    </header>
+
+    <fieldset class=Cube_Fieldset>
+        <div ID=Cube class=Cube>
+            <span ID=Face class=Cube_Face>Face</span>
+            <span ID=Back class=Cube_Face>Back</span>
+            <span ID=Left class=Cube_Face>Left</span>
+            <span ID=Right class=Cube_Face>Right</span>
+            <span ID=Top class=Cube_Face>Top</span>
+            <span ID=Bottom class=Cube_Face>Bottom</span>
+            <!--
+            <span ID=Face class=Cube_Face>●</span>
+            <span ID=Back class=Cube_Face><BR>●　　●<BR>●　　●<BR>●　　●</span>
+            <span ID=Left class=Cube_Face><BR>●　<BR>　●</span>
+            <span ID=Right class=Cube_Face><BR>●　　●<BR>　●　<BR>●　　●</span>
+            <span ID=Top class=Cube_Face>●　●<BR>●　●</span>
+            <span ID=Bottom class=Cube_Face><BR>●　　<BR>　●　<BR>　　●</span>
+            -->
+        </div>
+    </fieldset>
+
+    <label>
+        X : <input id="DimX" type="range" min="-360" max="360" value="0" oninput=RotateCube_DimX()>
+        <span id="DimXValue">0</span>deg
+    </label>
+    <label>
+        Y : <input id="DimY" type="range" min="-360" max="360" value="0" oninput=RotateCube_DimY()>
+        <span id="DimYValue">0</span>deg
+    </label>
+    <label>
+        Z : <input id="DimZ" type="range" min="-360" max="360" value="0" oninput=RotateCube_DimZ()>
+        <span id="DimZValue">0</span>deg
+    </label>
+
+    <script src="js/cube.js"></script>
+</body>
+
+</html>

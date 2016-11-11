@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<style>
+	ul#menu {
+		background-image: linear-gradient(to right, red, transparent);
+		height: 50px;
+		margin: 10px;
+		border-radius: 10px 5px;
+		width: 900px;
+	}
+	
+	ul#menu,
+	ul#menu ul {
+		list-style-type: none;
+	}
+	
+	#menu a {
+		text-decoration: none;
+	}
+	
+	#menu >li {
+		float: left;
+		border: 1px solid black;
+		margin: 10px;
+		text-shadow: 2px 2px 2px black;
+		height: 1.5em;
+		overflow: hidden;
+	}
+	
+	#menu >li:hover {
+		font-size: 2em;
+		box-shadow: 2px 2px 2px lime;
+		height: auto;
+	}
+	/*////////////////////////////////////////////////////////////////////////////////////*/
+	
+	#ul {
+		/*background-image: linear-gradient(to right, RGB(76, 175, 80), transparent);*/
+		/*background-image: linear-gradient(to right, black, transparent);*/
+		background-color: black;
+		height: 50px;
+		margin: 10px;
+		border-radius: 10px 5px;
+		width: 100%;
+		padding: 5px 0 3px 0;
+		/*transform-style: flat|pre*/
+	}
+	
+	#ul ul li {
+		float: left;
+		list-style-type: none;
+	}
+	
+	#ul .a {
+		color: white;
+		height: 16px;
+		font-family: arial;
+		font-size: 20px;
+		padding: 0 10px 0 10px;
+		text-decoration: none;
+	}
+	
+	#ul .a:hover {
+		border-bottom: 5px solid white;
+		border-left: 5px solid white;
+	}
+	
+	#ul ul ul {
+		display: none;
+	}
+	
+	#ul ul li:hover ul {
+		display: block;
+		position: absolute;
+		height: 500px;
+		background-image: linear-gradient(to bottom, black, black,  transparent);
+		width: 100%;
+		
+	}
+	
+	
+	
+	#ul ul li ul>div {
+		float: left;
+		width: 220px;
+
+	}
+	#ul ul li ul>.wi{
+		width: 150px;
+		padding-right: 70px;
+	}
+
+	#ul ul li ul div>li {
+		float: left;
+		margin: 10px;
+	}
+	
+	#ul ul li ul div>h3 {
+		color: white;
+		margin-bottom: 2px;
+	}
+	
+	#ul ul li ul div li > a {
+		color: white;
+		text-decoration: none;
+	}
+</style>
+
+<body>
+	<header>
+		<h1>5강의실 박성현</h1>
+	</header>
+	<hr>
+
+
+	<ul id="menu">
+
+		<li><a href="#">Home</a></li>
+		<li>
+			<a href="#">TUTORIALS</a>
+			<ul>
+				<li><a href="#">JAVA</a></li>
+				<li><a href="#">JAVASCRIPT</a></li>
+				<li><a href="#">HTML5</a></li>
+				<li><a href="#">CSS5</a></li>
+			</ul>
+		</li>
+
+		<li>
+			<a href="#">OS</a>
+			<ul>
+				<li><a href="#">Linux</a></li>
+				<li><a href="#">Windows</a></li>
+				<li><a href="#">Unix</a></li>
+				<li><a href="#">Max OS X</a></li>
+				<li><a href="#">HTML5 OS</a></li>
+			</ul>
+		</li>
+
+
+		<li>
+			<a href="#">DBMS</a>
+			<ul>
+				<li><a href="#">Oracle 12g</a></li>
+				<li><a href="#">Sybase</a></li>
+				<li><a href="#">Infomix</a></li>
+				<li><a href="#">MySQL</a></li>
+				<li><a href="#">SQL Lite</a></li>
+			</ul>
+		</li>
+
+	</ul>
+
+	<br><br><br><br><br><br><br>
+	<hr>
+	<div id="ul">
+
+		<ul>
+			<li><a class="a" href="#">TUTORIALS</a>
+				<ul>
+					<div class="wi">
+						<h3>HTML and CSS</h3>
+						<li><a href="#">Learn HTML</a></li>
+						<li><a href="#">Learn CSS</a></li>
+						<li><a href="#">Learn W3.CSS</a></li>
+						<li><a href="#">Learn Colors</a></li>
+						<li><a href="#">Learn Bootstrap</a></li>
+					</div>
+					<div>
+						<h3>JavaScript</h3>
+						<li><a href="#">Learn JavaScript</a></li>
+						<li><a href="#">Learn jQuery</a></li>
+						<li><a href="#">Learn jQueryMobile</a></li>
+						<li><a href="#">Learn AppML</a></li>
+						<li><a href="#">Learn AngliarJS</a></li>
+					</div>
+					<div class="wi">
+						<h3>Server Side</h3>
+						<li><a href="#">Learn SQL </a></li>
+						<li><a href="#">Learn PHP </a></li>
+						<li><a href="#">Learn ASP</a></li>
+					</div>
+					<div>
+						<h3>Web Building</h3>
+						<li><a href="#">Web Templates</a></li>
+						<li><a href="#">Web Statistics</a></li>
+						<li><a href="#">Web Certificates</a></li>
+					</div>
+					<div>
+						<h3>XML Tutorials</h3>
+						<li><a href="#">Learn XML</a></li>
+						<li><a href="#">Learn XML AJAX</a></li>
+						<li><a href="#">Learn XML DOM</a></li>
+						<li><a href="#">Learn XML DTD</a></li>
+						<li><a href="#">Learn XML Schema</a></li>
+						<li><a href="#">Learn XSLT</a></li>
+						<li><a href="#">Learn XPath</a></li>
+						<li><a href="#">Learn XQuery</a></li>
+					</div>
+				</ul>
+			</li>
+
+			<li><a class="a" href="#"> REFERENCES</a>
+				<ul>
+					<div>
+						<h3>HTML</h3>
+						<li><a href="#">HTML Tag Reference</a></li>
+						<li><a href="#">HTML Event Reference</a></li>
+						<li><a href="#">HTML Color Reference</a></li>
+						<li><a href="#">HTML Attribute Reference</a></li>
+						<li><a href="#">HTML Canvas Reference
+</a></li>
+					</div>
+					<div>
+						<h3>CSS</h3>
+						<li><a href="#">CSS Reference</a></li>
+						<li><a href="#">CSS Selector Reference</a></li>
+						<li><a href="#">W3.CSS Reference</a></li>
+						<li><a href="#">Bootstrap Reference</a></li>
+						<li><a href="#">Icon Reference</a></li>
+					</div>
+					<div>
+						<h3>JavaScript</h3>
+						<li><a href="#">JavaScript Reference</a></li>
+						<li><a href="#">HTML DOM Reference</a></li>
+						<li><a href="#">jQuery Reference</a></li>
+						<li><a href="#">AngularJS Reference</a></li>
+					</div>
+					<div>
+						<h3>XML</h3>
+						<li><a href="#">XSLT Reference</a></li>
+						<li><a href="#">Web Statistics</a></li>
+						<li><a href="#">Character Sets</a></li>
+					</div>
+
+					<div>
+						<h3>Server Side</h3>
+						<li><a href="#">PHP Reference</a></li>
+						<li><a href="#">SQL Reference</a></li>
+						<li><a href="#">ASP Reference</a></li>
+					</div>
+				</ul>
+			</li>
+
+
+			<li><a class="a" href="#">EXAMPLES</a>
+				<ul>
+					<div class="wi">
+						<h3>HTML and CSS</h3>
+						<li><a href="#">Learn HTML</a></li>
+						<li><a href="#">Learn CSS</a></li>
+						<li><a href="#">Learn W3.CSS</a></li>
+						<li><a href="#">Learn Colors</a></li>
+						<li><a href="#">Learn Bootstrap</a></li>
+					</div>
+					<div>
+						<h3>JavaScript</h3>
+						<li><a href="#">JavaScript Examples</a></li>
+						<li><a href="#">HTML DOM Examples</a></li>
+						<li><a href="#">jQuery Examples</a></li>
+						<li><a href="#">jQuery Mobile Examples</a></li>
+						<li><a href="#">AngularJS Examples</a></li>
+						<li><a href="#">AJAX Examples</a></li>
+					</div>
+					<div>
+						<h3>Server Side</h3>
+						<li><a href="#">PHP Examples</a></li>
+						<li><a href="#">ASP Examples</a></li>
+					</div>
+
+					<div>
+						<h3>XML </h3>
+						<li><a href="#">XML Examples</a></li>
+						<li><a href="#">XSLT Examples</a></li>
+						<li><a href="#">XPath Examples</a></li>
+						<li><a href="#">XML Schema Examples</a></li>
+						<li><a href="#">SVG Examples</a></li>
+					</div>
+				</ul>
+			</li>
+
+
+			<!--<li><a  class="a" href="#">EXAMPLES</a>
+			<ul>
+<div>
+					<h3>HTML</h3>
+					<li><a href="#">HTML Tag Reference</a></li>
+					<li><a href="#">HTML Event Reference</a></li>
+					<li><a href="#">HTML Color Reference</a></li>
+					<li><a href="#">HTML Attribute Reference</a></li>
+					<li><a href="#">HTML Canvas Reference
+</a></li>
+				</div>
+				<div>
+					<h3>CSS</h3>
+					<li><a href="#">CSS Reference</a></li>
+					<li><a href="#">CSS Selector Reference</a></li>
+					<li><a href="#">W3.CSS Reference</a></li>
+					<li><a href="#">Bootstrap Reference</a></li>
+					<li><a href="#">Icon Reference</a></li>
+				</div>
+				<div>
+					<h3>JavaScript</h3>
+					<li><a href="#">JavaScript Reference</a></li>
+					<li><a href="#">HTML DOM Reference</a></li>
+					<li><a href="#">jQuery Reference</a></li>
+					<li><a href="#">AngularJS Reference</a></li>
+				</div>
+				<div>
+					<h3>XML</h3>
+					<li><a href="#">XSLT Reference</a></li>
+					<li><a href="#">Web Statistics</a></li>
+					<li><a href="#">Character Sets</a></li>
+				</div>
+
+				<div>
+					<h3>Server Side</h3>
+					<li><a href="#">PHP Reference</a></li>
+					<li><a href="#">SQL Reference</a></li>
+					<li><a href="#">ASP Reference</a></li>
+				</div>
+			</ul>
+		</li>-->
+
+		</ul>
+
+<div>1</div>
+<div>2</div>
+<div>2</div>
+<div>3</div>
+<div>4</div>
+<div>5</div>
+<div>6</div>
+<div>1</div>
+<div>2</div>
+<div>2</div>
+<div>3</div>
+<div>4</div>
+<div>5</div>
+<div>6</div>
+<div>1</div>
+<div>2</div>
+<div>2</div>
+<div>3</div>
+<div>4</div>
+<div>5</div>
+<div>6</div>
+<div>1</div>
+<div>2</div>
+<div>2</div>
+<div>3</div>
+<div>4</div>
+<div>5</div>
+<div>6</div>
+<div>1</div>
+<div>2</div>
+<div>2</div>
+<div>3</div>
+<div>4</div>
+<div>5</div>
+<div>6</div>
+
+
+	</div>
+
+</body>
+
+</html>

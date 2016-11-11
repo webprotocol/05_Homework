@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+<title></title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+	/*style code for menu1*/
+	
+	ul#menu1 {
+		background-image: linear-gradient(to right, red, transparent);
+		width: 900;
+		height: 50px;
+		margin: 10px;
+		border-radius: 10px 5px;
+	}
+	
+	#menu1,
+	ul#menu1 ul {
+		list-style-type: none;
+	}
+	
+	#menu1 a {
+		text-decoration: none;
+	}
+	
+	#menu1 > li {
+		border: 1px solid black;
+		float: left;
+		margin: 10px;
+		text-shadow: 2px 2px 2px black;
+		height: 1.5em;
+		overflow: hidden;
+	}
+	
+	#menu1 > li:hover {
+		font-size: 2em;
+		box-shadow: 5px 5px 5px lime;
+		height: auto;
+	}
+	/*style code for menu2*/
+
+	ul#menu2 {
+		
+		background-image: linear-gradient(to right, gold, transparent);
+		width: 700;
+		height: 50px;
+		margin: 10px;
+		border-radius: 6px 3px;
+		box-shadow: 2px 2px 2px 2px orange;
+	}
+	
+	#menu2,
+	ul#menu2 ul {
+		list-style-type: none;
+	}
+	
+	#menu2 a {
+		text-decoration: none;
+		color:black;
+	}
+	
+	#menu2 > li {
+		background-color:lemonchiffon;
+		border: 1px inset white;
+		float:left;
+		padding:0px 5px;
+		margin: 10px;
+		text-shadow: 2px 2px 2px gray;
+		height: 1.5em;
+		overflow: hidden;
+	}
+	
+	#menu2 > li:hover {
+		
+		font-size: 1em;
+		font-weight:bold;
+		box-shadow: 1px 1px 1px yellow,3px 3px 3px black;
+		height: auto;
+	}
+</style>
+</head>
+
+<body>
+<header>
+	<h1>5강의실 이진주</h1>
+</header>
+<hr>
+<div>
+	<ul id="menu1">
+		<li><a href="#">Home</a></li>
+
+		<li>
+			<a href="#">Language</a>
+			<ul>
+				<li><a href="#">JAVA</a></li>
+				<li><a href="#">JAVASCRIPT</a></li>
+				<li><a href="#">HTML5</a></li>
+				<li><a href="#">CSS5</a></li>
+			</ul>
+		</li>
+
+		<li><a href="#">OS</a>
+
+			<ul>
+				<li><a href="#">Linux</a></li>
+				<li><a href="#">Windows</a></li>
+				<li><a href="#">Unix</a></li>
+				<li><a href="#">Mac OS X</a></li>
+				<li><a href="#">HTML5 OS</a></li>
+			</ul>
+		</li>
+
+
+		<li>
+			<a href="#">DBMS</a>
+			<ul>
+				<li><a href="#">Oracle12g</a></li>
+				<li><a href="#">Sybase</a></li>
+				<li><a href="#">Infomix</a></li>
+				<li><a href="#">MySQL</a></li>
+				<li><a href="#">SQL lite</a></li>
+			</ul>
+		</li>
+	</ul>
+</div>
+<br>
+<br>
+<br>
+
+
+<!--<hr id="secondHr">-->
+<div>
+
+	<ul id="menu2">
+		<li><a href="#">Home</a></li>
+
+		<li>
+			<a href="#">Genres</a>
+			<ul>
+				<li><a href="#">Action</a></li>
+				<li><a href="#">Reality</a></li>
+				<li><a href="#">Comedy</a></li>
+				<li><a href="#">Crime</a></li>
+				<li><a href="#">Family</a></li>
+				<li><a href="#">Music</a></li>
+			</ul>
+		</li>
+
+		<li><a href="#">Years</a>
+
+			<ul>
+				<li><a href="#">after 2015</a></li>
+				<li><a href="#">2011-2015</a></li>
+				<li><a href="#">2006-2010</a></li>
+				<li><a href="#">2001-2005</a></li>
+				<li><a href="#">before 2000</a></li>
+			</ul>
+		</li>
+
+
+		<li>
+			<a href="#">A-Z</a>
+			<ul>
+				<li><a href="#">ABCDEF</a></li>
+				<li><a href="#">GHIJKL</a></li>
+				<li><a href="#">MNOPQR</a></li>
+				<li><a href="#">STUVWXYZ</a></li>				
+			</ul>
+		</li>
+	</ul>
+</div>
+
+</body>
+
+</html>

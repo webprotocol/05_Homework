@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>cube.html</title>
+	<style>
+		.wrap {
+			width: 400px;
+			perspective: 500px;
+			background-image: linear-gradient(to left, skyblue, transparent);
+		}
+
+		.cube {
+			width: 200px;
+			height: 200px;
+			margin: 20px auto;
+			/*border: 10px solid plum;*/
+
+			position: relative;
+
+			transform-style: preserve-3d;
+		}
+
+		.face {
+			display: block;
+			width: 200px;
+			height: 200px;
+
+			border: 2px solid black;
+
+			background-color: rgba(200, 0, 0, 0.4);
+			position: absolute;
+			left: 0px;
+			top: 0px;
+
+			line-height: 200px;
+			text-align: center;
+		}
+
+		.front {
+			transform: translateZ(100px);
+		}
+
+		.back {
+			transform: translateZ(-100px) rotateY(180deg);
+		}
+
+		.left {
+			transform: translateX(-100px) rotateY(-90deg);
+		}
+
+		.right {
+			transform: translateX(100px) rotateY(90deg);
+		}
+
+		.top {
+			transform: translateY(100px) rotateX(90deg);
+		}
+
+		.bottom {
+			transform: translateY(-100px) rotateX(-90deg);
+		}
+
+		input[type=range] {
+			width: 425px;
+		}
+
+		input[type=range][orient=vertical]
+		{
+			-webkit-appearance: slider-vertical;
+			width: 8px;
+			height: 275px;
+			padding: 0 5px;
+		}
+	</style>
+</head>
+<body>
+<header>
+	<h1>5강의실 김진곤</h1>
+</header>
+<fieldset class="wrap" style="display: inline-block; float: left">
+	<div class="cube">
+		<span class="face front">front</span>
+		<span class="face back">back</span>
+		<span class="face left">left</span>
+		<span class="face right">right</span>
+		<span class="face top">top</span>
+		<span class="face bottom">bottom</span>
+	</div>
+</fieldset>
+<label style="display: block;">
+	<input type="range" orient="vertical" value="0" min="-360" max="360" oninput="changeRotateX(event)"
+	><span>0</span>
+	<span>deg</span>
+</label>
+<label style="clear: both;">
+	<input type="range" value="0" min="-360" max="360" oninput="changeRotateY(event)"
+	><span>0</span>
+	<span>deg</span>
+</label>
+<br>
+<label>
+	<input type="checkbox" checked>박스 외곽선
+</label>
+
+<script>
+	function changeRotateY(event)
+	{
+		event.target.nextElementSibling.innerText = event.target.value;
+		var pValue;
+		var x = document.querySelector(".cube").style.transform.match(/rotateX\(.*\)/);
+		if (x && x.length > 0)
+			pValue = x[0];
+		else
+			pValue = "rotateX(0deg)";
+		pValue += " rotateY(" + event.target.value + "deg)";
+		document.querySelector(".cube").style.transform = pValue;
+	}
+
+	function changeRotateX(event)
+	{
+		event.target.nextElementSibling.innerText = event.target.value;
+		var pValue = "rotateX(" + event.target.value + "deg) ";
+		var y = document.querySelector(".cube").style.transform.match(/rotateY\(.*\)/);
+		if (y && y.length > 0)
+			pValue += y[0];
+		else
+			pValue += "rotateX(0deg)"
+		document.querySelector(".cube").style.transform = pValue;
+	}
+
+	document.querySelector("input[type=checkbox]").addEventListener("click", function (event)
+	{
+		var faces = document.querySelectorAll(".face");
+		var pValue;
+		if (event.target.checked)
+			pValue = "2px solid black";
+		else
+			pValue = "0px solid black";
+
+		for (var i = 0; i < faces.length; ++i)
+		{
+			faces[i].style.border = pValue;
+		}
+	});
+</script>
+</body>
+</html>

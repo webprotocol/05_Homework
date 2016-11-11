@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<title>cube.html</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+		.wrap {
+			width: 400px;
+			perspective: 500px;
+		}
+		
+		.cube {
+			width: 200px;
+			height: 200px;
+			margin: 20px auto;
+			border: 10px solid gray;
+			position: relative;
+			/*background-image:url("img/starsky.png");*/
+			transform-style: preserve-3d;
+		}
+		
+		.face {
+			display: block;
+			width: 200px;
+			height: 200px;
+			background-color: rgba(255, 0, 0, 0.5);
+			position: absolute;
+			left: 0px;
+			top: 0px;
+			color: lime;
+			font-size: 3em;
+			text-align: center;
+			line-height: 200px;
+		}
+		/*img {
+              opacity: 0.5;
+              filter: alpha(opacity=50); 
+             }
+
+            img:hover {
+               opacity: 1.0;
+               filter: alpha(opacity=100);
+            }*/
+		
+		input[type=range] {
+			width: 300px;
+		}
+		
+		.front {
+			transform: translateZ(100px);
+		}
+		
+		.back {
+			transform: translateZ(-100px) rotateY(180deg);
+		}
+		
+		.left {
+			transform: translateX(-100px) rotateY(-90deg);
+		}
+		
+		.right {
+			transform: translateX(100px) rotateY(90deg);
+		}
+		
+		.top {
+			transform: translateY(-100px) rotateX(90deg);
+		}
+		
+		.bottom {
+			transform: translateY(100px) rotateX(-90deg);
+		}
+		
+		#ver1 {
+			transform: rotate(90deg);
+			position: absolute;
+			left: 300px;
+			top: 220px;
+			/*transform-origin:center right;*/
+		}
+		
+		#ver2 {
+			transform: rotate(90deg);
+			position: absolute;
+			left: 330px;
+			top: 220px;
+			/*transform-origin:center right;*/
+		}
+		#ver3 {
+			position: absolute;
+			left: 445px;
+			top: 400px;
+			/*transform-origin:center right;*/
+		}
+		#ver4 {
+			position: absolute;
+			left: 475px;
+			top: 400px;
+			/*transform-origin:center right;*/
+		}
+	</style>
+</head>
+
+<body>
+	<header>
+		<h1>5강의실 이진주</h1>
+	</header>
+
+	<fieldset class="wrap">
+		<div class="cube">
+			<span class="face front">front</span>
+			<span class="face back">back</span>
+			<span class="face left">left</span>
+			<span class="face right">right</span>
+			<span class="face top">top</span>
+			<span class="face bottom">bottom</span>
+		</div>
+	</fieldset>
+	<br>
+	<label><input oninput="changeRotateX(event)"type="range" min="-360" max="360" value="0"><span>0</span></label>
+	<br>
+
+	<label><input oninput="changeRotateY(event)"type="range" min="-360" max="360" value="0"><span>0</span></label>
+	<br>
+	<div>
+		<label><input id="ver1" oninput="changeRotateX(event)"type="range" min="-360" max="360" value="0"><span id="ver3">0</span></label>
+		<br>
+	</div>
+	<div>
+		<label><input id="ver2" oninput="changeRotateY(event)"type="range" min="-360" max="360" value="0"><span id="ver4">0</span></label>
+		<br>
+	</div>
+	<!--<label for="bwidth" style="font-size:14px">rotate3d(#,#,#,degree)</label>
+		<input id="one" type="number" min="-100" max="100" value="0" oninput="changeRotateAll(event)">
+		<input id="two" type="number" min="-100" max="100" value="0" oninput="changeRotateAll(event)">
+		<input id="three" type="number" min="-100" max="100" value="0" oninput="changeRotateAll(event)">
+		<input id="four" type="number" min="-360" max="360" value="0" oninput="changeRotateAll(event)">
+
+
+	-->
+
+
+
+	<script>
+		function changeRotateX(event){
+			var me=event.target;
+			var span=me.nextSibling;
+			var value=me.value;
+			var cube=document.querySelector('.cube');
+
+			span.innerHTML=value;
+			cube.style.transform="rotateX("+value+"deg)";
+			}
+
+		function changeRotateY(event){
+			var me=event.target;
+			var span=me.nextSibling;
+			var value=me.value;
+			var cube=document.querySelector('.cube');
+
+			span.innerHTML=value;
+			cube.style.transform="rotateY("+value+"deg)";
+			}
+
+			
+		// function changeRotateAll(event){
+		// 	var value=event.target;
+		// 	var cube=document.querySelector('.cube');
+
+		// 	cube.style.transform="rotate3d("+one.value+","+two.value+","+three.value+","+four.value+"deg)";
+		// 	}
+	
+
+		// function changeRotateAll(event){
+		// 	var me=event.target;
+		// 	var span=me.nextSibling;
+		// 	var value=me.value;
+		// 	var cube=document.querySelector('.cube');
+
+		// 	span.innerHTML=value;
+		// 	cube.style.transform="rotate3d("+one.value+","+two.value+","+three.value+","+four.value+"deg)";
+		// 	}
+	
+	</script>
+</body>
+
+</html>
