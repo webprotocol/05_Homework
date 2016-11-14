@@ -1,0 +1,160 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title>transform.html</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    div.box{
+        width: 100px;
+        height: 100px;
+        border: 1px solid skyblue;
+        background: linear-gradient(pink, transparent);
+    }
+
+    .move{
+        /*transform: translate(100px, -50px);*/
+    }
+    .zoom {
+        /*transform: scale(2, 2);*/
+        /*transform-origin: left top;*/
+    }
+    .clock  {
+        transform: rotate(0deg);
+        /*transform-origin: right top;       */
+    }
+    .skew{
+        transform: skew(10deg, 10deg);
+    }
+
+    article div {
+        float: left;
+        margin: 10px;
+    }
+article hr {
+    clear: both;
+}
+
+   
+   
+    </style>
+    </head>
+    <body>
+    <header>
+        <h1>5강의실 심유찬</h1>
+    </header>
+   
+      <!--Translate-->
+   
+    <article>
+        <h1>transform: translate(tx, ty) </h1>
+        <hr>
+        <div class="box move"></div>
+       <div>
+        <label><input id="tx" oninput="changeTX(event)" type="range" min="-300" max="300" value="0"><span id="moveX"></span>X</label>
+		<label><input id="ty" oninput="changeTY(event)" type="range" min="-300" max="300"value="0"><span id="moveY"></span>Y</label>
+        </div>
+        <hr>
+    </article>
+
+
+  <!--Scale-->
+ 
+ 
+     <article>
+        <h1>transform: scale(sx, sy) </h1>
+        <hr>
+        <div class="box zoom"></div>
+        <div>
+        <label><input id="sx" oninput="changeSX(event)" type="range" min="-10" max="10" value="0"><span id="zoomX"></span>X</label>
+		<label><input id="sy" oninput="changeSY(event)" type="range" min="-10" max="10" value="0"><span id="zoomY"></span>Y</label>
+        </div>
+        <hr>
+    </article>
+
+    <!--Rotate-->
+         <article>
+        <h1>transform: rotate(angle) </h1>
+        <hr>
+        <div class="box clock"></div>
+        <div>
+            <label><input oninput="changeRotate(event)" type="range" min="-360" max"360" value="0"><span id="clock"></span> deg</label>
+        </div>
+        <hr>
+    </article>
+ 
+     <!--Skew-->
+
+    <article>
+	<h1>transform : skew(angle, angle)</h1>
+	<hr>
+	<div class="box skew"></div>
+	<div>
+		<label><input oninput="changeSK(event)" type="range" nim:"-120" max="120" value=" "><span id="skk"></span>deg</label>
+	</div>
+	<hr>
+</article>
+    
+     <script>
+       
+ 
+     // Tranlate
+
+     function changeTX(event) {
+	var value = event.target.value;
+	moveX.innerHTML = value;
+	
+	var tx = document.querySelector('.move');
+	tx.style.transform = "translateX(" + value + "px)";
+}
+
+function changeTY(event) {
+	var value = event.target.value;
+	moveY.innerHTML = value;
+	
+	var ty = document.querySelector('.move');
+	ty.style.transform = "translateY(" + value + "px)";
+}
+   
+          // Scale
+
+function changeSX(event) {
+    var value = event.target.value;
+    zoomX.innerHTML = value;
+    
+    var sx = document.querySelector('.zoom  ');
+    sx.style.transform = "scaleX(" + value + ")";
+}
+function changeSY(event) {
+	var value = event.target.value;
+	zoomY.innerHTML = value;
+	
+	var sy = document.querySelector('.zoom');
+	sy.style.transform = "scaleY(" + value + ")";    
+}
+//    Rotate
+       
+        function changeRotate(event) {
+        var value = event.target.value;
+        clock.innerHTML = value;
+
+        var div = document.querySelector(".clock");
+        div.style.transform = "rotate(" + value + "deg)"; 
+     }
+
+
+      // Skew
+     function changeSK(event) {
+	var value = event.target.value;
+	skk.innerHTML = value;
+
+	var div = document.querySelector('.skew');
+	div.style.transform = "skew(" + value + "deg)";
+
+}
+
+
+    </script>
+    </body>
+</html>

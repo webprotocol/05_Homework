@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="css/style.css" rel="stylesheet">
+	<style>
+		div {
+			width : 100px;
+			height : 100px;
+			margin : 10px;
+			float : left;
+			border : 1px solid green;
+			transform-origin : top;
+			transition-duration : 2s;
+		}
+
+		div:nth-of-type(1):hover {
+			transform : scaleY(5);
+			transition-timing-function : ease;
+		}
+
+		div:nth-of-type(2):hover {
+			transform : scaleY(5);
+			transition-timing-function : linear;
+		}
+
+		div:nth-of-type(3):hover {
+			transform : scaleY(5);
+			transition-timing-function : ease-in;
+		}
+
+		div:nth-of-type(4):hover {
+			transform : scaleY(5);
+			transition-timing-function : ease-out;
+		}
+
+		div:nth-of-type(5):hover {
+			transform : scaleY(5);
+			transition-timing-function : ease-in-out;
+		}
+
+		div:nth-of-type(6):hover {
+			transform : scaleY(5);
+			transition-timing-function : cubic-bezier(0.165, 0.84, 0.44, 1);
+		}
+
+	</style>
+</head>
+
+<body>
+	<script>
+		var conArr = ['ease', 'linear', 'in', 'out', 'in-out', 'bezier', 'random'];
+		var arr = ['ease','linear','ease-in','ease-out','ease-in-out','cubic-bezier(0.165, 0.84, 0.44, 1)'];
+
+		for(var i=0; i<7; i++) {
+			if(i != 6) {
+				document.write('<div>' + conArr[i] + '</div>');
+			}
+			else {
+				document.write('<div onmouseover="randomTrans(this)" onmouseout="animStop(this)">'+ conArr[i]+'</div>');
+			}
+			
+		}
+
+		function randomTrans(dv) {
+			
+			var ran = Math.floor(Math.random() * 6);
+
+			dv.style.transform = 'scaleY(5)';
+			dv.style.transitionTimingFunction = arr[ran];
+			dv.innerHTML = conArr[ran];
+		}
+
+		function animStop(dv) {
+			dv.style.transform = 'scaleY(1)';
+		}
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<title>transition_down.html</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+	div{
+		width:100px;
+		height:100px;
+		margin:20px;
+		border: 2px solid gray;
+		background-color: gold;
+		float:left;
+		transition-duration:2s;
+	}
+	div:nth-of-type(1):hover {
+		transform:translateY(600px);
+		background-image: linear-gradient(white, transparent);
+		transition-timing-function: ease;	
+	}
+	div:nth-of-type(1)::after{
+		content:". ease"
+	}
+	div:nth-of-type(2) {
+		transform-origin: left;
+		height:200px;
+	}
+	div:nth-of-type(2):hover {
+		transform:rotateY(360deg);
+		background-image: linear-gradient(white, transparent);
+		transition-timing-function: linear;	
+	}
+	div:nth-of-type(2)::after{
+		content:". linear"
+	}
+	div:nth-of-type(3) {
+		transform-origin: top
+	}
+	div:nth-of-type(3):hover {
+		transform:scaleY(6);
+		background-image: linear-gradient(white, transparent);
+		transition-timing-function: ease-in;	
+	}
+	div:nth-of-type(3)::after{
+		content:". ease-in"
+	}
+	div:nth-of-type(4) {
+		height:600px;
+		
+	}
+	div:nth-of-type(4):hover {
+		height:100px;
+	    background-image: linear-gradient(white, transparent);
+		transition-timing-function: ease-out;	
+	}
+	div:nth-of-type(4)::after{
+		content:". ease-out"
+	}
+	div:nth-of-type(5) {
+		height:300px;
+		
+	}
+	div:nth-of-type(5):hover {
+		transform: rotateY(360deg);
+	    background-image: linear-gradient(white, transparent);
+		transition-timing-function: ease-in-out;	
+	}
+	div:nth-of-type(5)::after{
+		content:". ease-in-out"
+	}
+	div:nth-of-type(6) {
+		height:600px;
+		
+	}
+	div:nth-of-type(6):hover {
+		height:100px;
+	    background-image: linear-gradient(white, transparent);
+		transition-timing-function: cubic-bezier(.67,1.38,.56,-1.17);
+	}
+	div:nth-of-type(6)::after{
+		content:". cubic-bezier"
+	}
+</style>
+
+</head>
+<body>
+
+<script>
+	for (var i=1; i<=6; i++) {
+		document.write("<div>"+i+"</div>");
+	}
+	
+</script>
+</body>
+</html>

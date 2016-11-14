@@ -108,12 +108,13 @@
 	{
 		event.target.nextElementSibling.innerText = event.target.value;
 		var pValue;
-		var x = document.querySelector(".cube").style.transform.match(/rotateX\(.*\)/);
+		var x = document.querySelector(".cube").style.transform.match(/rotateX\(\S+\)/);
 		if (x && x.length > 0)
 			pValue = x[0];
 		else
 			pValue = "rotateX(0deg)";
 		pValue += " rotateY(" + event.target.value + "deg)";
+		console.log(pValue);
 		document.querySelector(".cube").style.transform = pValue;
 	}
 
@@ -126,6 +127,7 @@
 			pValue += y[0];
 		else
 			pValue += "rotateX(0deg)"
+		console.log(pValue);
 		document.querySelector(".cube").style.transform = pValue;
 	}
 

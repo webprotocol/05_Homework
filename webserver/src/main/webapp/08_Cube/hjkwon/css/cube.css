@@ -11,6 +11,7 @@ div.Cube {
 
     position: relative;
     transform-style: preserve-3d;
+    transition-duration: 1000ms;
 }
 
 /* Y/Z */

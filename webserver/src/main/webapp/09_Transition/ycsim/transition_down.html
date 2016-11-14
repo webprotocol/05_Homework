@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    div{
+        width: 100px;
+        height: 100px;
+       
+        background-color: rgba(255, 51, 204, 0.5);
+
+        position: relative;    
+
+        transition-property: all;
+        transition-duration: 1s;
+        float : left;
+        margin : 10px;
+		padding : 10px;
+
+    }
+    
+    div:nth-of-type(1):hover {
+        height:300px;
+        background-image: linear-gradient(blue, transparent);        
+        transition-timing-function: ease;
+        
+    }
+    div:nth-of-type(2):hover {
+        height:200px;
+        background-image: linear-gradient(red, transparent);
+        transition-timing-function: linear;
+    }
+     div:nth-of-type(3) {
+        transform-origin: top;   
+     }    
+        div:nth-of-type(3):hover {
+        transform: scaleY(5);
+        transition-timing-function: in; 
+     }
+     div:nth-of-type(3):hover {
+        transform: scaleY(5);
+        transition-timing-function: ease; 
+        }
+        
+     div:nth-of-type(4) {
+        transform-origin: top;   
+     }    
+     div:nth-of-type(4):hover {
+        transform: scaleY(5);
+        transition-timing-function: ease-out; 
+     }   
+     div:nth-of-type(5) {
+        transform-origin: top;   
+     }    
+        
+     div:nth-of-type(5):hover {
+        transform: scaleY(5);
+        transition-timing-function: ease-in-out; 
+     }
+       div:nth-of-type(6) {
+        transform-origin: center;   
+     }    
+     div:nth-of-type(6):hover {
+        transform: rotate(360deg);
+        transition-timing-function: cubic-bezier(.41,-0.54,1,-0.72); 
+     }
+      div:nth-of-type(7) {
+        transform-origin: center;   
+     }    
+     div:nth-of-type(7):hover {
+        transform: skew(360deg);
+        transition-timing-function: cubic-bezier(.41,-0.54,1,-0.72); 
+     }
+      div:nth-of-type(8) {
+        transform-origin: center;   
+     }    
+     div:nth-of-type(8):hover {
+        transform: translateY(500px);
+        transition-timing-function: cubic-bezier(.44,.25,.95,-0.17);
+     }
+
+
+
+    
+    </style>
+    </head>
+    <body>
+    <section>
+        
+<script>
+    for (var i=1; i<=8; i++ ){
+        document.write("<div>"+ i +"</div>");
+    }  
+   
+</script>
+    </section>
+    
+
+</body>
+</html>

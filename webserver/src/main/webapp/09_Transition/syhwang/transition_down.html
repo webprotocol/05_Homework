@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<style>
+   h3 {
+       font-weight: 10;
+    
+       
+   }
+    div {
+        width: 30px;
+        position: relative;
+        margin: 10px;
+        height: 300px;
+        float: left;
+        background-color: plum;
+        transition-property: all;
+        transition-duration: 1s;
+      
+        
+    }
+    
+    div:nth-of-type(1):hover {
+        width: 100px;
+        background-color: turquoise;
+        transition-timing-function: ease;
+        background-color: springgreen lightcoral slateblue
+    }
+    
+    div:nth-of-type(2):hover {
+        transform: scale(2) rotate(20deg);
+        background-image: linear-gradient(deeppink, transparent);
+        transition-timing-function: linear;
+    }
+    
+    div:nth-of-type(3):hover {
+        transform: scaleX(3);
+        margin: 100px;
+        border-style: outset;
+        background-image: linear-gradient(cornflowerblue, honeydew);
+        transition-timing-function: ease-in;
+    }
+    
+    div:nth-of-type(4):hover {
+        transform: matrix(2, -0.3, 0, 1, 0, 0);
+        background-image: linear-gradient(green, yellow, transparent);
+        transition-timing-function: ease-out;
+    }
+    
+    div:nth-of-type(5):hover {
+        transform: skew(-50deg, 20deg) scaleY(2) rotate(-90deg);
+        background-image: linear-gradient(firebrick, transparent);
+        transition-timing-function: ease-in-out;
+    }
+    
+    div:nth-of-type(6):hover {
+        transform: rotate(270deg) scale(2);
+        background-image: linear-gradient(mediumblue, powderblue, transparent);
+        transition-timing-function: cubic-bezier(1, .99, 0, -0.69);
+    }
+    
+    div:nth-of-type(7):hover {
+        transform:matrix(0.586, 0.8, -0.8, 0.586, 20, 0) skew(140deg,140deg);
+        background-image: linear-gradient(springgreen, lightcoral, slateblue);
+        transition-timing-function: cubic-bezier(1, .12, .69, 1.48) ;
+    }
+</style>
+
+<body>
+    <h3>Transition</h3>
+    <section>
+        <div>
+            <p>ease</p>
+        </div>
+        <div>
+            <p>linear</p>
+        </div>
+        <div>
+            <p>ease-in</p>
+        </div>
+        <div>
+            <p>ease-out</p>
+        </div>
+        <div>
+            <p>ease-in-out</p>
+        </div>
+        <div>
+            <p>cubic-bezier</p>
+        </div>
+        <div>
+            <p></p>
+        </div>
+        <script>
+
+        for(i=0;i<500;i++){window.top.moveTo(i%9,i/10);}
+    </script>
+    </section>
+</body>
+
+</html>

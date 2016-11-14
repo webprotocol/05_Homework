@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>Transition Down</title>
+	<style>
+		body {
+			width: 980px;
+			height: 100%;
+		}
+
+		div.scroll {
+			width: 100px;
+			height: 50px;
+			margin: 10px 5px;
+			display: inline-block;
+			float: left;
+			text-align: center;
+			background-image: linear-gradient(to bottom, #95fff8, #4fffe6, #459aff);
+
+			border-radius: 4px;
+			transition-property: all;
+			transition-duration: 2s;
+		}
+
+		div.edge {
+			height: 25px;
+			margin: 0px;
+			padding: 0px;
+			position: relative;
+			bottom: -7px;
+
+			background-color: rgba(40, 40, 40, 0.5);
+			border-radius: 0px 0px 4px 4px;
+			transition-property: all;
+			transition-duration: 2s;
+		}
+
+		div.edge:before {
+			content: "▼";
+		}
+
+		div.scroll:hover {
+			height: 800px;
+		}
+
+		div.scroll:hover div.edge {
+			transition-timing-function: inherit;
+			bottom: -757px;
+		}
+		div.scroll:nth-of-type(1) {
+		}
+
+		div.scroll:nth-of-type(1):before {
+			content: 'ease';
+		}
+
+		div.scroll:nth-of-type(1):hover {
+			transition-timing-function: ease;
+		}
+
+		div.scroll:nth-of-type(2) {
+
+		}
+
+		div.scroll:nth-of-type(2):before {
+			content: 'linear';
+		}
+
+		div.scroll:nth-of-type(2):hover {
+			transition-timing-function: linear;
+		}
+
+		div.scroll:nth-of-type(3) {
+
+		}
+
+		div.scroll:nth-of-type(3):before {
+			content: 'ease-in';
+		}
+
+		div.scroll:nth-of-type(3):hover {
+			transition-timing-function: ease-in;
+		}
+
+		div.scroll:nth-of-type(4) {
+
+		}
+
+		div.scroll:nth-of-type(4):before {
+			content: 'ease-out';
+		}
+
+		div.scroll:nth-of-type(4):hover {
+			transition-timing-function: ease-out;
+		}
+
+		div.scroll:nth-of-type(5) {
+
+		}
+
+		div.scroll:nth-of-type(5):before {
+			content: 'ease-in-out';
+		}
+
+		div.scroll:nth-of-type(5):hover {
+			transition-timing-function: ease-in-out;
+		}
+
+		div.scroll:nth-of-type(6) {
+
+		}
+
+		div.scroll:nth-of-type(6):before {
+			content: 'bezier';
+		}
+
+		div.scroll:nth-of-type(6):hover {
+			transition-timing-function: cubic-bezier(.05,.95,.94,.05);
+		}
+
+	</style>
+</head>
+<body>
+	<div class="scroll"><div class="edge"></div></div>
+	<div class="scroll"><div class="edge"></div></div>
+	<div class="scroll"><div class="edge"></div></div>
+	<div class="scroll"><div class="edge"></div></div>
+	<div class="scroll"><div class="edge"></div></div>
+	<div class="scroll"><div class="edge"></div></div>
+</body>
+</html>
