@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>storyboard.html</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body{
+	background-color: rgba(255,0,0,0.5);
+}
+header{
+	background-color:rgba(255,153,255,0.5);
+	width:1280px;
+	position: relative;
+	left:-10px;
+	bottom:35px;
+	font-size: 18pt;
+	text-align: center;
+	border: 1px solid black;
+}
+ul{
+	list-style-type: none;
+	margin:0px;
+	position: relative;
+	left:-40px;
+	font-weight: 900;
+	font-size: 15pt;
+	color:lime;
+	text-shadow: 1px 1px 3px #000;
+	}
+li{
+	float:left;
+	list-style-position: inside;
+	padding:5px;
+	margin:0px;
+	list-style-type: none;
+	
+}
+.asiDe{
+	width:1280px;
+	
+}
+section aside{
+		float:left;
+		width: 55%;
+	
+		
+	}
+section article{
+		float:left;
+		width: 45%;
+		
+	}
+
+@media screen and (max-width: 330px){
+	header{
+	background-color:rgba(255,153,255,0.5);
+	width:330px;
+	position: relative;
+	left:-10px;
+	bottom:35px;
+	font-size: 18pt;
+	text-align: center;
+	}
+}
+
+article{
+	float:left;
+}
+aside{
+	float:left;
+}
+.image img{
+	width:200px;
+	height:200px;
+	margin:10px;
+	border:5px inset rgba(0,0,0,0.8);
+	
+}
+footer{
+	position: relative;
+	bottom: auto;
+	clear: both;
+	padding: 15px;
+	text-align: center;
+	}
+
+@media screen and (max-width: 330px){
+		section aside:nth-of-type(1){
+			width:100%;
+		}
+		section article{
+			width:100%;
+		}
+		section aside:nth-of-type(2){
+			width:100%;
+		}
+	}
+p{
+	text-shadow: 1px 1px 3px #000;	
+}
+qq{
+	display: block;
+}
+ww{
+	display: block;
+}
+</style>
+</head>
+<body>
+	<header>
+		<h1>Lorem Ipsum</h1>
+	</header>
+	<section>
+		<aside class="asiDe">
+			<ul>
+				<li>Home</li>
+				<li>HTML5</li>
+				<li>CSS3</li>
+				<li>JQuery</li>
+			</ul>
+		</aside>
+		<article>
+			<h2>Where can I get some?</h2>
+			<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.</p>
+		</article>
+		<aside class="image">
+			<img id="qq" src="img/1.png">
+			<img id="ww" src="img/w.png">
+			
+		</aside>
+	
+	</section>
+	
+<footer>help@lipsum.com</footer>
+</body>
+</html>

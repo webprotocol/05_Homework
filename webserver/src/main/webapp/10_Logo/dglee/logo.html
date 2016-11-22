@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="ko"><head>
+<title>animation.html</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    /*
+     * transition: all 0s ease 0s
+     *
+     * transition-property: width, color, left
+     * transition-duration: 1s
+     * transition-timing-function: cubic-bezier(1.0, .5, .5, 1.2)
+     * transition-delay: 100ms
+     *
+     * animation : none 0s ease 0s  1  normal none running
+     *
+     * animation-name: logo
+     * animation-duration: 3s
+     * animation-timing-function: ease | linear | ease-in | ease-out | cubic-bezier(,,,)
+     * animation-delay: 0.005s
+     *
+     * animation-iteration-count: 1 | n | infinite
+     * animation-direction: normal | reverse | alternate | alternate-reverse
+     * animation-fill-mode: none | backwards | forwards
+     * animation-play-state: running | paused
+     */
+
+     @keyframes logo1 {
+         from {
+             background-color: transparent;
+         }
+
+         to {
+             background-color: gold;
+         }
+     }
+
+     .logo1 {
+    	animation-name: logo1;
+        animation-duration: 3s;
+        animation-timing-function: linear;
+        animation-iteration-count:infinite;
+        animation-direction: normal;
+        animation-fill-mode: forwards;
+        animation-play-state: running;
+     }
+
+     @keyframes logo2 {
+         from {
+             transform: rotate(360deg);
+         }
+
+         to {
+             transform: rotate(90deg);
+         }
+     }
+
+     .logo2 {
+         animation-name: logo2;
+        animation-duration: 3s;
+        animation-timing-function: ease-in;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-fill-mode: forwards;
+        animation-play-state: running;
+     }
+
+     @keyframes logo3 {
+         from {
+             transform: scaleX(5);
+         }
+
+         to {
+            transform: scaleY(5);
+         }
+     }
+
+     .logo3 {
+         animation-name: logo3;
+        animation-duration: 3s;
+        animation-timing-function: ease-out;
+        animation-iteration-count: infinite;
+        animation-direction: alternate-reverse;
+        animation-fill-mode: forwards;
+        animation-play-state: running;
+     }
+
+     @keyframes logo4 {
+         from {
+             transform: translateY(500px);
+         }
+
+         to {
+            transform: translateY(500px);
+         }
+     }
+
+
+     .logo4 {
+         animation-name: logo4;
+        animation-duration: 3s;
+        animation-timing-function: ease;
+        animation-iteration-count: infinite;
+        animation-direction: normal;
+        animation-fill-mode: forwards;
+     }
+
+     @keyframes logo5 {
+         from {
+             color: red;
+         }
+		 17% {
+             color: orange;
+         }
+		 32% {
+             color: yellow;
+         }
+		 47% {
+             color: green;
+         }
+		 62% {
+             color: blue;
+         }
+		 77% {
+            color: darkblue;
+         }
+         to {
+             color: purple;
+         }
+     }
+
+     .logo5 {
+        animation-name: logo5;
+        animation-duration: 3s;
+        animation-timing-function: ease;
+        animation-iteration-count: infinite;
+        animation-direction: normal;
+     }
+body {
+	background:#bcbcbc;
+}
+
+#tv {
+	margin:50px auto;
+	width:480px;
+	height:270px;
+	border:10px solid #333;
+	border-radius:15px;
+	background-clip:border-box;
+	position: relative;
+	background:#000;
+
+	&:after, &:before {
+		position:absolute;
+		content:"";
+		background:#333;
+	}
+
+	&:after {
+		width:40px; height:50px;
+		bottom:-50px; left:50%;
+		margin-left:-20px;
+	}
+
+	&:before {
+		width:130px; height:10px;
+		bottom:-50px; left:50%;
+		margin-left:-65px;
+		border-top-right-radius:10px;
+		border-top-left-radius:10px;
+	}
+}
+
+.inner {
+	overflow:hidden;
+	position:relative;
+	width:100%;
+	height:100%;
+
+	&.off {
+		transform-origin:center;
+	}
+}
+
+.program {
+	position: absolute;
+	top:0; left:0;
+	width:100%;
+	height:100%;
+	border-radius:4px;
+	overflow:hidden;
+	background:url(http://andrewashley.co.nz/code-examples/tv-glitch/southpark.gif) top left no-repeat;
+	animation: glitch 15s infinite;
+}
+
+.noise {
+	opacity:0;
+	position: absolute;
+	top:0; left:0;
+	z-index:1000;
+	width:100%; height:100%;
+	background:rgba(0,0,0,0.5) url(http://andrewashley.co.nz/code-examples/tv-glitch/grilled-noise.png);
+	animation: noise 12s 3195.17ms infinite;
+}
+
+
+.footer {
+	font-family: 'Indie Flower', cursive;
+  position:fixed;
+  top:360px; left:0; right:0;
+  text-align:center;
+  margin-top:50px;
+  font-size:25px;
+  font-weight:300;
+  color:#212121;
+  text-shadow:2px 2px 4px rgba(0,0,0,0.3);
+
+  .fa-heart {
+    color:lighten(#ff0000, 15%);
+		animation: heart 10s infinite;
+  }
+
+  a {
+    color:lighten(#ff0000, 10%);
+		text-decoration:none;
+    transition:color 0.5s ease-in-out;
+
+    &:hover {
+      color:darken(#ff0000, 15%);
+      transition:color 0.5s ease-in-out;
+    }
+  }
+}
+
+@keyframes glitch {
+	30% {
+		transform:skew(0deg) scale(1);
+	}
+
+	30.2% {
+		transform:skew(50deg) scale(2.5, 3.8);
+	}
+
+	30.5% {
+		transform:skew(0deg) scale(1);
+	}
+
+	50% {
+		transform:skew(0deg) scale(1);
+	}
+
+	50.2% {
+		transform:skew(50deg) scale(1.5, 1.8);
+	}
+
+	50.4% {
+		transform:skew(0deg) scale(1);
+	}
+
+	99.6% {
+		transform:skew(0deg) scale(1);
+	}
+
+	99.8% {
+		transform:skew(-50deg) scale(0.5, 1.4);
+	}
+
+	100% {
+		transform:skew(0deg) scale(1);
+	}
+}
+
+@keyframes noise {
+	30% {
+		opacity:0;
+		transform:skew(0deg) scale(1);
+	}
+
+	30.6% {
+		opacity:1;
+		transform:skew(50deg) scale(2.5, 3.8);
+	}
+
+	31% {
+		opacity:0;
+		transform:skew(0deg) scale(1);
+	}
+
+	50% {
+		opacity:0;
+		transform:skew(0deg) scale(1);
+	}
+
+	50.6% {
+		opacity:1;
+		transform:skew(50deg) scale(1.5, 1.8);
+	}
+
+	51% {
+		opacity:0;
+		transform:skew(0deg) scale(1);
+	}
+
+	99% {
+		opacity:0;
+		transform:skew(0deg) scale(1);
+	}
+
+	99.4% {
+		opacity:1;
+		transform:skew(-50deg) scale(0.5, 1.4);
+	}
+
+	100% {
+		opacity:0;
+		transform:skew(0deg) scale(1);
+	}
+}
+
+
+@keyframes heart {
+	0%, 50%, 51%, 99% {
+		transform:skew(0deg);
+	}
+	50.5% {
+		transform:skew(-30deg) scale(0.9,1);
+	}
+	100% {
+		transform:skew(20deg) scale(1,1.2);
+	}
+}
+.space {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  padding-top: 56.25%;
+  perspective: 70vw;
+  overflow: hidden;
+  background-color: #030303;
+  transform: translateY(-50%);
+  box-shadow: 0 0 2vw rgba(0, 0, 0, 0.5);
+}
+
+.crawl {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  animation-name: crawl;
+  animation-duration: 100s;
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
+  transform: rotateX(70deg);
+  transform-origin: 50% 100%;
+}
+
+p {
+  width: 100vw;
+  margin: 0 auto 12vw auto;
+  line-height: 8.5vw;
+  font-size: 6.7vw;
+  letter-spacing: 0.05em;
+  text-align: justify;
+}
+
+@keyframes crawl {
+  0% {
+    top: 100%;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    top: -800%;
+    opacity: 0;
+  }
+}
+
+.stars {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  filter: blur(0.1vw);
+}
+
+.star {
+  position: absolute;
+
+  @for $i from 1 through 200 {
+    &:nth-child(#{$i}) {
+      $size: random() * 0.3;
+
+      left: #{random() * 100%};
+      top: #{random() * 100%};
+      width: #{$size}vh;
+      height: #{$size}vh;
+      background-color: rgba(220, 220, 255, 1);
+    }
+  }
+}
+
+fieldset {
+  background-color: #222;
+  color: #ffc808;
+}
+</style>
+</head>
+<body>
+	<header>
+	<h1>5강의실 이동근</h1>
+</header>
+<fieldset id="1">
+
+<h1 onclick="logo1(event)">ㅁ1 <img src="http://www.iep.utm.edu/wp-content/media/buddha-225x300.jpg"></h1>
+<hr>
+<h1 onclick="logo2(event)">ㅁ2</h1>
+<hr>
+<h1 onclick="logo3(event)">ㅁ3</h1>
+<hr>
+<h1 onclick="logo4(event)">ㅁ4</h1>
+<hr>
+<h1 onclick="logo5(event)">ㅁ5</h1>
+<div id="tv">
+  <div class="inner off">
+    <div class="program"></div>
+    <div class="noise"></div>
+  </div>
+</div>
+<div class="footer"><i class="fa fa-heart" aria-hidden="true"></i><a href="http://codepen.io/coinoperatedgoi/" target="_blank"></a></div>
+<hr>
+</fieldset>
+<fieldset>
+	<div class='space'>
+  <div class='stars'>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+    <div class='star'></div>
+  </div>
+  <div class='crawl'>
+    <p>
+     나는 자랑스러운 태극기 앞에
+    </p>
+    <p>
+      자유롭고 정의로운 대한민국의 무궁한 영광을 위하여
+    </p>
+    <p>
+      충성을 다할 것을 굳게 다짐합니다.
+    </p>
+  </div>
+</div>
+</fieldset>
+<script>
+    function changePlayState(event) {
+        var value = event.target.value;
+        var logo5 = document.querySelector(".logo5");
+        logo5.style.animationPlayState = value;
+    }
+
+
+    function logo1(event) {
+        var me = event.target;
+        me.className = "logo1";
+
+        me.addEventListener("animationend", function() {
+            console.log("animationend");
+            me.className = "";
+        });
+    }
+	function logo2(event) {
+        var me = event.target;
+        me.className = "logo2";
+
+        me.addEventListener("animationend", function() {
+            console.log("animationend");
+            me.className = "";
+        });
+    }
+	function logo3(event) {
+        var me = event.target;
+        me.className = "logo3";
+
+        me.addEventListener("animationend", function() {
+            console.log("animationend");
+            me.className = "";
+        });
+    }
+	function logo4(event) {
+        var me = event.target;
+        me.className = "logo4";
+
+        me.addEventListener("animationend", function() {
+            console.log("animationend");
+            me.className = "";
+        });
+    }
+	function logo5(event) {
+        var me = event.target;
+        me.className = "logo5";
+
+        me.addEventListener("animationend", function() {
+            console.log("animationend");
+            me.className = "";
+        });
+    }
+</script>
+
+</body></html>

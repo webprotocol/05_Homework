@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <title>storyboard.html</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+<style>
+	header {
+		background-color: blue;
+		padding: 15px;
+	}
+
+	/*section aside*/
+	section aside{
+		float: left;
+		width: 25%;
+	}
+	aside img {
+		width: 100%;
+	}
+	.menu ul {
+		list-style-type: none;
+		list-style-position: inside;
+		padding:2px;
+	}
+	.menu > ul {
+		background-image: linear-gradient(to right, coral, transparent);
+		margin-top: 10px;
+	}
+
+	.one ul li {
+		width: 130px;
+		background-color: black;
+		color: ghostwhite;
+		margin-left:100px;
+		margin-top: 40px;
+		border-radius: 20px;
+	}
+
+	/*section article*/
+	section article {
+		float: left;
+		width: 45%;
+		border: 1px solid grey;
+	}
+	
+	/*footer*/
+	footer {
+		background-color: papayawhip;
+		padding: 10px;
+		text-align: center;
+		clear:both;
+	}
+
+	/*media*/
+
+	@media screen and (max-width: 768px) {
+		section aside:nth-of-type(1) {
+			width: 40%
+		}
+		section article {
+			width: 55%;
+		}
+		section aside:nth-of-type(2) {
+			width: 100%
+		}
+	}
+
+	@media screen and (max-width: 600px) {
+		section aside:nth-of-type(1) {
+			width: 100%;
+			
+		}
+		.menu > ul {
+		    background-image: linear-gradient(to right, pink, transparent);
+		    margin-top: 10px;
+		}
+		ul li {
+			width: 43%;
+			float:left;
+			padding: 10px;
+		}		
+
+		section article {
+			width: 100%;
+		}
+		section aside:nth-of-type(2) {
+			width: 100%
+		}
+	}
+</style>
+
+</head>
+
+<body>
+<header>
+	<h1>Mosaic</h1>
+</header>
+<section>
+	<aside class="menu">
+		<ul class="one">
+			<li>HTML5
+			<ul>
+				<li>Color</li>
+				<li>background</li>
+			</ul>
+			</li>
+			<li>CSS3
+			<ul>
+				<li>ho</li>
+				<li>go</li>
+				<li>bo</li>
+			</ul>
+			</li>
+		</ul>
+	</aside>
+	<article>
+		<h2>What is Lorem Ipsum?</h2>
+		<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+	</article>
+	<aside>
+		<figure>
+			<figcaption>Dog</figcaption>
+			<img src="http://www.loremflickr.com/100/100/dog" alt="dog">
+		</figure>
+		<figure>
+			<figcaption>Cat</figcaption>
+			<img src="http://www.loremflickr.com/100/100/cat" alt="cat">
+		</figure>
+	</aside>
+</section>
+<footer>
+	<p>Copyright (c) 2009 Microsoft Corporation. All rights reserved.</p>
+</footer>
+</body>
+
+</html>

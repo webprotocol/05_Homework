@@ -1,0 +1,41 @@
+<!DOCTYPE>
+<html lang="en"><head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="cube.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>5강의실 이동근</h1>
+    </header>
+
+    <fieldset class="Cube_Fieldset">
+        <div id="Cube" class="Cube" style="transform: rotateX(107deg) rotateY(-318deg) rotateZ(-226deg);">
+            <span id="Face" class="Cube_Face">Face</span>
+            <span id="Back" class="Cube_Face">Back</span>
+            <span id="Left" class="Cube_Face">Left</span>
+            <span id="Right" class="Cube_Face">Right</span>
+            <span id="Top" class="Cube_Face">Top</span>
+            <span id="Bottom" class="Cube_Face">Bottom</span>
+        </div>
+    </fieldset>
+
+    <label>
+        X : <input id="DimX" min="-360" max="360" value="0" oninput="RotateCube_DimX()" type="range">
+        <span id="DimXValue">107</span>deg
+    </label>
+    <label>
+        Y : <input id="DimY" min="-360" max="360" value="0" oninput="RotateCube_DimY()" type="range">
+        <span id="DimYValue">-318</span>deg
+    </label>
+    <label>
+        Z : <input id="DimZ" min="-360" max="360" value="0" oninput="RotateCube_DimZ()" type="range">
+        <span id="DimZValue">-226</span>deg
+    </label>
+
+    <script src="cube.js"></script>
+
+
+</body></html>
