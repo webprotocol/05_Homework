@@ -1,0 +1,32 @@
+.nav .root {
+	width : 120px;
+	height : 30px;
+	text-align : center;
+	background : #000000;
+	margin :1px;
+	padding-top : 5px;
+	color : #ffffff;
+}
+
+.root a {
+	text-decoration : none;
+}
+
+.nav a:link, .nav a:visited, .nav a:hover {
+	color : #ffffff;
+}
+
+#mymenu li {
+	list-style-type : none;
+	float : left;
+}
+
+.nav_sub {
+	position : absolute;
+}
+
+.nav_cat li {
+	clear : both;
+	background : transparent;
+	border: 0px;
+}
