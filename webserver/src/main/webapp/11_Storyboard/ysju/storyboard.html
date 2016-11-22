@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<!--
+▣ 실기시험 1 (40점 만점)
+	- 작성자 : 주요섭 (5강의실)
+	- 주  제 : 
+	- 목  적 :
+	- 기  능 : 
+-->
+<html lang="ko">
+
+<head>
+	<title>storyboard.html</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--<link href="css/storyboard.css" rel="stylesheet" type="text/css">-->
+	<style>
+		#mainHeader {
+			padding: 15px;
+			margin-top: 0;
+			background-color: indianred;
+		}
+		
+		#container {
+			margin: auto;
+			background: #fff;
+			border: 1px solid #e7e7e7;
+		}
+		
+		ul#menuList {
+			list-style-type: none;
+			background-color: skyblue;
+			height: 50px;
+			margin-top: -15px;
+			margin-bottom: 0px;			
+		}
+		
+		#menuList a, #menuList a:visited {
+			text-decoration: none;
+			display: block;
+		}
+		
+		#menuList>li {
+			float: left;
+			margin: 13px;
+			text-shadow: 2px 2px 5px black;
+			height: 1.5em;
+			overflow: hidden;
+		}
+		
+		section aside{
+        float: left;
+        width: 20%;
+	
+    }
+		section article {
+			float: left;
+			width: 55%;
+			padding-top: 5px;
+		}
+		
+		
+		#footer {
+			background-color: indianred;
+			text-align: center;
+			clear: both;
+			padding: 15px;
+		}
+		#divhome{
+			display: inline;
+		}
+		#div1,#div2,#div3,#div4{
+			display: none;
+		}
+		div#div1 ul{
+			list-style-type: none;
+			padding: 10px;
+			list-style-position: inside;
+		}
+		#div1 li{
+			margin-top: 15px;
+		}
+		@media screen and (max-width:768px){
+        section aside:nth-of-type(1){
+            width: 40%;
+        }
+        section article{
+            width: 55%;
+        }
+        section aside:nth-of-type(2){
+            width: 100%;
+        }
+    }
+    @media screen and (max-width:600px){
+        section aside:nth-of-type(1){
+            width: 100%;
+        }
+        section article{
+            width: 100%;
+        }
+        section aside:nth-of-type(2){
+            width: 100%;
+        }
+    }
+	</style>
+</head>
+
+<body>
+	<div>
+		<header id="mainHeader">
+			<h1>제목</h1>
+		</header>
+		<nav>
+			<ul id="menuList">
+				<li><a href="#" onclick="btnhome(event)">HOME</a></li>
+				<li><a href="#" onclick="btn1(event)">1번</a></li>
+				<li><a href="#" onclick="btn2(event)">2번</a></li>
+				<li><a href="#" onclick="btn3(event)">3번</a></li>
+				<li><a href="#" onclick="btn4(event)">4번</a></li>
+			</ul>
+		</nav>
+		<section id="content">
+			<aside class="menu">
+				<div id="divhome">
+					home
+				</div>
+				<div id="div1">
+					<ul>
+						<li>1</li>
+						<li>2</li>
+						<li>3</li>
+						<li>4</li>
+						<li>5</li>
+					</ul>
+				</div>
+				<div id="div2">
+					2번
+				</div>
+				<div id="div3">
+					3번
+				</div>
+				<div id="div4">
+					4번
+				</div>
+			</aside>
+			<article>
+				<h2>내용</h2>
+				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p> 
+			</article>
+		<aside id="sidebar">
+			<figure>
+				<figcaption>사이드</figcaption>
+				<img src="http://loremflickr.com/200/200/ad">
+			</figure>
+			<figure>
+				<figcaption>사이드</figcaption>
+				<img src="http://loremflickr.com/200/200/advertisement">
+			</figure>
+		</aside>
+		</section>
+		<footer id="footer">
+			푸터
+		</footer>
+	</div>
+	<!--<script src="js/storyboard.js"></script>-->
+	<script>
+		/*function menubtn(event){
+			document.querySelector("#divhome").style.display="none";
+			document.querySelector("#div1").style.display="none";
+			document.querySelector("#div2").style.display="none";
+			document.querySelector("#div3").style.display="none";
+			document.querySelector("#div4").style.display="none";
+			document.querySelector("#"+event.target.class).style.display="inline";
+			
+		}*/
+		function btnhome(event){
+			document.querySelector("#divhome").style.display="inline";
+			document.querySelector("#div1").style.display="none";
+			document.querySelector("#div2").style.display="none";
+			document.querySelector("#div3").style.display="none";
+			document.querySelector("#div4").style.display="none";
+			console.log(event.target.nextSibling);
+			console.log(event.target.previousSibling);
+		}
+		function btn1(event){
+			document.querySelector("#divhome").style.display="none";
+			document.querySelector("#div1").style.display="inline";
+			document.querySelector("#div2").style.display="none";
+			document.querySelector("#div3").style.display="none";
+			document.querySelector("#div4").style.display="none";
+		}
+		function btn2(event){
+			document.querySelector("#divhome").style.display="none";
+			document.querySelector("#div1").style.display="none";
+			document.querySelector("#div2").style.display="inline";
+			document.querySelector("#div3").style.display="none";
+			document.querySelector("#div4").style.display="none";
+		}
+		function btn3(event){
+			document.querySelector("#divhome").style.display="none";
+			document.querySelector("#div1").style.display="none";
+			document.querySelector("#div2").style.display="none";
+			document.querySelector("#div3").style.display="inline";
+			document.querySelector("#div4").style.display="none";
+		}
+		function btn4(event){
+			document.querySelector("#divhome").style.display="none";
+			document.querySelector("#div1").style.display="none";
+			document.querySelector("#div2").style.display="none";
+			document.querySelector("#div3").style.display="none";
+			document.querySelector("#div4").style.display="inline";
+		}
+		
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>storyboard.html</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+	header {
+		background-color: lightskyblue;
+		padding: 20px;
+	}
+	section aside {
+		float: left;
+		width: 20%;
+	}
+	.menu ul {
+		list-style-type: none;
+		list-style-position: inside;
+		margin: 0px;
+		padding: 5px;
+	}
+	.menu li {
+		background-image: linear-gradient(to right, lightpink, transparent);
+		margin-top: 10px;
+	}
+	section article {
+		float: left;
+		width: 55%;
+	}
+	div {
+		margin: 10px;
+		padding: 5px;
+		
+		/*width: 100%;*/
+	}
+	#cal td {
+		margin: 20px;
+		padding: 5px;
+		border: 1px solid black;
+		text-align: center;
+	}
+	article img {
+		width: 100%;
+	}
+	footer {
+		clear: both;
+		background-color: darkcyan;
+		padding: 15px;
+		text-align: center;
+	}
+	@media screen and (max-width: 768px) {
+		section aside:nth-of-type(1) {
+			width: 40%;
+		}
+		section article {
+			width: 60%;
+		}
+		section aside:nth-of-type(2) {
+			width: 100%;
+		}
+	}
+	@media screen and (max-width: 600px) {
+		section aside:nth-of-type(1) {
+			width: 100%;
+		}
+		section article {
+			width: 100%;
+		}
+		section aside:nth-of-type(2) {
+			width: 100%;
+		}
+	}
+</style>
+</head>
+<body>
+<header>
+	<h1>Frame</h1>
+</header>
+<section>
+	<aside class="menu">
+		<ul>
+			<li>배경</li>
+			<li>글꼴</li>
+			<li>색상</li>
+		</ul>
+	</aside>
+	<article>
+		<fieldset>
+			<figure>
+				<img src="http://www.loremflickr.com/300/300/mountain">
+			</figure>
+		</fieldset>
+	</article>
+	<aside>
+		<div>
+			<table id="cal">
+				<tr><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td></tr>
+				<tr><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td><td>13</td><td>14</td></tr>
+				<tr><td>15</td><td>16</td><td>17</td><td>18</td><td>19</td><td>20</td><td>21</td></tr>
+				<tr><td>22</td><td>23</td><td>24</td><td>25</td><td>26</td><td>27</td><td>28</td></tr>
+				<tr><td>30</td><td>31</td><td>32</td><td>33</td><td>34</td><td>35</td><td>36</td></tr>
+			</table>
+		</div>
+	</aside>
+</section>
+<footer>
+	<p>Copyright (c) 2016 hj. All rights reserved.</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<title>storyboard.html</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+		@import url('https://fonts.googleapis.com/css?family=Pacifico');
+		header {
+			color: burlywood;
+			text-align: center;
+			background-color: black;
+			padding: 30px;
+			font-family: "Pacifico";
+		}
+		
+		.one ul {
+			background-color: black;
+			list-style-type: none;
+			list-style-position: inside;
+			margin: 1px;
+			padding: 0px;
+		}
+		
+		.one li {
+			color: black;
+			margin-right: 5px;
+			float: right;
+		}
+		
+		section article {
+			float: left;
+			width: 100%;
+			border: 1px solid black;
+			font-family: "Pacifico";
+		}
+		
+		article img {
+			width: 100%;
+		}
+		
+		footer {
+			clear: both;
+			background-color: black;
+			padding: 25px;
+			background-position: 50% 50%;
+		}
+		
+		@media screen and (max-width: 768px) {
+			section article:nth-of-type(1) {
+				width: 100%;
+			}
+			section article:nth-of-type(2) {
+				width: 100%;
+			}
+			section article:nth-of-type(3) {
+				width: 100%;
+			}
+		}
+		
+		@media screen and (max-width: 600px) {
+			section article:nth-of-type(1) {
+				width: 100%;
+			}
+			section article:nth-of-type(2) {
+				width: 100%;
+			}
+			section article:nth-of-type(3) {
+				width: 100%;
+			}
+		}
+		
+		@keyframes triangle3 {
+			from {
+				width: 0px;
+				height: 0px;
+				border-top: 30px solid brown;
+				border-bottom: 30px solid transparent;
+				border-left: 30px solid transparent;
+				border-right: 30px solid transparent;
+			}
+			30% {
+				width: 0px;
+				height: 0px;
+				border-top: 30px solid transparent;
+				border-bottom: 30px solid transparent;
+				border-left: 30px solid antiquewhite;
+				border-right: 30px solid transparent;
+			}
+			60% {
+				width: 0px;
+				height: 0px;
+				border-top: 30px solid transparent;
+				border-bottom: 30px solid sandybrown;
+				border-left: 30px solid transparent;
+				border-right: 30px solid transparent;
+			}
+			to {
+				width: 0px;
+				height: 0px;
+				border-top: 30px solid transparent;
+				border-bottom: 30px solid transparent;
+				border-left: 30px solid transparent;
+				border-right: 30px solid gold;
+			}
+		}
+		
+		.triangle3 {
+			animation: triangle3 8s ease-in-out 0s infinite;
+			font-size: 7px;
+			color: chocolate;
+			font-family: "Pacifico";
+			text-align: center;
+			}
+			
+	</style>
+</head>
+
+<body>
+	<header>
+		<h1>monopoly</h1>
+	</header>
+	<section>
+		<article class="one">
+			<ul>
+				<li>Friday</li>
+				<li>Thursday</li>
+				<li>wednesday</li>
+				<li>Tuesday</li>
+				<li>Monday</li>
+			</ul>
+		</article>
+		<article class="two">
+			<figure>
+				<img src="http://loremflickr.com/700/150/cat">
+			</figure>
+
+		</article>
+		<article class="three">
+			<h2>Hvorfor bruger vi det?</h2>
+			<p>Det er en kendsgerning, at man bliver distraheret af læsbart indhold på en side, når man betragter dens layout. Meningen
+				med at bruge Lorem Ipsum er, at teksten indeholder mere eller mindre almindelig tekstopbygning i modsætning til "Tekst
+				her – og mere tekst her", mens det samtidigt ligner almindelig tekst. Mange layoutprogrammer og webdesignere bruger Lorem
+				Ipsum som fyldtekst. En søgning på Lorem Ipsum afslører mange websider, som stadig er på udviklingsstadiet. Der har været
+				et utal af variationer, som er opstået enten på grund af fejl og andre gange med vilje (som blandt andet et resultat
+				af humor).</p>
+			<p>Der er mange tilgængelige udgaver af Lorem Ipsum, men de fleste udgaver har gennemgået forandringer, når nogen har tilføjet
+				humor eller tilfældige ord, som på ingen måde ser ægte ud. Hvis du skal bruge en udgave af Lorem Ipsum, skal du sikre
+				dig, at der ikke indgår noget pinligt midt i teksten. Alle Lorem Ipsum-generatore på nettet har en tendens til kun at
+				dublere små brudstykker af Lorem Ipsum efter behov, hvilket gør dette til den første ægte generator på internettet. Den
+				bruger en ordbog på over 200 ord på latin kombineret med en håndfuld sætningsstrukturer til at generere sætninger, som
+				ser pålidelige ud. Resultatet af Lorem Ipsum er derfor altid fri for gentagelser, tilføjet humor eller utroværdige ord
+				osv.
+			</p>
+		</article>
+
+	</section>
+	<footer>
+		<div class="triangle3">monopoly</div>
+	</footer>
+</body>
+
+</html>

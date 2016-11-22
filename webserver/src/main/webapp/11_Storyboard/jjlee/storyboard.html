@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<title>storyboard.html</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+
+		header{
+			/*Visual Science*/
+			background-color:black;
+			color:antiquewhite;
+			padding:15px;
+
+		}
+		section aside:nth-of-type(1){
+   		    /*projects,company....*/
+			   float:right;
+			   background-color:red;
+			color:navajowhite;
+			width:25%;
+		}
+		section article{
+			/*we are passionate...*/
+			float:left;
+			width:50%;
+		}
+		section aside:nth-of-type(2){
+   		    /*3 pics*/   
+			clear:both;
+			color:black;
+			width:100%;
+		}
+		
+		aside img{
+			width:100%; 
+			border:3px solid red; }
+		/*property of each picture*/
+
+		figure{
+			width:20%;
+			float:left;
+		}
+	
+		.menu ul{
+			list-style-type:none;
+			list-style-position:inside;
+			margin:0px;
+			padding:10px;
+			
+		}
+		.menu li{
+			margin-top:10px;
+		}
+
+		footer{
+			clear:both;
+			background-color:lightskyblue;
+			padding:15px;
+			text-align:center;
+		}
+		@media screen and (max-width:768px){
+			section aside:nth-of-type(1){
+				width:40%;
+			}
+			section width{
+				width:55%;
+			}
+			section aside:nth-of-type(2){
+				width:100%;
+			}
+		}
+		@media screen and (max-width:600px){
+			section aside:nth-of-type(1){
+				width:100%;
+			}
+			section width{
+				width:100%;
+			}
+			section aside:nth-of-type(2){
+				width:100%;
+			}
+		}
+	</style>
+</head>
+
+<body>
+
+	<header>
+		<h1>Visual Science</h1>
+	</header>
+
+	<section>
+		<aside class="menu">
+			<ul>
+				<li>PROJECTS</li>
+				<li>COMPANY</li>
+				<li>NEWS</li>
+				<li>LANGUAGE</li>
+			</ul>
+		</aside>
+		<article>
+			<h2></h2>
+			<p>We are passionate about communicating the benefits of technology, science and engineering.
+				Since 2007, we’ve helped clients around the world explain complex products, issues and research.
+				We are small enough to be flexible, but big enough to handle large projects. 
+				We have the scientific, design and graphics expertise to make any project eye-catching, accurate and clear, whether for
+				marketing or educational purposes.</p>
+		</article>
+		<br>
+		<aside>
+			<figure>
+				<figcaption>Zica virus illustrations</figcaption>
+				<img src="http://visual-science.com/images/projects/illustrations-zika.220.jpg">
+			</figure>
+			<figure>
+				<figcaption>Human skull</figcaption>
+				<img src="http://visual-science.com/images/projects/illustration-human-skull.220.jpg">
+			</figure>
+			<figure>
+				<figcaption>Poster and AR App "Stom"</figcaption>
+				<img src="http://visual-science.com/images/projects/atom-plakaty-politech.220.jpg">
+			</figure>
+		</aside>
+	</section>
+
+	<footer>
+		<p>Copyright (c) 2009 Microsoft Corporation. All rights reserved.</p>
+	</footer>
+
+</body>
+
+</html>

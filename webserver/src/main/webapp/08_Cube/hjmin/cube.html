@@ -58,19 +58,25 @@
 	}
 	input[type=range] {
 		width: 300px;
-		margin: 50px;
+		margin: 30px;
+	}
+
+	#texty {
+		position: absolute;
+		left: 500px;
+		top: 30px;
 	}
 	.y_range {
 		transform: rotate(270deg);
 
 		position: relative;
-		left: -100px;
-		top: -200px;
+		left: -190px;
+		top: 200px;
 	}
 	.y {
 		position: absolute;
-		left: 600px;
-		top: 100px;
+		left: 70px;
+		top: 370px;
 	}
 </style>
 </head>
@@ -89,37 +95,44 @@
 		<span class="face bottom">bottom</span>
 	</div>
 </fieldset>
-<label><input oninput="changeRotateY(event)" type="range" min="-360" max="360" value="0"><span>0</span></label>
-<label><input class="y_range" oninput="changeRotateX(event)" type="range" min="-360" max="360" value="0"><span class="y">0</span></label>
-<label><input oninput="changeRotateZ(event)" type="range" min="-360" max="360" value="0"><span>0</span></label>
+<label>X축<input id="rotate_x" oninput="changeRotateXYZ(event)" type="range" min="-360" max="360" value="0"><span id="rotx">0</span></label>
+<label>
+	<div id="texty">
+		Y축<input id="rotate_y"  class="y_range" oninput="changeRotateXYZ(event)" type="range" min="-360" max="360" value="0"><span class="y" id="roty">0</span>
+	</div>
+</label>
+<div>
+	<label>Z축<input id="rotate_z" oninput="changeRotateXYZ(event)" type="range" min="-360" max="360" value="0"><span id="rotz">0</span></label>
+</div>
 <script>
-	function changeRotateX(event) {
-		var me = event.target;
-		var span = me.nextSibling;
-		var value = me.value;
+	function changeRotateXYZ(event) {
+		var value = event.target.value;
 		var cube = document.querySelector('.cube');
 
-		span.innerHTML = value + "deg";
-		cube.style.transform = "rotateX(" + value + "deg)";
+		cube.style.transform = "rotateX(" + rotate_y.value + "deg) rotateY(" + rotate_x.value + "deg) rotateZ(" + rotate_z.value + "deg)";
+		rotx.innerHTML = rotate_x.value + "deg";
+		roty.innerHTML = rotate_y.value + "deg";
+		rotz.innerHTML = rotate_z.value + "deg";
 	}
-	function changeRotateY(event) {
-		var me = event.target;
-		var span = me.nextSibling;
-		var value = me.value;
-		var cube = document.querySelector('.cube');
+	// function changeRotateX(event) {
+	// 	var me = event.target;
+	// 	var span = me.nextSibling;
+	// 	var value = me.value;
+	// 	var cube = document.querySelector('.cube');
 
-		span.innerHTML = value + "deg";
-		cube.style.transform = "rotateY(" + value + "deg)";
-	}
-	function changeRotateZ(event) {
-		var me = event.target;
-		var span = me.nextSibling;
-		var value = me.value;
-		var cube = document.querySelector('.cube');
+	// 	span.innerHTML = value + "deg";
+	// 	cube.style.transform = "rotateX(" + value + "deg)";
+	// }
+	// function changeRotateY(event) {
+	// 	var me = event.target;
+	// 	var span = me.nextSibling;
+	// 	var value = me.value;
+	// 	var cube = document.querySelector('.cube');
 
-		span.innerHTML = value + "deg";
-		cube.style.transform = "rotateZ(" + value + "deg)";
-	}
+	// 	span.innerHTML = value + "deg";
+	// 	cube.style.transform = "rotateY(" + value + "deg)";
+	// }
+
 </script>
 </body>
 </html>

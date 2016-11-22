@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/logo.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>5강의실 권혁준</h1>
+    </header>
+
+    <script src="js/logo.js"></script>
+
+    <fieldset>
+        <legend>Logo1</legend>
+        <div class=LogoBox onmouseover=ResetWorldMap(0)>
+            <script>
+                MoveWorldMap(0);
+            </script>
+        </div>
+        <div id=TextBox1>
+            <span id="ShiningText">W</span><span id="NormalText">orld</span> <span id="ShiningText">T</span><span id="NormalText">raveling</span> <span id="ShiningText">C</span><span id="NormalText">enter</span>
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>Logo2</legend>
+        <div class=LogoBox onmouseover=ResetWorldMap(1)>
+            <script>
+                MoveWorldMap(1);
+            </script>
+        </div>
+        <div id=TextBox2>
+            <div class=NoiseBox id=MoveTextBox1>
+                <span class=BFont>W</span><span class=NormalFont>orld</span>
+            </div>
+            <div class=NoiseBox id=MoveTextBox2>
+                <span class=BFont>T</span><span class=NormalFont>raveling</span>
+            </div>
+            <div class=NoiseBox id=MoveTextBox3>
+                <span class=BFont>C</span><span class=NormalFont>enter</span>
+            </div>
+            <script>   
+                Noise(0);
+            </script>
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>Logo3</legend>
+        <div class=LogoBox onmouseover=ResetWorldMap(2)>
+            <script>
+                MoveWorldMap(2);
+            </script>
+        </div>
+        <div id=TextBox3>
+            <script>
+                AddTextStrings("AddedString", "World Traveling Center");
+                RainbowWave("AddedString", false, 0, 2500, 200);
+            </script>
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>Logo4</legend>
+        <div class=LogoBox onmouseover=ResetWorldMap(3)>
+            <script>
+                MoveWorldMap(3);
+            </script>
+        </div>
+        <div id=TextBox4>
+            <div class=NoiseBox id=MoveTextBox1>
+                <script>
+                    AddTextStrings("AddedString2", "World");
+                </script>
+            </div>
+            <div class=NoiseBox id=MoveTextBox2>
+                <script>
+                    AddTextStrings("AddedString2", "Traveling");
+                </script>
+            </div>
+            <div class=NoiseBox id=MoveTextBox3>
+                <script>
+                    AddTextStrings("AddedString2", "Center");
+                </script>
+            </div>
+            <script>   
+                RainbowWave("AddedString2", false, 0, 200, 200);
+            </script>
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>Logo5 : Grow</legend>
+        <div class=LogoBox onmouseover=ResetWorldMap(4)>
+            <script>
+                MoveWorldMap(4);
+            </script>
+        </div>
+        <div id=TextBox5>
+            <script>
+                AddTextStrings("AddedString3", "World Traveling Center");
+                RainbowWave("AddedString3", true, 0, 1000, 200);
+            </script>
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>Logo6 : Grow</legend>
+        <div class=LogoBox onmouseover=ResetWorldMap(5)>
+            <script>
+                MoveWorldMap(5);
+            </script>
+        </div>
+        <div id=TextBox6>
+            <div class=NoiseBox id=MoveTextBox1>
+                <script>
+                    AddTextStrings("AddedString4", "World");
+                </script>
+            </div>
+            <div class=NoiseBox id=MoveTextBox2>
+                <script>
+                    AddTextStrings("AddedString4", "Traveling");
+                </script>
+            </div>
+            <div class=NoiseBox id=MoveTextBox3>
+                <script>
+                    AddTextStrings("AddedString4", "Center");
+                </script>
+            </div>
+            <script>   
+                RainbowWave("AddedString4", true, 0, 500, 200);
+            </script>
+        </div>
+    </fieldset>
+
+</body>
+
+</html>

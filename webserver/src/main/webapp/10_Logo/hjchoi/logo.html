@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+<title>logo.html</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+	h2{
+		float:left;
+		width: 250px;
+		margin:50px 0px;
+	}
+
+	/*logo1*/
+	@keyframes logo1 {
+		from {
+			transform: translateY(0px);
+			color: white;
+			background-color: black;
+		}
+		50% {
+			background-image: linear-gradient(to right, red 10%, yellow 30%, green 50%, blue 70%, purple 90%);
+			border-radius: 30px;
+		}
+		to {
+			transform: translateY(400px);
+			background-image: linear-gradient(to right, red 10%, yellow 30%, green 50%, blue 70%, purple 90%);
+			border-radius: 30px;
+		}
+	}
+	.logo1 {
+		animation-name: logo1;
+		animation-duration: 3s;
+		animation-fill-mode: forwards;
+	}
+	
+	/*logo2*/
+	@keyframes logo2 {
+		from {
+			transform: skewY(20deg);
+			
+		}
+		20% {
+			transform: skewY(-20deg);
+			background-image: radial-gradient(circle,  saddlebrown 2%, gold 20%, white,transparent);
+			border-radius: 30px;
+			color: gray;
+		}
+		50% {
+			transform: skewY(40deg);
+
+		}
+		to {
+			transform: rotateY(90deg);
+		}
+	}
+	.logo2 {
+		transform-origin: left;
+		
+		animation-name: logo2;
+		animation-duration: 3s;
+		animation-fill-mode: forwards;
+	}
+	
+	/*logo3*/
+	@keyframes logo3 {
+		from {
+			color:red;
+		}
+		20%{
+			transform: scale(2,2);
+			color: yellow;
+			
+		}
+		40% {
+			color: green;
+		}
+		70%{
+			color:blue;	
+		}
+		to{
+			color:purple;
+			transform: scale(3,2);
+		}
+	}
+	.logo3 {
+		animation: logo3 4s cubic-bezier(0,1.74,.89,-0.55);
+		animation-fill-mode: forwards;
+
+	}
+	@keyframes logo4 {
+		from {
+			
+			transform: rotateZ(0deg);
+		}
+		30% {
+			
+			transform: rotateZ(-90deg);
+		}
+		60%{
+			
+			transform: rotateZ(-180deg);
+			background-color: indianred;
+			text-align: center;
+			
+		}
+		90% {
+			
+			transform: rotateZ(-270deg);
+			background-color: indianred;
+			
+		}
+		to {
+			
+			transform: rotateZ(-360deg);
+			background-image:linear-gradient(to left, indianred, transparent);
+			text-align: right;
+		}
+	}
+	.logo4 {
+		animation: logo4 2s ease-in;
+		animation-fill-mode: forwards
+	}
+	@keyframes logo5{
+		from{
+			width: 700px;
+			background-color: steelblue;
+		}
+		30%{
+			width: 350px;
+			background-color: goldenrod;
+		}
+		45%{
+			width: 600px;
+			background-color: seagreen;
+		}
+		70% {
+			width: 170px;
+			background-color: darkorange;
+		}
+		to {
+			width: 150px;
+			background-color: black;
+			color: ghostwhite;
+		}
+	}
+	.logo5 {
+		animation-name:logo5;
+		animation-duration: 3s;
+		animation-fill-mode: forwards;
+
+	}
+</style>
+</head>
+<body>
+<header>
+	<h1>5강의실 최혜진</h1>
+</header>
+<h2 class="logo1">Hello Logo.1</h2>
+<h2 class="logo2">Hello Logo.2</h2>
+<h2 class="logo3">Hello Logo.3</h2>
+<h2 class="logo4">Hello Logo.4</h2>
+<h2 class="logo5">Hello Logo.5</h2>
+</body>
+</html>

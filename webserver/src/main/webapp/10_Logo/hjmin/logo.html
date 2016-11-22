@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title></title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+	@keyframes ani1 {
+		from {
+			color: LemonChiffon;
+		}
+
+		to {
+			background-image: linear-gradient(Orange, transparent);
+		}
+	}
+	.ani1 {
+		animation-name: ani1;
+		animation-duration: 5s;
+	}
+
+	.dir {
+		position: relative;
+		left: 10px;
+	}
+	@keyframes ani2 {
+		from {
+			left: 20px;
+		}
+
+		to {
+			left: 800px;
+		}
+	}
+	.ani2 {
+		animation-name: ani2;
+		animation-duration: 5s;
+		animation-timing-function: ease-in-out;
+		animation-iteration-count: 5;
+	}
+	@keyframes ani3 {
+		from {
+			text-shadow: 1px 1px 1px GreenYellow;
+		}
+
+		to {
+			text-shadow: 5px -5px 10px DarkCyan;
+		}
+	}
+	.ani3 {
+		animation: ani3 5s ease 0s 5 alternate;
+		animation-fill-mode: backwards;
+	}
+
+	.dtest {
+		perspective: 500px;
+
+		position: absolute;
+		top: 350px;
+		left: 15px;
+		transform-style: preserve-3d;
+	}
+	@keyframes ani4 {
+		from {
+			color: IndianRed;
+			transform: rotateY(0deg);
+		}
+
+		to {
+			color: MediumVioletRed;
+			transform: rotateY(45deg);
+		}
+	}
+	.ani4 {
+		animation-name: ani4;
+		animation-duration: 3s;
+		animation-iteration-count: infinite;
+		animation-direction: alternate-reverse;
+	}
+	#ps {
+		position: relative;
+		top: 70px;
+	}
+	.dtest1 {
+		position: relative;
+		top: 70px;
+	}
+	@keyframes ani5 {
+		from {
+			transform: scaleX(2)
+		}
+
+		to {
+			transform: skewX(125deg);
+		}
+	}
+	.ani5 {
+		animation-name: ani5;
+		animation-duration: 3s;
+		animation-timing-function: ease-in; 
+		animation-iteration-count: 3;
+	}
+	#ps1 {
+		position: relative;
+		top: 70px;
+	}
+</style>
+</head>
+<body>
+<h1>5강의실 민혜진</h1>
+<hr>
+<h1 class="ani1">5강의실 IT 콘텐츠</h1>
+<hr>
+<h1 class="ani2 dir">5강의실 IT 콘텐츠</h1>
+<hr>
+<h1 class="ani3">5강의실 IT 콘텐츠</h1>
+<hr>
+<div class="dtest"><h1 class="ani4">5강의실 IT 콘텐츠</h1></div>
+<hr id="ps">
+<div class="dtest1"><h1 class="ani5">5강의실 IT 콘텐츠</h1></div>
+<hr id="ps1">
+</body>
+</html>

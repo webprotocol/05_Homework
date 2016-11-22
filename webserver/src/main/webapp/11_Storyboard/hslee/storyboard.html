@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>storyboard.html</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--<link href="css/style.css" rel="stylesheet">-->
+<style>
+	
+	section ul{
+		list-style-type: none;
+		list-style-position: inside;
+		margin : 0;
+		padding : 10px;
+	}
+
+	section li {
+		background-color: rgba(255,127,80,0.4);
+		margin-top: 10px;
+	}
+
+	section article {
+		float : auto;
+	}
+
+	@media screen and (min-width : 768px) { /*desktop*/
+		section aside{
+			width :30%;
+			float : left;
+			padding :0;
+			margin :0;
+		}
+		section article {
+			width : 100%;
+		}
+		 aside:nth-of-type(2),  aside:nth-of-type(3){
+			clear : both;
+		}
+	}
+	@media screen and (max-width : 768px) { /*tab*/
+		section aside {
+			float : left;
+			width : 30%;
+			padding:10px;
+		}
+		
+		section article {
+			width : 100%;
+		}
+	}
+
+	@media screen and (max-width : 600px) {  /*mobile*/
+		aside {
+			text-align: center;
+		}
+		section aside:nth-of-type(1) {
+			width : 100%;
+		}
+		section aside:nth-of-type(2) {
+			width : 100%;
+		}
+		section aside:nth-of-type(3) {
+			width : 100%;
+		}
+		section article:nth-of-type(1){
+			width : 100%;
+		}
+	}
+
+</style>
+</head>
+<body>
+<header>
+<details class="title">
+<summary>실기시험1</summary>
+<ol id="title">
+	<li>작성자 : 이희수</li>
+	<li>주제 : </li>
+	<li>목적 : </li>
+	<li>기능 : </li>
+</ol>
+</details>
+</header>
+<section>
+<aside class="01">
+	<details>
+		<summary>font</summary>
+		<ul>
+		<li>프로젝트1</li>
+		<li>프로젝트2</li>
+		<li>프로젝트3</li>
+		<li>프로젝트4</li>
+	</ul>
+	</details>
+</aside>
+<aside class="02">
+	<details>
+		<summary>design</summary>
+		<ul>
+		<li>프로젝트1</li>
+		<li>프로젝트2</li>
+		<li>프로젝트3</li>
+		<li>프로젝트4</li>
+	</ul>
+	</details>
+</aside>
+<aside class="03">
+	<details>
+		<summary>concept</summary>
+		<ul>
+		<li>프로젝트1</li>
+		<li>프로젝트2</li>
+		<li>프로젝트3</li>
+		<li>프로젝트4</li>
+	</ul>
+	</details>
+</aside>
+<article class="04">
+	<h2>What is Lorem Ipsum?</h2>
+		<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+</article>
+
+</section>
+</body>
+</html>
