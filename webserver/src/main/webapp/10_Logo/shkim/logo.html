@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--   <link href="css/style.css" rel="stylesheet">  -->
+    <!--
+     * transition: all 0s ease 0s
+     *
+     * transition-property: width, color, left
+     * transition-duration: 1s
+     * transition-timing-function: cubic-bezier(1.0, .5, .5, 1.2)
+     * transition-delay: 100ms
+     * 
+     * animation : none 0s ease 0s  1  normal none running
+     *
+     * animation-name: logo
+     * animation-duration: 3s
+     * animation-timing-function: ease | linear | ease-in | ease-out | cubic-bezier(,,,)
+     * animation-delay: 0.005s
+     *
+     * animation-iteration-count: 1 | n | infinite
+     * animation-direction: normal | reverse | alternate | alternate-reverse 
+     * animation-fill-mode: none | backwards | forwards
+     * animation-play-state: running | paused
+     -->
+
+    <style>
+        @keyframes logo1 {
+            from {
+                color: #999;
+            }
+            to {
+                color: blue;
+            }
+        }
+        
+        .narsha {
+            animation-name: logo1;
+            animation-duration: 3s;
+        }
+        
+        @keyframes logo2 {
+            from {
+                transform: rotateX(0deg);
+            }
+            100% {
+                transform: rotateX(180deg);
+            }
+            to {
+                transform: rotateX(180deg) scaleX(1);
+            }
+        }
+        
+        .biatt {
+            animation: logo2 1s alternate infinite forwards;
+            transform-origin: left;
+        }
+      
+        @keyframes logo3 {
+            from {
+                transform: rotateX(0deg);
+                color: green;
+            }
+            100% {
+                transform: rotateX(0deg);
+            }
+            to {
+                transform: rotateX(0deg) scaleX(3);
+            }
+        }
+        
+        .busbook {
+            animation: logo3 2s alternate infinite forwards;
+            transform-origin: left;
+                 }
+        
+        @keyframes logo4 {
+            from {
+                transform: rotateX(0deg);
+                color: Red;
+            }
+            100% {
+                transform: rotateX(180deg);
+            }
+            to {
+                transform: rotateX(360deg) scaleX(1);
+            }
+        }
+        
+        .PRClass {
+            animation: logo4 3s alternate infinite forwards;
+            transform-origin: left;
+        }
+        
+        .logo5 {
+            transform-origin: top;
+            animation: logo5 1s infinite alternate;
+            animation-play-state: running;
+        }
+        
+        .korealestate {
+            /*     animation: logo4 3s ease 0s 4 alternate;
+         animation-fill-mode: forwards;
+     */
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <h2>5강의실 김석하</h2>
+    </header>
+    <hr>
+    <h1 class="narsha"> narsha.kr </h1>
+    <hr>
+    <h1 class="biatt"> Biatt.com </h1>
+    <hr>
+    <h1 class="busbook"> busbook.kr </h1>
+    <hr>
+    <h1 class="PRClass"> PRClass.com </h1>
+    <hr>
+    <h1 class="korealestate"> korealestate.net </h1>
+
+    <hr>
+
+    <script>
+     function clickLogo5(event){
+        var me = event.target;
+        me.className = "logo5";  
+    }
+
+</script>
+</body>
+
+</html>
