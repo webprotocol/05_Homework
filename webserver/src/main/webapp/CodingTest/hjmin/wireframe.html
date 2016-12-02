@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!--
+▣ 실기시험 2 (40점 만점)
+	- 작성자 : 민혜진(5강의실)
+	- 주 제 : 세계지도 도시 이미지창
+	- 목 적 : 애니메이션 활용하기
+	- 기 능 : 텍스트 클릭시 이미지 팝업창 애니메이션 효과 적용
+-->
+<html lang="ko">
+<head>
+<title>wireframe.html</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="css/gridsystem.css" rel="stylesheet">
+<link href="css/wireframe.css" rel="stylesheet">
+</head>
+<body>
+<fieldset>
+	<legend>실기시험 2</legend>
+	<ol>
+		<li>작성자 : 민혜진</li>
+		<li>주제 : 세계지도 도시 이미지창</li>
+		<li>목적 : 애니메이션 활용하기</li>
+		<li>기능 : 텍스트 클릭시 이미지 팝업창 애니메이션 효과 적용</li>
+	</ol>
+</fieldset>
+<header>
+	<h1 class="title_map">World Map</h1>
+</header>
+<section class="row">
+	<article class="col-m-12 col-12 img_map">
+	<figure class="imgBack">
+		<img src="img/worldmap.png" alt="WorldMap">
+			<div class="popup direc_seoul" onclick="seoulPopup()">Seoul
+				<span class="pop_seoul" id="img_seoul"><img src="img/seoul.jpg" alt="seoul"></span>
+			</div>
+			<div class="popup direc_china" onclick="chinaPopup()">China
+				<span class="pop_china" id="img_china"><img src="img/china.jpg" alt="China"></span>
+			</div>
+			<div class="popup direc_london" onclick="londonPopup()">London
+				<span class="popupimg" id="img_london"><img src="img/london.jpg" alt="London"></span>
+			</div>
+			<div class="popup direc_newyork" onclick="newyorkPopup()">Newyork
+				<span class="popupimg" id="img_newyork"><img src="img/newyork.jpg" alt="Newyork"></span>
+			</div>
+			<div class="popup direc_sydney" onclick="sydneyPopup()">Sydney
+				<span class="popupimg" id="img_sydney"><img src="img/sydney.jpg" alt="Sydney"></span>
+			</div>
+			<div class="popup direc_peru" onclick="peruPopup()">Peru
+				<span class="pop_peru" id="img_peru"><img src="img/peru.png" alt="Peru"></span>
+			</div>
+			<div class="popup direc_kenya" onclick="kenyaPopup()">Kenya
+				<span class="pop_kenya" id="img_kenya"><img src="img/kenya.jpg" alt="Kenya"></span>
+			</div>
+	</figure>
+	</article>
+</section>
+<footer>
+	<p>Copyright (c) 2016 hj. All rights reserved.</p>
+</footer>
+<script src="js/wireframe.js"></script>
+</body>
+</html>

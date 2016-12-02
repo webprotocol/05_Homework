@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>table.html</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="css/table.css" rel="stylesheet">
+</head>
+<body>
+
+<section>
+    <h2>Calender</h2>
+    <table>
+        <tr><th class="week">일</th><th class="week">월</th><th class="week">화</th><th class="week">수</th><th class="week">목</th><th class="week">금</th><th class="week">토</th></tr>
+        <tr><th></th><th></th><th>11/1</th><th>11/2</th><th>11/3</th><th>11/4</th><th>11/5</th></tr>
+        <tr><td id="td1"></td><td id="td2"></td><td id="td3"></td><td id="td4">10시 쇼핑</td><td id="td5"></td><td id="td6"></td><td id="td7"></td></tr>
+        
+        <tr><th>11/6</th><th>11/7</th><th>11/8</th><th>11/9</th><th>11/10</th><th>11/11</th><th>11/12</th></tr>
+        <tr><td id="td8"></td><td id="td9"></td><td id="td10"></td><td id="td11"></td><td id="td12"></td><td id="td13"></td><td id="td14"></td></tr>
+        
+        <tr><th>11/13</th><th>11/14</th><th>11/15</th><th>11/16</th><th>11/17</th><th>11/18</th><th>11/19</th></tr>
+        <tr><td id="td15"></td><td id="td16">3시 회의</td><td id="td17"></td><td id="td18"></td><td id="td19"></td><td id="td20"></td><td id="td21"></td></tr>
+
+        <tr><th>11/20</th><th>11/21</th><th>11/22</th><th>11/23</th><th>11/24</th><th>11/25</th><th>11/26</th></tr>
+        <tr><td id="td22"></td><td id="td23"></td><td id="td24"></td><td id="td25"></td><td id="td26"></td><td id="td27"></td><td id="td28"></td></tr>
+
+        <tr><th>11/27</th><th>11/28</th><th>11/29</th><th>11/30</th><th></th><th></th><th></th></tr>
+        <tr><td id="td29"></td><td id="td30"></td><td id="td31"></td><td id="td32">2시 미팅</td><td id="td33"></td><td id="td34"></td><td id="td35"></td></tr>
+    </table>
+    <nav>
+        <select class="col-2" id="SelectCol" onchange="ChangeSelect(event)">
+           <!--1주-->
+            <option value="first">------------1째주------------</option>
+            <option value="Onethree">11/1</option>
+            <option value="Onefour">11/2</option>
+            <option value="Onefive">11/3</option>
+            <option value="Onesix">11/4</option>
+            <option value="Oneseven">11/5</option>
+            
+            <!--2주-->
+            <option value="">------------2째주------------</option>
+            <option value="Oneeight">11/6</option>
+            <option value="Onenine">11/7</option>
+            <option value="Oneten">11/8</option>
+            <option value="Oneeleven">11/9</option>
+            <option value="Onetwelve">11/10</option>
+            <option value="Onethirteen">11/11</option>
+            <option value="Onefourteen">11/12</option>
+
+            <!--3주-->
+            <option value="">------------3째주------------</option>
+            <option value="Onefifteen">11/13</option>
+            <option value="Onesixteen">11/14</option>
+            <option value="Oneseventeen">11/15</option>
+            <option value="Oneeighteen">11/16</option>
+            <option value="Onenineteen">11/17</option>
+            <option value="Onetwenty">11/18</option>
+            <option value="Onetwentyone">11/19</option>
+
+            <!--4주-->
+            <option value="">------------4째주------------</option>
+            <option value="Onetwentytwo">11/20</option>
+            <option value="Onetwentythree">11/21</option>
+            <option value="twentyfour">11/22</option>
+            <option value="twentyfive">11/23</option>
+            <option value="twentysix">11/24</option>
+            <option value="twentyseven">11/25</option>
+            <option value="twentyeight">11/26</option>
+
+            <!--5주-->
+            <option value="">------------5째주------------</option>
+            <option value="twentynine">11/27</option>
+            <option value="Onethirty">11/28</option>
+            <option value="Onethirtyone">11/29</option>
+            <option value="Onethirtytwo">11/30</option>
+        </select>
+        <input class="col-1" id="TextClear" oninput="changeText(event)" type="text" maxlength="8"  placeholder="입력하세요">
+        <input class="col-2" onclick="ClickOk(event)" type="button" value="적용">
+        <input class="col-2" onclick="ClickClear(event)" type="button" value="clearAll">
+    </nav>
+</section>
+
+<script src="js/wireframe.js"></script>
+</body>
+</html>

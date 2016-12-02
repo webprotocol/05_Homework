@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>font.html</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="css/font.css" rel="stylesheet">
+</head>
+<body>
+<aside class="row">
+	<div class=" divbutton col-12 col-m-12">
+		<h1>[ font 속성 ]</h1>
+		<form>
+			<label class="col-3 col-m-3">글씨체</label>
+		<select id="FontName" onchange="changeFontStyle(event)" class="col-1 col-m-3">
+			<option value="SeoulHangangB">한강체B</option>
+			<option value="AMERIKA_">AMERIKA_</option>
+			<option value="MASQUE">MASQUE</option>
+			<option value="BebasNeue">BebasNeue</option>
+		</select>
+		<label class="col-3 col-m-3">크기</label><input id="FontSize" onchange="changeFontStyle(event)" class="col-1 col-m-3" type="number" min="0" max="100" value="12">
+		<label class="col-3 col-m-3">색상</label><input id="FontColor" oninput="changeFontStyle(event)" onclick="changeFontColor(event)" class="col-1 col-m-3" type="text" placeholder="ex)#ff0000">
+		<label class="col-3 col-m-3 padding"><input onchange="changeFontItalic(event)"  type="checkbox" name="other" value="italic">기울임</label>
+		<label class="col-3 col-m-3 padding"><input onchange="changeFontBold(event)"  type="checkbox" name="other" value="bold">굵게</label>
+		<label class="col-3 col-m-3 padding"><input onchange="changeFontUndeline(event)"  type="checkbox" name="other" value="underline">밑줄</label>
+		<label class="col-3 col-m-3 padding"><input onchange="changeFontAlign(event)"  type="checkbox" name="other" value="center">가운데정렬</label>
+		</form>
+	</div>
+	<div class="colorPicker">
+		<table>
+			<tr><td onclick="ColorClick(event)" id="colorPickerTred"></td><td onclick="ColorClick(event)" id="colorPickerTorange"></td><td onclick="ColorClick(event)" id="colorPickerTyellow"></td></tr>
+			<tr><td onclick="ColorClick(event)" id="colorPickerTgreen"></td><td onclick="ColorClick(event)" id="colorPickerTblue"></td><td onclick="ColorClick(event)" id="colorPickerTpurple"></td></tr>
+			<tr><td onclick="ColorClick(event)" id="colorPickerTlime"></td><td onclick="ColorClick(event)" id="colorPickerTpink"></td><td onclick="ColorClick(event)" id="colorPickerTcoral"></td></tr>
+			<tr><td onclick="ColorClick(event)" colspan="3" id="colorPickerTexit">닫기X</td></tr>
+		</table>
+	</div>
+</aside>
+<article class="divcontent row">
+	<div class="">
+		<textarea class="col-m-12 col-12" id="textArea"></textarea>
+	</div>
+</article>
+<aside>
+	<div class="divdisplay" >
+		<div class="display_hide">
+			<h6>테마변경</h6>
+			<label><input class="col-2" onclick="temaClick(event)" type="radio" name="tema" value="img/texture5.png"> 초기 </label><img class="col-2" src="img/texture5.png" alt="img2" style="width:30px;height:30px;">
+			<label><input class="col-2" onclick="temaClick(event)" type="radio" name="tema" value="img/texture1.jpg"> 테마2 </label><img class="col-2" src="img/texture1.jpg" alt="img2" style="width:30px;height:30px;">
+			<label><input class="col-2" onclick="temaClick(event)" type="radio" name="tema" value="img/texture2.jpg"> 테마3 </label><img class="col-2" src="img/texture2.jpg" alt="img3" style="width:30px;height:30px;">
+			<label><input class="col-2" onclick="temaClick(event)" type="radio" name="tema" value="img/texture3.jpg"> 테마3 </label><img class="col-2" src="img/texture3.jpg" alt="img4" style="width:30px;height:30px;">
+		</div>
+	</div>
+</aside>
+
+<script src="js/storyboard.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,256 @@
+/*
+▣ 실기시험 1 (40점 만점)
+- 작성자 : 주요섭 (5강의실)
+- 주  제 : 학원에서 먹을만한 점심메뉴
+- 목  적 : 지금까지 배운 HTML, CSS복습
+- 기  능 : 점심시간에 먹을만한 메뉴들을 정리
+	*/
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+*{ 
+ font-family: 'Noto Sans KR', sans-serif;
+ margin: 0;
+}
+#wrapper{
+	width: 100%;
+	background-image: url(../img/background.png);
+	background-attachment: fixed;
+}
+
+/* 주사위*/
+h3{
+	margin: 0px;
+	padding: 0px;
+}
+.wrap{
+	width: 400px;
+	perspective:500px;
+	background-color: black;
+
+}
+.cube{
+	width: 200px;
+	height: 200px;
+	margin: 20px auto;
+
+	position: relative;
+	transform-style: preserve-3d;
+
+	animation-duration: 1.5s;
+	animation-fill-mode: forwards;
+}
+.face{
+	width: 200px;
+	height: 200px;
+	display: block;
+
+	border: 2px solid black;
+	background-color: rgba(255, 255, 255, 0.9);
+	position:absolute;
+	left: 0px;
+	top: 0px;
+
+	font-size: 3em;
+	line-height: 200px;
+	text-align: center;
+}
+.front{
+	transform: translateZ(100px);
+}
+.back{
+	transform: translateZ(-100px) rotateY(180deg);
+}
+.left{
+	transform: translateX(-100px) rotateY(-90deg);
+}
+.right{
+		transform: translateX(100px) rotateY(90deg);
+}
+.top{
+	transform: translateY(-100px) rotateX(90deg);
+}
+.bottom{
+	transform: translateY(100px) rotateX(-90deg);
+}
+
+
+@keyframes changedice1{
+    from{
+        transform: rotateX(-200deg) rotateY(100deg) rotateZ(320deg);
+    }
+    to{
+        transform: rotateX(25deg) rotateY(10deg) rotateZ(-14deg);
+    }
+}
+@keyframes changedice2{
+    to{
+        transform: rotateX(219deg) rotateY(4deg) rotateZ(144deg);
+    }
+}
+@keyframes changedice3{
+    to{
+        transform: rotateX(-121deg) rotateY(269deg) rotateZ(27deg);
+    }
+}
+@keyframes changedice4{
+    to{
+        transform: rotateX(86deg) rotateY(-296deg) rotateZ(120deg);
+    }
+}
+@keyframes changedice5{
+    to{
+        transform: rotateX(-150deg) rotateY(100deg) rotateZ(90deg)
+    }
+}
+@keyframes changedice6{
+    to{
+        transform: rotateX(-77deg) rotateY(-194deg) rotateZ(-197deg);
+    }
+}
+#mainHeader {
+	padding: 15px;
+	margin-top: 0;
+}
+
+#container {
+	margin: auto;
+	background: #fff;
+	border: 1px solid #e7e7e7;
+}
+
+ul#menuList {
+	list-style-type: none;
+	height: 50px;
+	margin-top: 0px;
+	margin-bottom: 0px;		
+}
+
+a, #menuList a:visited {
+	text-decoration: none;
+	display: block;
+	color: black;
+}
+
+#listhover a:hover{
+	font-weight: bold;
+	font-size: 30px;
+	opacity: 1;
+}
+#listhover a{
+	font-size: 18px;
+}
+#menuList>li {
+	display: block;
+	float: left;
+	margin: 13px;
+	margin-right: 50px;
+	text-shadow: 2px 2px 5px black;
+	height: 1.5em;
+	overflow: hidden;
+}
+
+section aside:nth-child(1){
+float: left;
+width: 20%;
+}
+
+section aside:nth-child(2){
+	width: 15%;
+}
+
+section article {
+	float: left;
+	width: 60%;
+	padding-top: 5px;
+	border-left: 1px solid black;
+	padding-top:  50px;
+}
+article hr{
+	margin-top: 50px;
+}
+#articlehome{
+	padding-bottom: 50px;
+}
+#articlehome div{
+	float: left;
+	width: 300px;
+	height: 220px;
+	margin: 3px;
+}
+article div{
+	margin-left: 50px;
+}
+h3+span{
+	font-size: 15px;
+	color: grey;
+	clear: both;
+}
+h3 span{
+	float: right;
+}
+
+#bulgogi{
+	border: 20px solid red;
+	border-radius: 10%;
+}
+table{
+	text-align: center;
+}
+#bulgogi>table td{
+	padding-left: 20px;
+	padding-right: 20px;
+	width: auto;
+}
+table td{
+	font-weight: bold;
+}
+#price{
+	color: red;
+}
+
+footer {
+	text-align: center;
+	clear: both;
+	padding-bottom: 40px;
+	font-size: 11px;
+}
+
+#divhome,#articlehome{
+	display: inline;
+}
+article, #div1,#div2,#div3,#div4{
+	display: none;
+}
+div#div1 ul, div#div2 ul, div#div3 ul, div#div4 ul{
+	list-style-type: none;
+	padding: 10px;
+	list-style-position: inside;
+}
+#div1 li, #div2 li, #div4 li{
+	margin-top: 15px;
+}
+#article_11,#article_12{
+	height: 480px;
+}
+@media screen and (max-width:768px){
+section aside:nth-of-type(1){
+	width: 40%;
+}
+section article{
+	width: 55%;
+}
+section aside:nth-of-type(2){
+	width: 100%;
+}
+}
+@media screen and (max-width:600px){
+section aside:nth-of-type(1){
+	width: 100%;
+}
+section article{
+	width: 100%;
+}
+section aside:nth-of-type(2){
+	width: 100%;
+}
+}

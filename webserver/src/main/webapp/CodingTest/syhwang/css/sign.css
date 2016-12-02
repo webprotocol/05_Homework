@@ -1,0 +1,86 @@
+@font-face {
+font-family: 새봄체;
+src:url("../fonts/LexiSaebomR.woff");
+}
+
+body {
+font-family: 새봄체;
+background-color:snow;
+
+
+	padding-top:50px;
+
+	float: left;
+	left: 50%;
+	position: fixed;
+    margin-top:30px;
+	margin-left: -660px;
+  width:400px;
+    min-height:200px;
+    z-index:100;
+    padding:30px;
+    border:1px solid #383838;
+    background: #D1D1D1;
+    background: repeating-linear-gradient(-45deg, #EFC1CB, #EFC1CB 30px, #F2F2F2 30px, #F2F2F2 40px, #C2E8F5 40px, #C2E8F5 70px, #F2F2F2 70px, #F2F2F2 80px);
+    /* FF3.6+ */
+    /*border-radius*/
+
+    border-radius:8px;
+    /*box-shadow*/
+
+    box-shadow:0px 1px 6px #3F3F3F;
+
+}
+/*로고*/
+#logo {
+font-family: 새봄체;
+margin-top: 30px;
+margin-left: 15px;
+
+}
+
+:focus {outline: none;}
+
+form {
+
+margin-right: 180px;
+}
+
+div {
+margin: 10px;
+}
+
+label, input[type="submit"] {
+width: 110px;
+display: inline-block;
+}
+
+input {
+width: 200px;
+}
+
+input:focus:invalid {
+box-shadow: 0 0 5px #d45252;
+border-color: #b03535;
+
+}
+
+input:focus:valid {
+box-shadow: 0 0 5px #5cd053;
+border-color: #28921f;
+}
+
+#logo, form {
+	line-height: 22px;
+	background-color: #fbfbfb;
+	padding: 13px 13px 13px 54px;
+	margin-bottom: 10px;
+	border-color: #ccc;
+	width:100%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+  border: 3px solid rgba(0,0,0,0);
+}
+

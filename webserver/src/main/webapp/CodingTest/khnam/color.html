@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<title>color.html</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+		#out {
+			width: 300px;
+			height: 100px;
+			border:1px solid red;
+			background-color:#000000;
+		}
+
+		span.color {
+			width: 50px;
+			height: 30px;
+			border: 1px solid green;
+			display: inline-block;
+		}
+
+		span.colStr {
+			width: 100px;
+			height: 30px;
+			border: 1px solid green;
+			display: inline-block;
+		}
+
+		label {
+			width:150px;
+			border:1px solid green;
+		}
+	</style>
+</head>
+
+<body>
+	<div>
+		<div>
+			<label>빨강색(R):</label>
+			<input type="range" min="0" max="255" value="255" data-color="R" oninput="changeColor(this)">
+			<span class="color" style="background-color:rgb(255,0,0)"></span>
+			<span class="colStr">rgb(255,0,0)</span>
+		</div>
+		<div>
+			<label>초록색(G):</label>
+			<input type="range" min="0" max="255" value="255" data-color="G" oninput="changeColor(this)">
+			<span class="color" style="background-color:rgb(0,255,0)"></span>
+			<span class="colStr">rgb(0,255,0)</span>
+		</div>
+		<div>
+			<label>파란색(B):</label>
+			<input type="range" min="0" max="255" value="255" data-color="B" oninput="changeColor(this)">
+			<span class="color" style="background-color:rgb(0,0,255)"></span>
+			<span class="colStr">rgb(0,0,255)</span>
+		</div>
+		
+	</div>
+
+	<div>
+		<div id="out" style="background-color:#000000"></div>
+		<div id="outStr">rgb(255,255,255)</div>	
+		<button onclick="sendData()">선택</button>
+	</div>	
+	<script>
+		var dvOut = document.querySelector('#out');
+		var dvOutStr = document.querySelector('#outStr');
+		var cols = document.querySelectorAll('input[type=range]');
+		var colsLen = cols.length;
+		var pBtnAttr = '';
+		
+		function setPBtnAttr(str) {
+			pBtnAttr = str;
+		}
+
+		function sendData() {
+			parent.closePanel(dvOutStr.innerHTML, pBtnAttr);
+		}
+
+		function viewOut() {
+			var rS = cols[0].value;
+			var gS = cols[1].value;
+			var bS = cols[2].value;
+		
+			var colStr = 'rgb(' + rS + ',' + gS + ',' + bS + ')'
+			dvOut.style.backgroundColor = colStr;
+			dvOutStr.innerHTML = colStr;
+		}
+
+		function changeColor(rng) {
+			var colType = rng.dataset.color;
+			var colStr = '';
+			switch(colType) {
+			case 'R' :
+				colStr = 'rgb(' + rng.value + ', 0,0)';
+				break;
+			case 'G' :
+				colStr = 'rgb(0,' + rng.value + ', 0)';
+				break;
+			case 'B' :
+				colStr = 'rgb(0,0,' + rng.value + ')';
+				break;
+			default :
+				break;
+			}
+
+			rng.nextElementSibling.style.backgroundColor = colStr;
+			rng.nextElementSibling.nextElementSibling.innerHTML = colStr;
+			viewOut();
+		}
+	</script>
+</body>
+
+</html>

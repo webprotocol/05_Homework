@@ -1,0 +1,220 @@
+/*
+▣ 실기시험 1 (40점 만점)
+	- 작성자 : 이희수(5강의실)
+	- 주 제 : HTML5 ＆ CSS3를 응용하여 웹브라우저를 자유롭게 꾸밀 수 있는 편지쓰기
+	- 목 적 : input태그의 다양한 type을 이용하여 문서편집(편지쓰기)을 편리하게 할 수 있다
+	- 기 능 : HTML5 & CSS3를 자유롭게 활용할 수 있으며 JAVASCRIPT를 이용하여 CSS를 효과적으로 나타낸다
+*/
+
+/*font style*/
+	#f1 {
+		font-family: 'Nanum Pen Script';
+	}
+	#f2 {
+		font-family: 'Nanum Brush Script';
+	}
+	#f3 {
+		font-family: 'Jeju Hallasan';
+	}
+	#f4 {
+		font-family: 'KoPub Batang';
+	}
+	#c1 {
+		color : DimGrey;
+	}
+	#c2 {
+		color : DeepPink;
+	}
+	#c3 {
+		color : LightCoral;
+	}
+	#c4 {
+		color : Maroon;
+	}
+	#c5 {
+		color : MidnightBlue;
+	}
+	#c6 {
+		color : OliveDrab;
+	}
+	#c7 {
+		color : SteelBlue;
+	}
+	#b1 {
+			font-weight: bold;
+		}
+
+	#b2 {
+		font-weight: lighter;
+		}
+
+	#b3 {
+		font-weight: bolder;
+		}
+	#italic {
+		font-style: italic;
+}
+
+/*default TAG style*/
+	summary {
+		color : lightsalmon;
+		font-family: 'Jeju Gothic';
+	}
+
+	label , figcaption, #title, #normal, #itaclic {
+		font-size: 10pt;
+		color : #808080;
+	}
+
+	.rule {
+		border : 1px dotted LightSalmon;
+		background-color: rgba(255,250,240,0.4);
+	}
+
+	ol {
+		list-style-position: inside;
+		margin: 5px;
+		padding :0px;
+	}
+
+	fieldset {
+		border: none;
+		background-color: rgba(255,250,240,0.4);
+		border : 1px dotted LightSalmon;
+	}
+	#skin {
+		box-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+	}
+	#text_out {
+		border : none;
+		box-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+		background-image: url('img/letterbg.png');
+}
+
+/*button style*/
+.button {
+	background-color: LightSalmon;
+    border: none;
+	border-radius: 100px;
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+	position: relative;
+	font-family: 'Jeju Gothic';
+	float : left;
+	}
+
+.button1 {
+    background-color: white;
+    color: #808080;
+    border: 2px solid LightSalmon;
+	}
+
+.button1:hover {
+    background-color: LightSalmon;
+    color: white;
+}
+
+
+
+/*Desktop*/
+@media screen and (min-width:768px) {
+	header {
+		width:20%;
+		float: left;
+	}
+	fieldset {
+		width : 20%;
+		float : left;
+		margin : 10px;
+	}
+	.aside01, .aside02,.aside03, #button{
+		clear: both;
+	}
+	#text_out {
+		width: 70%;
+		height : 800px;
+		margin:10px;
+		padding:20px;
+	}
+
+	#div1 {
+		width : 100%;
+		height : 100%;
+	}
+	.rule {
+		margin : 10px;
+		padding : 10px;
+	}
+}
+/*Tablet - [ipad]Portrait version*/
+@media screen and (max-width:768px) {
+	.rule {
+		width : 97%;
+		padding : 10px;
+	}
+	.aside01 {
+		display: none;
+	}
+	.aside02 {
+		width: 45%;
+		margin-left: 0;
+		padding : 10px;
+		float: left;
+	}
+	.aside03 {
+		width: 45%;
+		margin-left: 52%;
+		padding : 10px;
+	}
+	#text_out {
+		width: 95%;
+		height : 800px;
+		padding:20px;
+	}
+
+	#div1 {
+		width : 100%;
+		height : 100%;
+	}
+	
+}
+
+/*Smart Phone - [GalasyS6]Portrait version*/
+@media screen and (max-width:600px) {
+	.rule {
+		width : 94%;
+		padding : 10px;
+	}
+	.aside01 {
+		display: none;
+	}
+	.aside02 {
+		width: 94%;
+		margin-left: 0;
+		padding : 10px;
+		float: left;
+	}
+	.aside03 {
+		width: 94%;
+		margin-left: 0;
+		padding : 10px;
+	}
+	#text_out {
+		width: 94%;
+		height : 800px;
+		padding:10px;
+	}
+
+	#div1 {
+		width : 100%;
+		height : 100%;
+	}
+}
+
+
+	

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<!--
+▣ 실기시험 1 (40점 만점)
+	- 작성자 : 민혜진(5강의실)
+	- 주 제 : 사진 액자 프레임 바꾸기
+	- 목 적 : background 속성과 font 속성 활용하기
+	- 기 능 : 액자형태 배경 프레임 색깔 변경과 프레임 굵기와 형태 변형, 사진에 대한 메모 글꼴 변경과 스타일 설정
+-->
+<html lang="ko">
+<head>
+<title>storyboard.html</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="css/gridsystem.css" rel="stylesheet">
+<link href="css/storyboard.css" rel="stylesheet">
+</head>
+<body>
+<fieldset>
+	<legend>실기시험 1</legend>
+	<ol>
+		<li>작성자 : 민혜진 </li>
+		<li>주제 : 사진 액자 프레임 바꾸기</li>
+		<li>목적 : background 속성과 font 속성 활용하기</li>
+		<li>기능 : 액자형태 배경 프레임 색깔 변경과 프레임 굵기와 형태 변형, 사진에 대한 메모 글꼴 변경과 스타일 설정</li>
+	</ol>
+</fieldset>
+<div id="wrapper">
+<header>
+	<h1>Frame Generator</h1>
+</header>
+<section class="row">
+<aside class="menu col-m-4 col-3">
+<ul class="m">
+	<li>액자 스타일</li>
+	<button onclick="changeDisplay(event)">Frame menu</button>
+	<button onclick="changeDisplay(event)">Off menu</button>
+	<div id="menu1">
+	<ul>
+		<li>배경 색상</li>
+		<div>
+			<label> R <input style="width:40%;" id="red" type="range" min="0" max="255" value="255" oninput="changeRed(event)">
+			<span></span></label><br>
+			<label> G <input style="width:40%;" id="green" type="range" min="0" max="255" value="0" oninput="changeGreen(event)">
+			&nbsp;&nbsp;<span id="rgb_out"></span></label><br>
+			<label> B <input style="width:40%;" id="blue" type="range" min="0" max="255" value="0" oninput="changeBlue(event)">
+			<span></span></label>
+		</div>
+		<li>액자 테두리</li>
+		<div>
+			<label>Width(최대 100)
+			<input id="br_width" oninput="changeBrwidth(event)" type="number" min="0" max="100" value="1" style="width:23%;"></label><br>
+			<label>Style
+			<select onchange="changeBrstyle(event)">
+				<option value="none">None</option>
+				<option value="solid">Solid</option>
+				<option value="dotted">Dotted</option>
+				<option value="dashed">Dashed</option>
+				<option value="double">Double</option>
+				<option value="groove">Groove</option>			
+			</select>	
+			</label><br>
+			<label>Border Color
+			<input onchange="changeBrcolor(event)" type="color" value="#191970"></label>
+		</div>
+	</ul>
+	</div>
+	<li>텍스트</li>
+	<button onclick="changeDisplay(event)">Text menu</button>
+	<button onclick="changeDisplay(event)">Off menu</button>
+	<div id="menu2">
+	<ul>
+		<li>메모 입력</li>
+		<input type="text" id="MemoPicture" oninput="changeMemo(event)" placeholder="사진에 남기고 싶은 메모">
+		<li>글꼴 모양</li>
+		<div>
+			<label>Font Family
+			<select onchange="changeFfamily(event)">
+				<option value="">--선택--</option>
+				<option style="font-family:init;" value="init">Initial</option>
+				<option style="font-family:sail;" value="sail">Sail Regular</option>
+				<option style="font-family:caveat;" value="caveat">Caveat Regular</option>
+				<option style="font-family:italianno;" value="italianno">Italianno Regular</option>
+				<option style="font-family:나눔고딕;" value="나눔고딕">나눔고딕체</option>
+				<option style="font-family:휴먼매직체;" value="휴먼매직체">휴먼매직체</option>
+			</select>
+			</label>
+		</div>
+		<li>글꼴 스타일</li>
+		<div>
+			<label>Font Style <br>
+			<input onchange="changeFstyle(event)" type="radio" name="fstyle" value="normal">Normal
+			<input onchange="changeFstyle(event)" type="radio" name="fstyle" value="italic">Italic<br>
+			<input onchange="changeFweight(event)" type="radio" name="fstyle" value="bold">Bold
+			<input onchange="changeFweight(event)" type="radio" name="fstyle" value="lighter">Lighter
+			</label>				
+		</div>
+		<li>글씨 사이즈</li>
+		<div>
+			<label>Font Size
+			<input oninput="changeFsize(event)" style="width:40%;" type="range" min="0" max="50" value="1">
+			<span></span>
+			</label>
+		</div>
+	</ul>
+	</div>
+</ul>
+</aside>
+<article class="col-m-8 col-6">
+	<fieldset>
+		<div id="imgFrame">
+		<figure class="imgbox">
+			<img src="http://www.loremflickr.com/300/300/Mountain" alt="Mountain">
+		</figure>
+		</div>
+		<p id="memo_out"></p>
+	</fieldset>
+</article>
+<aside class="col-m-12 col-3 a_date">
+	<div id="in_date" >
+		<div id="datearea">
+			<h4>The Date is</h4>
+			<p id="Tdate"></p>
+			<h4>The Day is</h4>
+			<p id="Tday"></p>
+		</div>
+	</div>
+	<script>
+		var date = new Date();
+		var toyear = date.getFullYear();
+		var tomonth = date.getMonth()+1;
+		var todate = date.getDate();
+		var toDay = date.getDay();
+		var days = ['Sunday', 'MonDay', 'TuesDay', 'WednsDay', 'ThursDay', 'FaiDay', 'SaturDay'];
+		
+		document.getElementById("Tdate").innerHTML = toyear + '/' + tomonth + '/' + todate;
+		document.getElementById("Tday").innerHTML = (days[toDay]);
+	</script>
+</aside>
+</section>
+<footer>
+	<p>Copyright (c) 2016 hj. All rights reserved.</p>
+</footer>
+</div>
+<script src="js/storyboard.js"></script>
+</body>
+</html>

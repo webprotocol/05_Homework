@@ -1,0 +1,312 @@
+@import url(http://fonts.googleapis.com/earlyaccess/nanumbrushscript.css);
+*{
+    box-sizing: border-box;
+	font-family: 'Nanum Brush Script', cursive;
+	font-size: 1em;
+	font-weight: bold;
+}
+body{
+	background-image: url('../img/texture5.png');
+    background-attachment: fixed;
+}
+@font-face {
+    font-family: SeoulHangangB;
+    src: url(../fonts/SeoulHangangB.woff);
+}
+@font-face {
+    font-family: SeoulHangangL;
+    src: url(../fonts/SeoulHangangL.woff);
+}
+@font-face {
+    font-family: MASQUE;
+    src: url(../fonts/MASQUE.woff);
+}
+@font-face {
+    font-family: BebasNeue;
+    src: url(../fonts/BebasNeue.woff);
+}
+input[type="image"]{
+	width:20px;
+	height:20px;
+}
+input[type="image"]:hover{
+	border:1px solid gray;
+}
+.divbutton{
+	background-color: white;
+	border:1px solid black;
+	border-radius: 20px;
+	text-align:center;
+	position:relative;
+	top:5px; 
+}
+.divcontent{
+	height:400px;
+	position:relative;
+	top:10px;
+}
+.divdisplay{
+	display:none;
+}
+textarea{
+	height:400px;
+	font-size: 12pt;
+}
+/* for mobile */
+
+[class*="col-"]{
+    width:100%;
+	/*border:1px solid red;*/
+}
+.padding{
+	padding:10px;
+}
+h6{
+	padding:0;
+	margin:0px;
+	margin-left:20px;
+	color:white;
+}
+
+.colorPicker{
+	border:1px solid black;
+	background-color: white;
+	padding:10px 5px;
+	width:110px;
+	height:140px;
+	position: absolute;
+	left:100px;
+	top:210px;
+	z-index: 3;
+	display: none;
+}
+td[id*=colorPicker]{
+	border:1px solid black;
+	width:30px;
+	height:30px;
+}
+td[id*=colorPicker]:hover{
+	border:3px solid blue;
+	cursor: pointer;
+}
+#colorPickerTred{
+	background-color: red;
+}
+#colorPickerTorange{
+	background-color: orange;
+}
+#colorPickerTyellow{
+	background-color: yellow;
+}
+#colorPickerTgreen{
+	background-color: green;
+}
+#colorPickerTblue{
+	background-color: blue;
+}
+#colorPickerTpurple{
+	background-color: purple;
+}
+#colorPickerTlime{
+	background-color: lime;
+}
+#colorPickerTpink{
+	background-color: hotpink;
+}
+#colorPickerTcoral{
+	background-color: coral;
+}
+
+/* fot tablet */
+@media screen and (min-width:600px){
+.col-m-1{ width:8.33%; }
+.col-m-2{ width:16.66%; }
+.col-m-3{ width:25%; }
+.col-m-4{ width:33.33%; }
+.col-m-5{ width:41.66%; }
+.col-m-6{ width:50%; }
+.col-m-7{ width:58.33%; }
+.col-m-8{ width:66.66%; }
+.col-m-9{ width:75%; }
+.col-m-10{ width:83.33%; }
+.col-m-11{ width:91.66%; }
+.col-m-12{ width:100%; }
+
+.divdisplay{
+	background-color: black;
+	width:30px;
+	height:130px;
+	position:fixed;
+	left:0px;
+	bottom:0px;
+	display: block;
+	z-index: 3;
+}
+.divdisplay::after{
+	content:" 바\a  탕\a  테\a  마\a ";
+	white-space:pre; 
+	font-weight: bold;
+	color:white;
+}
+.display_hide{
+	height:150px;
+	/*border:1px solid blue;*/
+	background-color: black;
+	display: none;
+}
+.display_hide label{
+	color:white;
+	font-weight: bold;
+}
+.divdisplay:hover{
+	cursor: pointer;
+}
+.divdisplay:hover .display_hide{
+		display: block;
+		animation-name: divdisplay;
+		animation-duration: 1s;
+		animation-timing-function:ease-out;
+		animation-fill-mode: forwards;
+		transform-origin: left top;
+}
+.display_hide label:hover{
+	cursor: pointer;
+}
+@keyframes divdisplay{
+	from{
+		width:50px;
+	}
+	to{
+		width:250px;
+	}
+}
+
+textarea{
+	height:700px;
+}
+.divbutton{
+	position:fixed;
+	left: 0px;
+	top:5px; 
+	z-index: 2;
+}
+.divcontent{
+	position:relative;
+	top:120px;
+	z-index: 1;
+}
+.colorPicker{
+	border:1px solid black;
+	background-color: white;
+	padding:10px 5px;
+	width:110px;
+	height:140px;
+	position: absolute;
+	left:450px;
+	top:80px;
+	z-index: 3;
+	display: none;
+}
+td[id*=colorPicker]{
+	border:1px solid black;
+	width:30px;
+	height:30px;
+}
+
+}
+/* fot desktop */
+@media screen and (min-width:768px){
+.col-1{ width:8.33%; }
+.col-2{ width:16.66%; }
+.col-3{ width:25%; }
+.col-4{ width:33.33%; }
+.col-5{ width:41.66%; }
+.col-6{ width:50%; }
+.col-7{ width:58.33%; }
+.col-8{ width:66.66%; }
+.col-9{ width:75%; }
+.col-10{ width:83.33%; }
+.col-11{ width:91.66%; }
+.col-12{ width:100%; }
+
+.colorPicker{
+	border:1px solid black;
+	background-color: white;
+	padding:10px 5px;
+	width:100px;
+	height:120px;
+	position: absolute;
+	left:590px;
+	top:80px;
+	z-index: 3;
+	display: none;
+}
+td[id*=colorPicker]{
+	border:1px solid black;
+	width:20px;
+	height:20px;
+}
+.divdisplay{
+	background-color: black;
+	width:30px;
+	height:130px;
+	position:fixed;
+	left:0px;
+	bottom:0px;
+	display: block;
+	z-index: 3;
+}
+.divdisplay::after{
+	content:" 바\a  탕\a  테\a  마\a ";
+	white-space:pre; 
+	font-weight: bold;
+	color:white;
+}
+.display_hide{
+	height:170px;
+	/*border:1px solid blue;*/
+	background-color: black;
+	display: none;
+}
+.display_hide label{
+	color:white;
+	font-weight: bold;
+}
+.divdisplay:hover{
+	cursor: pointer;
+}
+.divdisplay:hover .display_hide{
+		display: block;
+		animation-name: divdisplay;
+		animation-duration: 1s;
+		animation-timing-function:ease-out;
+		animation-fill-mode: forwards;
+		transform-origin: left top;
+}
+.display_hide label:hover{
+	cursor: pointer;
+}
+@keyframes divdisplay{
+	from{
+		width:50px;
+	}
+	to{
+		width:250px;
+	}
+}
+
+textarea{
+	height:700px;
+}
+.divbutton{
+	position:fixed;
+	left: 0px;
+	top:5px; 
+	z-index: 2;
+	padding:5px;
+}
+.divcontent{
+	position:relative;
+	top:110px;
+	z-index: 1;
+}

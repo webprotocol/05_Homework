@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+<title></title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="css/wireframe.css" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<script src="js/wireframe.js"></script>
+</head>
+
+<body id="out_out">
+			<fieldset>
+	<legend>실기시험 2</legend>
+	<ol>
+		<li>작성자 : 김종순</li>
+		<li>주제 :  애니매이션 </li>
+		<li>목적 :  동작 제어</li>
+		<li>기능 :  배경색 변경, 글자색 변경, 글자크기 변경, 글자 애니메이션 동작제어, 별 동작 제어</li>
+	</ol>
+</fieldset>
+<header>
+	<div class="star1">★</div>
+	<div class="star1">★</div>
+	<div class="star1">★</div>
+	<div class="star1">★</div>
+	<div class="star1">★</div>
+	<div class="star1">★</div>
+	<div class="star1">★</div>
+	<div class="star1">★</div>
+</header>
+	<article>
+<pre id="out_out_out"><div id="out1_out"></div></pre>
+	</article>
+	<aside>
+	<span id="div2">
+	<span id="span1">뭐든지 입력하세요^^</span>
+	<label><textarea oninput="text_out(event)" id="text1" rows="0" cols="50"></textarea></label><br>
+	<span>배경색 변경 : </span>
+	<input id="color1" oninput="color_out(event)" type="color"value="white">
+	<span>글자색 변경 : </span><input id="color1" oninput="color1_out(event)" type="color"value="white">
+	<br>
+	
+	<span>글자크기 변경 : </span>
+	<input id="range1" type="range"oninput="font_out1(event)" min="8" max="300" value="25">
+	<input id="radio1" onchange="changePlayState(event)" type="radio" name="playstate" value="running" checked> <span>Go!</span>
+	<input id="radio1" onchange="changePlayState(event)" type="radio" name="playstate" value="paused"> <span>Stop!</span><br>
+	<span>속도 : </span><input id="num1" oninput="number_out(event)" type="number"min="0" max="50" value="0"><br>
+	별 Start : <a href="#"><i class="material-icons" onclick="changePlayState1(event)">&#xE037;</i></a>
+	별 Stop : <a href="#"><i class="material-icons" onclick="changePlayState2(event)">&#xE034;</i></a>
+	</span>
+	</aside>
+	
+</body>
+
+</html>

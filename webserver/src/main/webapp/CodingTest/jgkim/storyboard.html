@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<!--
+▣  실기시험 : (40점 만점)
+	- 작성자 : 김진곤 (5강의실)
+	- 주 제 : color picker
+	- 목 적 : HTML5환경에서 색상 선택 툴을 제공한다.
+	- 기 능 : 기능 : 사용자가 임의로 설정할 수 있는 사용자 팔레트 기능
+			선택한 색상의 RGB값 표시 및 RGB값으로 색 선택 가능
+-->
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+	<title>Title</title>
+	<link rel="stylesheet" href="css/storyboard.css">
+</head>
+<body ondragstart="return false;" onselectstart="return false;">
+<fieldset>
+	<legend>실기시험 1</legend>
+	<ol>
+		<li>작성자 : 김진곤</li>
+		<li>주제 : color picker</li>
+		<li>목적 : HTML5환경에서 색상 선택 툴을 제공한다.</li>
+		<li>기능 : 사용자가 임의로 설정할 수 있는 사용자 팔레트 기능 <br>
+			선택한 색상의 RGB값 표시 및 RGB값으로 색 선택 가능</li>
+	</ol>
+</fieldset>
+
+<button id="show" onclick="picker.show(true)">보이기</button>
+
+<div class="colorPickerPanel">
+
+	<!--Color Controller-->
+	<div class="panelRow">
+		<div class="spectrumPanel">
+			<button class="spectrumPointer"></button>
+			<canvas class="spectrumMap"></canvas>
+		</div>
+		<div class="huePanel">
+			<div class="huePointer"></div>
+			<canvas class="hueMap"></canvas>
+		</div>
+	</div>
+
+	<!--RGB Values-->
+	<div class="panelRow flexLayout">
+		<div class="flexLayout">
+			<label class="rgbLabel">R:</label>
+			<input type="number" max="255" min="0" value="255" id="red" class="rgbInput"/>
+		</div>
+		<div class="flexLayout">
+			<label class="rgbLabel">G:</label>
+			<input type="number" max="255" min="0" value="255" id="green" class="rgbInput"/>
+		</div>
+		<div class="flexLayout">
+			<label class="rgbLabel">B:</label>
+			<input type="number" max="255" min="0" value="255" id="blue" class="rgbInput"/>
+		</div>
+	</div>
+
+	<!--Swatch-->
+	<div class="panelRow">
+		<div class="defaultSwatches"></div>
+		<hr class="swatchDelimiter">
+		<div class="userSwatches"></div>
+		<button class="addSwatch">
+			<span class="colorBox"></span>
+			<span class="addSwatchText">팔레트에 추가</span>
+		</button>
+	</div>
+
+	<!--Buttons-->
+	<div class="panelRow">
+		<button class="button cancelButton">Cancel</button>
+		<button class="button selectButton">Select</button>
+	</div>
+</div>
+<script src="js/storyboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+<title>background.html</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="css/background.css" rel="stylesheet">
+</head>
+<body>
+
+<header>
+    <h1>② Background is ..</h1>
+</header> 
+
+<fieldset>
+    <legend>Color Select</legend>
+
+    <!--result-->
+    <div id="result_out"></div>
+    <p><b>※ Default</b> : BG(white) / border(3px black)</p>
+    <hr style="border: 5px double gold;"> 
+
+    <!--Border-width-->
+    <label for="b_wid" style="font-weight: bold;"> ◈ Border-width : </label>
+    <input id="b_wid" oninput="changeWidth(event)" type="number" min="0" max="50" value="3">
+    <hr>
+
+    <!--Border-color-->
+    <label for="b_col" style="font-weight: bold;"> ◈ Border-color : </label>
+    <select id="b_col" onchange="changebColor(event)">
+        <option value="black" selected>Black (검정)</option>
+        <option value="red">Red (빨강)</option>
+        <option value="Orange">Orange (주황)</option>
+        <option value="gold">Gold (황금)</option>
+        <option value="teal">Teal (청록)</option>
+        <option value="dodgerblue">Dodgerblue (파랑)</option>
+        <option value="palevioletred">Palevioletred (보라)</option>
+    </select> 
+    <hr>
+
+    <!--Background-color-->
+    <label style="font-weight: bold; display:inline-block;"> ◈ Background-color :  
+    <span class="r">R</span><span class="g">G</span><span class="b">B</span> 
+    ( <span id="red_out1"> 0 </span><span id="green_out1"> 0 </span><span id="blue_out1"> 0 </span> ) </label>
+    <div>
+        <label for="red" style="width:60px; display:inline-block; background-color:red; color:white;"> Red : </label>
+        <input oninput="changeRed(event)" type="range" min="0" max="255" value="0" style="width:70%">
+        <span id="red_out"> 0 </span>
+    </div>
+    <div>
+        <label for="green" style="width:60px; display:inline-block; background-color:green; color:white;"> Green : </label>
+        <input oninput="changeGreen(event)" type="range" min="0" max="255" value="0" style="width:70%">
+        <span id="green_out"> 0 </span>
+    </div>
+    <div>
+        <label for="blue" style="width:60px; display:inline-block; background-color:blue; color:white;"> Blue : </label>
+        <input oninput="changeBlue(event)" type="range" min="0" max="255" value="0" style="width:70%">
+        <span id="blue_out"> 0 </span>
+    </div>
+</fieldset>
+
+<footer>
+    <h1>Thank U<span> ♥ </span></h1>
+</footer>
+
+<script src="js/background.js"></script>
+</body>
+</html>

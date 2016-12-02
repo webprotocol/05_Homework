@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<!--
+▣ 실기시험 1 (40점 만점)
+	- 작성자 : 권혁준 (5강의실)
+	- 주제 : 두더지 잡기 게임
+	- 목적 : 1분동안 두더지를 잡는다.
+	- 기능 : 게임
+-->
+<html lang="ko">
+
+<head>
+	<title>storyboard.html</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<link href="css/storyboard.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet"> 
+
+	<!-- Using Greed System 16Col / 16Row -->
+	<link href="css/Greed.css" rel="stylesheet">
+</head>
+
+<body>
+	<fieldset>
+		<legend>실기시험 1</legend>
+		<ol>
+			<li>작성자 : 권혁준 (5강의실)</li>
+			<li>주제 : 두더지 잡기 게임</li>
+			<li>목적 : 1분동안 두더지를 잡는다.</li>
+			<li>기능 : 시간선택가능(js에서 설정), 난이도 존재(총 3단계)</li>
+		</ol>
+	</fieldset>
+
+	<div id="Buttons" class="col-4 row-16">
+		<div class="col-16 row-16 Filter">
+			<div class="row-2 col-16 BlockerY"></div>
+			<div class="col-2 row-12 BlockerX"></div>
+			<div id="Button_Contents" class="row-12 col-12">
+				<div id="PlayButton" class="col-16 row-5" onclick="PlayPauseButtonClicked()">
+					<div class="col-16 row-16 OuterCircle">
+						<div class="col-16 row-3 BlockerX"></div>
+						<div class="col-3 row-10 BlockerY"></div>
+						<div id="PlayButtonContents" class="col-10 row-10" >
+							<div id="PlayTriangle">
+							</div>
+							<div id=Left>
+							</div>
+							<div id=Right>
+							</div>
+						</div>
+						<div class="col-3 row-10 BlockerY"></div>
+						<div class="col-16 row-3 BlockerX"></div>
+					</div>
+				</div>
+				<div class="col-16 row-1 BlockerY"></div>
+				<div id="StopButton" class="col-16 row-5" onclick=TerminateAll() >
+					<div class="col-16 row-16 OuterCircle">
+						<div class="col-16 row-3 BlockerX"></div>
+						<div class="col-3 row-10 BlockerY"></div>
+						<div id="StopButtonContents" class="col-10 row-10" >
+						</div>
+						<div class="col-3 row-10 BlockerY"></div>
+						<div class="col-16 row-3 BlockerX"></div>
+					</div>
+				</div>
+				<div class="col-16 row-1 BlockerY"></div>
+				<div id="ScoreBoard" class="col-16 row-4">
+					<div class="col-16 row-1 BlockerX"></div>
+					<div id="ScoreBox" class="col-16 row-12">
+						<div class="col-2 row-16 BlockerX"></div>
+						<div class="col-12 row-2 BlockerY"></div>
+						<div class="col-12 row-10" id=Scores>
+							Hit : <span id="MoleCatched"></span><BR>
+							P : <span id="ScoreValue"></span>
+						</div>
+						<div class="col-2 row-16 BlockerX"></div>
+					</div>
+					<div class="col-16 row-2 BlockerX"></div>
+				</div>
+			</div>
+			<div class="col-2 row-12 BlockerX"></div>
+			<div class="row-2 col-16 BlockerY"></div>
+		</div>
+	</div>
+
+	<div id="GameScreen" class="col-12  row-16">
+		<div class="col-16 row-16 Filter">
+			<div class="row-1 col-16 BlockerY"></div>
+			<div class="col-1 row-14 BlockerX"></div>
+			<div class="col-14 row-14 Game_Contents">
+				<div id="Line1" class="col-16 row-5 Game_Contents">
+					<div class="col-2 row-16 BlockerX"></div>
+					<div class="col-1d2 row-16 BlockerX"></div>
+					<div class="col-1d4 row-16 BlockerX"></div>
+					<div class="col-5 row-16 Mole HoleBack">
+						<div id="GameBox" class="col-16 row-16 Mole Mobile">
+							<div class="col-16 row-2 BlockerY"></div>
+							<div class="col-2 row-14 BlockerX"></div>
+							<div class="col-12 row-12 MobileBox">
+								<img id=Mole1 name="MoleMobile" src="img/Mole.png" onclick="MoleClickEvent(0)">
+							</div>
+							<div class="col-2 row-14 BlockerX"></div>
+							<div class="col-16 row-2 BlockerY"></div>
+						</div>
+						<div class="col-16 row-16 Mole HoleFront">
+						</div>
+					</div>
+					<div class="col-1d2 row-16 BlockerX"></div>
+					<div class="col-5 row-16 Mole HoleBack">
+						<div id="GameBox" class="col-16 row-16 Mole Mobile">
+							<div class="col-16 row-2 BlockerY"></div>
+							<div class="col-2 row-14 BlockerX"></div>
+							<div class="col-12 row-12 MobileBox">
+								<img id=Mole2 name="MoleMobile" src="img/Mole.png" onclick="MoleClickEvent(1)">
+							</div>
+							<div class="col-2 row-14 BlockerX"></div>
+							<div class="col-16 row-2 BlockerY"></div>
+						</div>
+						<div class="col-16 row-16 Mole HoleFront">
+						</div>
+					</div>
+					<div class="col-1d4 row-16 BlockerX"></div>
+					<div class="col-1d2 row-16 BlockerX"></div>
+					<div class="col-2 row-16 BlockerX"></div>
+				</div>
+				<div class="col-16 row-1d2 BlockerY"></div>
+				<div id="Line2" class="col-16 row-5 Game_Contents">
+					<div class="col-5 row-16 Mole HoleBack">
+						<div id="GameBox" class="col-16 row-16 Mole Mobile">
+							<div class="col-16 row-2 BlockerY"></div>
+							<div class="col-2 row-14 BlockerX"></div>
+							<div class="col-12 row-12 MobileBox">
+								<img id=Mole3 name="MoleMobile" src="img/Mole.png" onclick="MoleClickEvent(2)">
+							</div>
+							<div class="col-2 row-14 BlockerX"></div>
+							<div class="col-16 row-2 BlockerY"></div>
+						</div>
+						<div class="col-16 row-16 Mole HoleFront">
+						</div>
+					</div>
+					<div class="col-1d2 row-16 BlockerX"></div>
+					<div class="col-5 row-16 Mole HoleBack">
+						<div id="GameBox" class="col-16 row-16 Mole Mobile">
+							<div class="col-16 row-2 BlockerY"></div>
+							<div class="col-2 row-14 BlockerX"></div>
+							<div class="col-12 row-12 MobileBox">
+								<img id=Mole4 name="MoleMobile" src="img/Mole.png" onclick="MoleClickEvent(3)">
+							</div>
+							<div class="col-2 row-14 BlockerX"></div>
+							<div class="col-16 row-2 BlockerY"></div>
+						</div>
+						<div class="col-16 row-16 Mole HoleFront">
+						</div>
+					</div>
+					<div class="col-1d2 row-16 BlockerX"></div>
+					<div class="col-5 row-16 Mole HoleBack">
+						<div id="GameBox" class="col-16 row-16 Mole Mobile">
+							<div class="col-16 row-2 BlockerY"></div>
+							<div class="col-2 row-14 BlockerX"></div>
+							<div class="col-12 row-12 MobileBox">
+								<img id=Mole5 name="MoleMobile" src="img/Mole.png" onclick="MoleClickEvent(4)">
+							</div>
+							<div class="col-2 row-14 BlockerX"></div>
+							<div class="col-16 row-2 BlockerY"></div>
+						</div>
+						<div class="col-16 row-16 Mole HoleFront">
+						</div>
+					</div>
+				</div>
+				<div class="col-16 row-1d2 BlockerY"></div>
+				<div id="Line3" class="col-16 row-5 Game_Contents">
+					<div class="col-2 row-16 BlockerX"></div>
+					<div class="col-1d2 row-16 BlockerX"></div>
+					<div class="col-1d4 row-16 BlockerX"></div>
+					<div class="col-5 row-16 Mole HoleBack">
+						<div id="GameBox" class="col-16 row-16 Mole Mobile">
+							<div class="col-16 row-2 BlockerY"></div>
+							<div class="col-2 row-14 BlockerX"></div>
+							<div class="col-12 row-12 MobileBox">
+								<img id=Mole6 name="MoleMobile" src="img/Mole.png" onclick="MoleClickEvent(5)">
+							</div>
+							<div class="col-2 row-14 BlockerX"></div>
+							<div class="col-16 row-2 BlockerY"></div>
+						</div>
+						<div class="col-16 row-16 Mole HoleFront">
+						</div>
+					</div>
+					<div class="col-1d2 row-16 BlockerX"></div>
+					<div class="col-5 row-16 Mole HoleBack">
+						<div id="GameBox" class="col-16 row-16 Mole Mobile">
+							<div class="col-16 row-2 BlockerY"></div>
+							<div class="col-2 row-14 BlockerX"></div>
+							<div class="col-12 row-12 MobileBox">
+								<img id=Mole7 name="MoleMobile" src="img/Mole.png" onclick="MoleClickEvent(6)">
+							</div>
+							<div class="col-2 row-14 BlockerX"></div>
+							<div class="col-16 row-2 BlockerY"></div>
+						</div>
+						<div class="col-16 row-16 Mole HoleFront">
+						</div>
+					</div>
+					<div class="col-1d4 row-16 BlockerX"></div>
+					<div class="col-1d2 row-16 BlockerX"></div>
+					<div class="col-2 row-16 BlockerX"></div>
+				</div>
+			</div>
+			<div class="col-1 row-14 BlockerX"></div>
+			<div class="row-1 col-16 BlockerY"></div>
+		</div>
+	</div> 
+
+	<div id=DebugModeBox>
+		GameStatus : <span id=DebugGameStatus></span>  <span id=DebugTimer></span><BR>
+		Mole Status > <BR>
+		<table>
+			<tr>
+				<td></td>
+				<td>Mole 0</td>
+				<td>Mole 1</td>
+				<td>Mole 2</td>
+				<td>Mole 3</td>
+				<td>Mole 4</td>
+				<td>Mole 5</td>
+				<td>Mole 6</td>
+			</tr>
+			<tr>
+				<td>Active</td>
+				<td class="DebugMoleActive"></td>
+				<td class="DebugMoleActive"></td>
+				<td class="DebugMoleActive"></td>
+				<td class="DebugMoleActive"></td>
+				<td class="DebugMoleActive"></td>
+				<td class="DebugMoleActive"></td>
+				<td class="DebugMoleActive"></td>
+			</tr>
+			<tr>
+				<td>Clicked</td>
+				<td><span class="DebugMoleClicked"></span></td>
+				<td><span class="DebugMoleClicked"></span></td>
+				<td><span class="DebugMoleClicked"></span></td>
+				<td><span class="DebugMoleClicked"></span></td>
+				<td><span class="DebugMoleClicked"></span></td>
+				<td><span class="DebugMoleClicked"></span></td>
+				<td><span class="DebugMoleClicked"></span></td>
+			</tr>
+			<tr>
+				<td>MoleValue</td>
+				<td><span class="DebugMoleValue"></span></td>
+				<td><span class="DebugMoleValue"></span></td>
+				<td><span class="DebugMoleValue"></span></td>
+				<td><span class="DebugMoleValue"></span></td>
+				<td><span class="DebugMoleValue"></span></td>
+				<td><span class="DebugMoleValue"></span></td>
+				<td><span class="DebugMoleValue"></span></td>
+			</tr>
+		</table>
+		Timer Handler : <span id=TimerHandler></span>
+	</div>
+
+	<script src="js/storyboard.js"></script>
+</body>
+
+</html>

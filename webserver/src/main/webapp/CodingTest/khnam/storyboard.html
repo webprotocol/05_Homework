@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!--
+▣ 실기시험 1 (40점 만점)
+	- 작성자 : 남기훈 (5강의실)
+	- 주  제 : 간단한 웹 에디터 구현하기
+	- 목  적 : Javascript로 DOM 다루는 연습
+	- 기  능 : iframe의 body를 editable mode로 스타일 및 태그적용, execCommand() 사용
+-->
+<html lang="ko">
+
+<head>
+	<title>storyboard.html</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="css/gridsystem.css" rel="stylesheet">
+	<link href="css/menu.css" rel="stylesheet">
+	<link href="css/storyboard.css" rel="stylesheet">
+
+	<script src="js/storyboard.js"></script>
+</head>
+
+<body>
+	<header>
+		<div>
+			<img id="hdImg" src="http://www.placehold.it/24x24">
+			<span id="hdTitle">Project</span><span id="hdDate"><em>(2016.11.21 ~ 2016.12.3)</em></span>
+		<div>
+	</header>
+
+	<section class="row">
+		<aside class="menu col-2 col-m-12">
+			<ul>
+				<li id="storyboard"><a href="#storyboard">StoryBoard</a></li>
+				<li id="wireframe"><a href="#wireframe">WireFrame</a></li>
+			</ul>
+		</aside>
+		<article class="col-10 col-m-12">
+			<iframe id="ifm"></iframe>
+		</article>
+	</section>
+	<footer>
+		<p>Copyright (c) 2016 Joonang Education Class5</p>
+	</footer>
+</body>
+
+</html>
+

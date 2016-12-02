@@ -1,0 +1,210 @@
+/*
+▣ 실기시험 2 (40점 만점)
+-작성자 : 남상혁 (5강의실)
+-주제 : 홈페이지 만들기
+-목적 : HTML5 + CSS3 책복습
+-기능 : HTML5 + CSS3 실습 코드 보기
+*/
+header {
+width: 100%;
+padding: 15px;
+background-color: forestgreen;
+}
+ul#menu {
+background-image: linear-gradient(to right, forestgreen, transparent);
+width: 100%;
+height: 50px;
+margin: 0px;
+}
+
+ul#menu,
+ul#menu ul {
+list-style-type: none;
+}
+
+#menu a {
+text-decoration: none;
+}
+
+#menu > li {
+float: left;
+margin: 10px 10px;
+overflow: hidden;
+}
+
+div {
+width:30%;
+padding:10px;
+float:left;
+}
+
+div.explain {
+width: 45%;
+height: 300px;
+float: left;
+}
+
+iframe {
+width: 100%;
+height: 400px;
+margin: 0;
+}
+
+.chap1 {
+display: none;
+}
+.chap2 {
+display: none;
+}
+.chap3{
+display: none;
+}
+.chap4{
+display: none;
+}
+.chap5{
+display: none;
+}
+.chap6{
+display: none;
+}
+.chap7{
+display: none;
+}
+.chap8{
+display:none;
+}
+.chap9{
+display: none;
+}
+.chap10{
+display: none;
+}
+.chap11{
+display: none;
+}
+.chap12{
+display: none;
+}
+.chap13{
+display: none;
+}
+.home img{
+margin-left: 400px;
+height: 500px;
+}
+.chap1 div:nth-of-type(2) {
+width: 55%;
+}
+.chap2 div:nth-of-type(1) {
+width: 45%;
+}
+.chap2 div img {
+width: 100%;
+height: 400px;
+}
+
+.chap2 div:nth-of-type(1) {
+width: 45%;
+}
+
+.chap2 div:nth-of-type(2) {
+width: 50%;
+}
+.chap3 img{
+width:100%;
+}
+.chap3 div:nth-of-type(1) {
+width: 43%;
+}
+.chap3 div:nth-of-type(2) {
+width: 50%;
+}
+.chap4 img{
+width:100%;
+}
+.chap4 div:nth-of-type(1){
+width: 45%;
+}
+.chap4 div:nth-of-type(2){
+width: 40%;
+}
+.chap5 img{
+width:100%;
+}
+.chap5 div:nth-of-type(1){
+width: 55%;
+}
+.chap5 div:nth-of-type(2){
+width: 40%;
+}
+.chap6 img{
+width:100%;
+}
+.chap6 div:nth-of-type(1){
+width: 45%;
+height: 400px;
+}
+.chap7 img{
+width:90%;
+}
+.chap7 div:nth-of-type(1){
+width: 50%;
+height:300px;
+}
+.chap8 img{
+width:70%;
+}
+.chap8 div:nth-of-type(1){
+width: 50%;
+height:300px;
+}
+.chap9 img{
+width:100%;
+}
+.chap9 div:nth-of-type(1){
+width: 50%;
+}
+.chap10 img{
+width:100%;
+}
+.chap10 div:nth-of-type(1){
+width: 40%;
+}
+.chap10 div:nth-of-type(2){
+width: 53%;
+}
+.chap11 img{
+width:100%;
+}
+.chap11 div:nth-of-type(1){
+width: 45%;
+height: 300px;
+}
+.chap11 div:nth-of-type(2){
+width: 45%;
+}
+.chap12 img{
+width:100%;
+}
+.chap12 div:nth-of-type(1){
+width: 45%;
+height: 400px;
+}
+.chap12 div:nth-of-type(2){
+width: 45%;
+}
+.chap13 img{
+width:100%;
+}
+.chap13 div:nth-of-type(1){
+width: 100%;
+height: 400px;
+}
+footer {
+text-align: center;
+clear: both;
+padding: 5px;
+background-color: forestgreen;
+width: 100%;
+}

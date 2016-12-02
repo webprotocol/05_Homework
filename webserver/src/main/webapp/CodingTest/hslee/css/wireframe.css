@@ -1,0 +1,484 @@
+/*
+▣ 실기시험 2 (40점 만점)
+	- 작성자 : 이희수(5강의실)
+	- 주 제 : 다양한 레이아웃의 구성으로 참여형 컨텐츠를 다룰 수 있는 웹페이지
+	- 목 적 : HTML5 시멘틱태그를 효율적으로 활용하여 각 페이지별로 다양한 레이아웃으로 편집 할 수 있다
+	- 기 능 : 각 페이지별로 JAVASCRIPT & CSS를 활용하여 참여형 컨텐츠를 만들어 페이지 체류시간을 올릴 수 있다
+*/
+
+/*NAVIGATION style*/
+	#nav { /*네비 전체영역 스타일*/
+		font-family: 'Jeju Gothic';
+		list-style-type: none;
+		background : rgba(255,255,255,0.8);
+	}
+
+	#nav li {/*메뉴 각각 항목에 대한 스타일*/
+		float: left;
+	}
+
+	#nav li a {/*메뉴 링크항목에 대한 스타일*/
+		color : #808080;
+		text-decoration : none;
+		
+	}
+
+	#nav li:hover a { /*메뉴 항목 위로 마우스를 올렸을때 스타일*/
+		color : #00CED1;
+		background: rgba(255,255,255,0.4);
+	}
+
+	#nav ul {/*서브 메뉴 영역에 대한 스타일*/
+		list-style-type: none;
+		background: rgba(255,255,255,0.3);
+		box-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+		opacity: 0;
+	}
+
+	#nav ul li { /*서브메뉴 각 항목의 스타일*/
+		padding:0;
+		height : 0;
+		width : 100%
+	}
+
+	#nav ul a { /*서브메뉴 항목의 링크 스타일*/
+		font-weight: normal;
+		color : #808080;
+	}
+	
+	#nav ul li:hover a { /*서브 메뉴 항목위로 마우스를 올렸을때 스타일*/
+	background: rgba(32,178,170,0.3);
+	color : #808080;
+	}
+
+	#nav li:hover ul { /*메인 메뉴 위로 마우스를 가져갔을때 서브메뉴 스타일*/
+		opacity : 1;
+	}		
+
+	ol {
+		list-style-position: inside;
+		margin: 5px;
+		padding :0px
+}
+
+/*main image animation*/
+	.animage {
+		transition-property : all;
+		transition-duration : 1s;
+		margin: 0 5px;
+	}
+	.image01 {
+		transform-origin: center;
+	}
+	.image01:hover {
+		transform : rotate(360deg);
+		transition-timing-function :cubic-bezier(.13,.82,0,-0.83);
+		transition-timing-function : ease-in-out;
+	}
+
+	.image02 {
+		transform-origin: top;
+	}
+	.image02:hover {
+		transform : rotateY(90deg);
+		transition-timing-function : ease-in;
+	}
+
+	.image03 {
+		transform-origin: top;
+		transition-delay : 0.3s;
+	}
+	.image03:hover {
+		transform : translateY(200px);
+		transition-timing-function : ease-in-out;
+		transition-timing-function :cubic-bezier(.22,.13,0,-0.83);
+	}
+
+	.image04 {
+		transform-origin: top;
+		transition-timing-function: linear;
+	}
+	.image04:hover {
+		height : 300px;
+		transition-timing-function : ease
+	}
+
+	.image05 {
+		transform-origin: right;
+	}
+	.image05:hover {
+		width:120px;
+		transition-timing-function : ease-in-out;
+}
+/*tooltip style*/
+	.tooltip {
+    position: relative;
+    display: inline-block;
+	border-radius: 100%;
+	background-color: rgba(233,150,122,0.6);
+	}
+
+	.tooltip .tooltiptext {
+    visibility: hidden;
+    width:150px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 1s;
+	}
+
+	.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+body {
+	background-color: lightgrey;
+}
+
+/******반응형 CSS*******/
+/*Desktop*/
+	@media screen and (min-width:768px) {
+		body {
+			margin : 0 auto;
+		}
+		header {
+		position: fixed;
+		}
+		#nav{
+			height:45px;
+			margin : 0;
+			/*padding: 0;*/
+		}
+		#nav li{
+			margin : 5px 10px;
+			padding: 0px;
+			width : 22%;
+			text-align: center;
+		}
+		
+		#nav li a { /*상단 목록만 영향을 받는다*/
+			display : block;
+			padding : 10px 20px;
+			margin : 0;
+			width : 100%;
+		}
+		#nav ul {
+			margin : 0;
+			padding : 0;
+			left : 0;
+			top : 45px;
+			width : 100%;
+		}
+
+		#nav ul li {
+			width : 100%;
+			height: 0;
+		}
+		#nav li:hover ul li {
+			height : 35px;
+			overflow: visible;
+			margin-left: 0;
+		}
+		section article {
+			float: left;
+			border : 1px dashed rgba(255,255,255,0.3);
+			box-sizing: border-box;
+		}
+		.article1 {
+				padding : 20px;
+				color : white;
+				width : 55%;
+				margin-top: 250px;
+				margin-left: 50px;
+			}
+		.article2 {
+			padding : 10px;
+			font-size: 10pt;
+			color :floralwhite;
+			width : 30%;
+			margin-top: 250px;
+			background-color: rgba(233,150,122,0.3);
+		}
+		
+		.article3 {
+			display: none;
+		}
+		.article4 {
+			margin-top : 350px;
+			padding : 10px;
+			font-size: 10pt;
+			color :floralwhite;
+			width : 30%;
+			margin-top: 10px;
+			background-color: rgba(233,150,122,0.3);
+		}
+		div {
+			padding : 20px;
+			padding-left: 100px;
+			padding-bottom: 0;
+		}
+		#first, #second, #result {
+			width : 80%;
+			height: 20px;
+		}
+		#plus, #minus, #multi, #divide {
+			border-radius: 100%;
+			border : 3px solid rgba(255,105,180,0.6);
+		}
+		#use {
+		column-count: 3;
+		-moz-column-count: 3;
+
+		column-rule-width: 1px;
+		column-rule-style : dotted;
+		column-rule-color : rgba(255,255,255,0.3);
+		margin: 10px 50px;
+		padding : 20px;
+		color : black;
+		background-color: rgba(255,255,255,0.4);
+
+
+		-moz-column-rule-style : dotted;
+		-moz-column-rule-color : floralwhite;
+		-ms-column-rule-style : dotted;
+		-ms-column-rule-color : floralwhite;
+		-o-column-rule-style : dotted;
+		-o-column-rule-color : floralwhite;
+		-webkit-column-rule-style : dotted;
+		-webkit-column-rule-color : floralwhite;
+
+		column-gap : 50px;
+		}
+		section::after {
+			content:"";
+			clear: both;
+			display: block;
+		}
+		footer {
+			background-color: white;
+			text-align:  center;
+			padding: 15px;
+		}
+}
+
+/*Tablet - [ipad]Portrait version*/
+	@media screen and (max-width:768px) {
+		body {
+			margin : 0;
+		}
+		
+		#nav{
+			height:50px;
+			width: 100%;
+			margin : 0;
+			padding: 0;
+		}
+		#nav li{
+			margin : 5px 10px;
+			padding: 0px;
+			width: 45%;
+			text-align: center;
+		}
+		
+		#nav li a { 
+			display : block;
+			padding : 10px 20px;
+			margin : 0;
+			width : 100%;
+		}
+		#nav ul {
+			margin : 0;
+			padding : 0;
+			left : 0;
+			top : 45px;
+			width : 100%;
+		}
+
+		#nav ul li {
+			width : 100%;
+		}
+		#nav li:hover ul li {
+			height : 35px;
+			overflow: visible;
+			margin-left: 0;
+		}
+		.pf {
+			display: none;
+		}
+		section article {
+			float: left;
+			border : 1px dashed rgba(255,255,255,0.3);
+			box-sizing: border-box;
+		}
+		.article1 {
+			padding : 20px;
+			color : white;
+			width : 100%;
+		}
+		.article2 {
+			display: none;
+		}
+		.article3 {
+			padding : 10px;
+			font-size: 10pt;
+			color :floralwhite;
+			width : 100%;
+			margin-top: 10px;
+			background-color: rgba(233,150,122,0.3);
+		}
+		.article4 {
+			display: none;
+		}
+		fieldset {
+			border : none;
+		}
+		section::after {
+				content:"";
+				clear: both;
+				display: block;
+		}
+		footer {
+			background-color: white;
+			text-align:  center;
+			padding: 15px;
+		}
+		#use {
+		column-count: 3;
+		-moz-column-count: 3;
+
+		column-rule-width: 1px;
+		column-rule-style : dotted;
+		column-rule-color : rgba(255,255,255,0.3);
+		padding : 20px;
+		background-color: rgba(255,255,255,0.4);
+
+
+		-moz-column-rule-style : dotted;
+		-moz-column-rule-color : floralwhite;
+		-ms-column-rule-style : dotted;
+		-ms-column-rule-color : floralwhite;
+		-o-column-rule-style : dotted;
+		-o-column-rule-color : floralwhite;
+		-webkit-column-rule-style : dotted;
+		-webkit-column-rule-color : floralwhite;
+
+		column-gap : 30px;
+		}
+
+}
+
+/*Smart Phone - [GalasyS6]Portrait version*/
+	@media screen and (max-width:600px) {
+		body {
+			margin : 0 auto;
+		}
+		#nav{
+			margin : 0;
+			height: 120px;
+			padding:0;
+		}
+		#nav li{
+			margin : 10px;
+			padding: 0px;
+			width : 80%;
+			text-align: center;
+		}
+		.pf {
+			display: none;
+		}
+		.animage {
+			display: none;
+		}
+		#nav li a { 
+			display : block;
+			padding : 10px 20px;
+			margin : 0;
+			width : 100%;
+		}
+		#nav ul {
+			margin : 0;
+			padding : 0;
+			left : 0;
+			top : 45px;
+			width : 100%;
+		}
+
+		#nav ul li {
+			width : 100%;
+		}
+		#nav li:hover ul li {
+			height : 35px;
+			overflow: visible;
+			margin-left: 0;
+		}
+		section article {
+			float: left;
+			border : 1px dashed rgba(255,255,255,0.3);
+			box-sizing: border-box;
+		}
+		.article1 {
+			padding : 20px;
+			color : white;
+			width : 100%;
+			}
+		.article2 {
+			display: none;
+		}
+		.article3 {
+			padding : 10px;
+			font-size: 10pt;
+			color :floralwhite;
+			width : 100%;
+			background-color: rgba(233,150,122,0.3);
+		}
+		.article4 {
+			display: none;
+		}
+		fieldset {
+			border : none;
+		}
+		section::after {
+				content:"";
+				clear: both;
+				display: block;
+		}
+		footer {
+			background-color: white;
+			text-align:  center;
+			padding: 15px;
+		}
+		#use {
+		column-count: 1;
+		-moz-column-count: 1;
+
+		column-rule-width: 1px;
+		column-rule-style : dotted;
+		column-rule-color : rgba(255,255,255,0.3);
+		padding : 20px;
+		background-color: rgba(255,255,255,0.4);
+
+
+		-moz-column-rule-style : dotted;
+		-moz-column-rule-color : floralwhite;
+		-ms-column-rule-style : dotted;
+		-ms-column-rule-color : floralwhite;
+		-o-column-rule-style : dotted;
+		-o-column-rule-color : floralwhite;
+		-webkit-column-rule-style : dotted;
+		-webkit-column-rule-color : floralwhite;
+
+		column-gap : 20px;
+		}
+
+}
+
+
+

@@ -1,0 +1,90 @@
+/*
+▣ 실기시험 1 (40점 만점)
+	- 작성자 : 민혜진(5강의실)
+	- 주 제 : 사진 액자 프레임 바꾸기
+	- 목 적 : background 속성과 font 속성 활용하기
+	- 기 능 : 액자형태 배경 프레임 색깔 변경과 프레임 굵기와 형태 변형, 사진에 대한 메모 글꼴 변경과 스타일 설정
+*/
+@font-face {
+	font-family: alice;
+	src : url('../fonts/Alice-Regular.woff'); 
+}
+@font-face {
+	font-family: sail;
+	src : url('../fonts/Sail-Regular.woff'); 
+}
+@font-face {
+	font-family: caveat;
+	src : url('../fonts/Caveat-Regular.woff'); 
+}
+@font-face {
+	font-family: italianno;
+	src : url('../fonts/Italianno-Regular.woff'); 
+}
+@font-face {
+	font-family: 나눔고딕;
+	src : url('../fonts/NanumGothic.woff'); 
+}
+@font-face {
+	font-family: 휴먼매직체;
+	src : url('../fonts/hmkmmag.woff'); 
+}
+
+#wrapper {
+	font-family: alice;
+}
+header {
+	background-color: #e4e481;
+	padding: 15px;
+}
+.menu ul {
+	list-style-type: none;
+	list-style-position: inside;
+	margin: 0px;
+	padding: 5px;
+}
+.menu li {
+	margin-top: 10px;
+}
+.m > li {
+	background-image: linear-gradient(to right, #ffdf80, transparent);
+}
+#menu1, #menu2 {
+	display: none;
+}
+#menu1 ul > li, #menu2 ul > li {
+	background-image: linear-gradient(to right, #d2ff4d, transparent);
+}
+
+#imgFrame {
+	border: 2px solid #400080;
+	background-color: #8598ad;
+}
+article img {
+	width: 100%;
+}
+#in_date{
+	margin-top: 50%;
+	margin-bottom: 50%;
+	width: 100%;
+	height: 100%;
+	display: table;
+}
+#datearea {
+	display: table-cell;
+
+	margin: 0 auto;
+	text-align: center;
+	vertical-align: middle;
+}
+
+footer {
+	background-color: #8a8a5c;
+	padding: 10px;
+	text-align: center;
+}
+@media screen and (max-width:768px) {
+	#in_date{
+		margin: 0 auto;
+	}
+}

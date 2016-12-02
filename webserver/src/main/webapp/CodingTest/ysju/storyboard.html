@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<!--
+▣ 실기시험 1 (40점 만점)
+- 작성자 : 주요섭 (5강의실)
+- 주  제 : 학원에서 먹을만한 점심메뉴
+- 목  적 : 지금까지 배운 HTML, CSS복습
+- 기  능 : 점심시간에 먹을만한 메뉴 정리
+-->
+<html lang="ko">
+
+<head>
+<title>storyboard.html</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="css/storyboard.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<fieldset>
+	<legend>실기시험 1</legend>
+	<ol>
+		<li>작성자 : 주요섭 </li>
+		<li>주  제 : 학원점심메뉴</li>
+		<li>목  적 : 지금까지 배운 HTML, CSS복습</li>
+		<li>기  능 : 점심시간에 먹을만한 메뉴들을 정리</li>
+	</ol>
+</fieldset>
+<div id="wrapper">
+	<header id="mainHeader">
+		<a href="http://192.168.50.72:8080/storyboard.html"><img src="img/mainlogo.png"></a>
+	</header>
+	<hr>
+	<nav>
+		<ul id="menuList">
+			<li><a href="http://192.168.50.72:8080/storyboard.html">HOME</a></li>
+			<li><a href="#" onclick="btn(event)" class="div1">식당</a></li>
+			<li><a href="#" onclick="btn(event)" class="div2">편의점</a></li>
+			<li><a href="#" onclick="btn(event)" class="div3">지도</a></li>
+			<li><a href="#" onclick="btn(event)" class="div4">내기</a></li>
+		</ul>
+		<hr>
+	</nav>
+	<section id="content">
+		<aside class="menu">
+			<div id="divhome">
+				&nbsp
+			</div>
+			<div id="div1">
+				<ul id="listhover">
+					<li><a href="#" onclick="lunch(event)" class="article_1">김가네</a></li>
+					<li><a href="#" onclick="lunch(event)" class="article_2">철든놈</a></li>
+					<li><a href="#" onclick="lunch(event)" class="article_3">부대찌개</a></li>
+					<li><a href="#" onclick="lunch(event)" class="article_4">하루</a></li>
+					<li><a href="#" onclick="lunch(event)" class="article_5">강남불백</a></li>
+				</ul>
+			</div>
+			<div id="div2">
+				<ul id="listhover">
+					<li><a href="#" onclick="lunch(event)" class="article_6">라면</a></li>
+					<li><a href="#" onclick="lunch(event)" class="article_7">김밥</a></li>
+					<li><a href="#" onclick="lunch(event)" class="article_8">도시락</a></li>
+					<li><a href="#" onclick="lunch(event)" class="article_9">샌드위치/햄버거</a></li>
+				</ul>
+			</div>
+			<div id="div3">
+				<ul id="listhover">
+					<li><a href="#" onclick="lunch(event)" class="article_10">지도 보기</a></li>
+				</ul>
+			</div>
+			<div id="div4">
+				<ul id="listhover"> 
+					<li><a href="#" onclick="lunch(event)" class="article_11">주사위굴리기</a></li>
+					<li><a href="#" onclick="lunch(event)" class="article_12">제비뽑기</a></li>
+				</ul>
+			</div>
+		</aside>
+		<article id="articlehome">
+			<div class="bg1">
+				<img src="img/bg1.png">
+			</div>
+			<div class="bg2">
+				<img src="img/bg2.jpg">
+			</div>
+			<div class="bg3">
+				<img src="img/bg3.png">
+			</div>
+			<div class="bg4">
+				<img src="img/bg4.png">
+			</div>
+		</article>
+
+		<article id="article_1">
+			<h2>김가네</h2>
+			<fieldset style="display:inline">
+			<legend><h3>메뉴</h3></legend>
+			<figcaption><img src="img/gim_menu.png"></figcaption>
+			</fieldset>
+				<br>
+				<hr>
+				<h3>위치</h3>
+				<table cellpadding="0" cellspacing="0" width="462"> <tr> <td style="border:1px solid #cecece;"><a href="http://map.naver.com/?edid=35125080&sText=7KSR7JWZ7KCV67O06riw7Iig7J247J6s6rCc67Cc7JuQ&elng=4093c13c8271be31e2f4080811f99fa5&sdid=37325329&dtPathType=0&menu=route&lng=637852d8dfab1e86b320ff87149a6967&pathType=3&mapMode=0&elat=4743e2cd10efd9c5f12f91efb5b76090&eText=6rmA6rCA64SkIOqwleuCqOyXreygkA%3D%3D&slng=d3707c7284e7ccb7bfda5d8ab07a6c4a&eType=SITE_1&sType=SITE&slat=ba035afb3cc70fe7071822275422e0c1&dlevel=14&lat=3aed6df7c8ae096223d9dc308d457ee2&enc=b64" target="_blank"><img src="http://prt.map.naver.com/mashupmap/print?key=p1479795866340_1379817950" width="460" height="340" alt="지도 크게 보기" title="지도 크게 보기" border="0" style="vertical-align:top;"/></a></td> </tr> <tr> <td> <table cellpadding="0" cellspacing="0" width="100%"> <tr> <td height="30" bgcolor="#f9f9f9" align="left" style="padding-left:9px; border-left:1px solid #cecece; border-bottom:1px solid #cecece;"> <span style="font-family: tahoma; font-size: 11px; color:#666;">2016.11.22</span>&nbsp;<span style="font-size: 11px; color:#e5e5e5;">|</span>&nbsp;<a style="font-family: dotum,sans-serif; font-size: 11px; color:#666; text-decoration: none; letter-spacing: -1px;" href="http://map.naver.com/?edid=35125080&sText=7KSR7JWZ7KCV67O06riw7Iig7J247J6s6rCc67Cc7JuQ&elng=4093c13c8271be31e2f4080811f99fa5&sdid=37325329&dtPathType=0&menu=route&lng=637852d8dfab1e86b320ff87149a6967&pathType=3&mapMode=0&elat=4743e2cd10efd9c5f12f91efb5b76090&eText=6rmA6rCA64SkIOqwleuCqOyXreygkA%3D%3D&slng=d3707c7284e7ccb7bfda5d8ab07a6c4a&eType=SITE_1&sType=SITE&slat=ba035afb3cc70fe7071822275422e0c1&dlevel=14&lat=3aed6df7c8ae096223d9dc308d457ee2&enc=b64" target="_blank">지도 크게 보기</a> </td> <td width="98" bgcolor="#f9f9f9" align="right" style="text-align:right; padding-right:9px; border-right:1px solid #cecece; border-bottom:1px solid #cecece;"> <span style="float:right;"><span style="font-size:9px; font-family:Verdana, sans-serif; color:#444;">&copy;&nbsp;</span>&nbsp;<a style="font-family:tahoma; font-size:9px; font-weight:bold; color:#2db400; text-decoration:none;" href="http://www.nhncorp.com" target="_blank">NAVER Corp.</a></span> </td> </tr> </table> </td> </tr> </table>
+		</article>
+		<article id="article_2">
+			<h2>구이혁명가 철든놈</h2>
+			<fieldset style="display:inline">
+			<legend><h3>메뉴</h3></legend>
+			<figcaption><img src="img/chul_menu_1.png"></figcaption>
+			</fieldset>
+				<br>
+				<hr>
+				<h3>위치</h3>
+			<table cellpadding="0" cellspacing="0" width="462"> <tr> <td style="border:1px solid #cecece;"><a href="http://map.naver.com/?edid=33860503&sText=7KSR7JWZ7KCV67O06riw7Iig7J247J6s6rCc67Cc7JuQ&elng=3f40ff659531af103298ea975d3e9abf&sdid=37325329&dtPathType=0&menu=location&lng=b3563621e7fb0600485cc5dee57fd06d&pathType=3&mapMode=0&elat=5c978e09d874dfc60aae1dcdbf0886c2&eText=7LKg65Og64aIIOygnDLqs7XsnqU%3D&slng=d3707c7284e7ccb7bfda5d8ab07a6c4a&eType=SITE&sType=SITE&slat=ba035afb3cc70fe7071822275422e0c1&dlevel=14&lat=4ccfe07c6367b14fc7999e239c646a61&enc=b64" target="_blank"><img src="http://prt.map.naver.com/mashupmap/print?key=p1479796439796_-1104224381" width="460" height="340" alt="지도 크게 보기" title="지도 크게 보기" border="0" style="vertical-align:top;"/></a></td> </tr> <tr> <td> <table cellpadding="0" cellspacing="0" width="100%"> <tr> <td height="30" bgcolor="#f9f9f9" align="left" style="padding-left:9px; border-left:1px solid #cecece; border-bottom:1px solid #cecece;"> <span style="font-family: tahoma; font-size: 11px; color:#666;">2016.11.22</span>&nbsp;<span style="font-size: 11px; color:#e5e5e5;">|</span>&nbsp;<a style="font-family: dotum,sans-serif; font-size: 11px; color:#666; text-decoration: none; letter-spacing: -1px;" href="http://map.naver.com/?edid=33860503&sText=7KSR7JWZ7KCV67O06riw7Iig7J247J6s6rCc67Cc7JuQ&elng=3f40ff659531af103298ea975d3e9abf&sdid=37325329&dtPathType=0&menu=location&lng=b3563621e7fb0600485cc5dee57fd06d&pathType=3&mapMode=0&elat=5c978e09d874dfc60aae1dcdbf0886c2&eText=7LKg65Og64aIIOygnDLqs7XsnqU%3D&slng=d3707c7284e7ccb7bfda5d8ab07a6c4a&eType=SITE&sType=SITE&slat=ba035afb3cc70fe7071822275422e0c1&dlevel=14&lat=4ccfe07c6367b14fc7999e239c646a61&enc=b64" target="_blank">지도 크게 보기</a> </td> <td width="98" bgcolor="#f9f9f9" align="right" style="text-align:right; padding-right:9px; border-right:1px solid #cecece; border-bottom:1px solid #cecece;"> <span style="float:right;"><span style="font-size:9px; font-family:Verdana, sans-serif; color:#444;">&copy;&nbsp;</span>&nbsp;<a style="font-family:tahoma; font-size:9px; font-weight:bold; color:#2db400; text-decoration:none;" href="http://www.nhncorp.com" target="_blank">NAVER Corp.</a></span> </td> </tr> </table> </td> </tr> </table>
+		</article>
+		<article id="article_3">
+			<h2>박가부대찌개</h2>
+			<fieldset style="display:inline">
+			<legend><h3>메뉴</h3></legend>
+			<figcaption><img src="img/budae_menu.png"></figcaption>
+			</fieldset>
+				<br>
+				<hr>
+				<h3>위치</h3>
+			<table cellpadding="0" cellspacing="0" width="462"> <tr> <td style="border:1px solid #cecece;"><a href="http://map.naver.com/?edid=21705758&sText=7KSR7JWZ7KCV67O06riw7Iig7J247J6s6rCc67Cc7JuQ&elng=e0f35d20f7b612f0bbe4fa428aac3dcc&sdid=37325329&dtPathType=0&menu=location&lng=8476067a9e61fa2ffc7a4ea405a9ee38&mapMode=0&elat=b24867216d8624aacb9497d3a2cd9320&pathType=3&eText=67CV6rCA67aA64yAIOqwleuCqOyXreygkA%3D%3D&slng=d3707c7284e7ccb7bfda5d8ab07a6c4a&eType=SITE&slat=ba035afb3cc70fe7071822275422e0c1&sType=SITE&lat=3220648e8ee803a8afa5c7b542845497&dlevel=13&enc=b64" target="_blank"><img src="http://prt.map.naver.com/mashupmap/print?key=p1479797344188_-1336867374" width="460" height="340" alt="지도 크게 보기" title="지도 크게 보기" border="0" style="vertical-align:top;"/></a></td> </tr> <tr> <td> <table cellpadding="0" cellspacing="0" width="100%"> <tr> <td height="30" bgcolor="#f9f9f9" align="left" style="padding-left:9px; border-left:1px solid #cecece; border-bottom:1px solid #cecece;"> <span style="font-family: tahoma; font-size: 11px; color:#666;">2016.11.22</span>&nbsp;<span style="font-size: 11px; color:#e5e5e5;">|</span>&nbsp;<a style="font-family: dotum,sans-serif; font-size: 11px; color:#666; text-decoration: none; letter-spacing: -1px;" href="http://map.naver.com/?edid=21705758&sText=7KSR7JWZ7KCV67O06riw7Iig7J247J6s6rCc67Cc7JuQ&elng=e0f35d20f7b612f0bbe4fa428aac3dcc&sdid=37325329&dtPathType=0&menu=location&lng=8476067a9e61fa2ffc7a4ea405a9ee38&mapMode=0&elat=b24867216d8624aacb9497d3a2cd9320&pathType=3&eText=67CV6rCA67aA64yAIOqwleuCqOyXreygkA%3D%3D&slng=d3707c7284e7ccb7bfda5d8ab07a6c4a&eType=SITE&slat=ba035afb3cc70fe7071822275422e0c1&sType=SITE&lat=3220648e8ee803a8afa5c7b542845497&dlevel=13&enc=b64" target="_blank">지도 크게 보기</a> </td> <td width="98" bgcolor="#f9f9f9" align="right" style="text-align:right; padding-right:9px; border-right:1px solid #cecece; border-bottom:1px solid #cecece;"> <span style="float:right;"><span style="font-size:9px; font-family:Verdana, sans-serif; color:#444;">&copy;&nbsp;</span>&nbsp;<a style="font-family:tahoma; font-size:9px; font-weight:bold; color:#2db400; text-decoration:none;" href="http://www.nhncorp.com" target="_blank">NAVER Corp.</a></span> </td> </tr> </table> </td> </tr> </table>
+		</article>
+		<article id="article_4">
+			<h2>하루</h2>
+			<fieldset style="display:inline;">
+			<legend><h3>메뉴</h3></legend>
+			<figcaption>
+				<h3>하루정식 <span>8,000</span></h3>
+				<span>히레까스+생선까스+감자고로케+우동</span>
+				<h3>히레까스<span>7,000</span></h3>
+				<span>국내산 1등급 안심으로 만든 부드러운 육질의 돈까스</span>
+				<h3>생선까스 <span>7,000</span></h3>
+				<span>부드럽고 담백한 흰 살 생선까스</span>
+				<h3>가츠카레 정식 <span>8,000</span></h3>
+				<span>일본식 돈까스 카레 덮밥</span>
+				<h3>가츠동 정식  <span>5,500</span></h3>
+				<span>부드러운 돈까스를 가쓰오소스에 야채와 계란을 익혀만든 덮밥</span>
+				<h3>김치가츠동 정식 <span>6,000</span></h3>
+				<span>국내산 김치와 국내산 1등급 돼지고기로 만든 돈까스의 만남</span>
+				<h3>차슈동 정식 <span>5,500</span></h3>
+				<span>삶은 등삼겹살을 철판에 살짝 구워 간장소스에 비벼먹는 덮밥</span>
+				<h3>애비동(새우덮밥) 정식 <span>6,000</span></h3>
+				<span>달짝지근한 쯔유의 감칠맛과 고사한 새우튀김 덮밥요리</span>
+				<h3>탄탄멘정식 <span>7,000</span></h3>
+				<span>깔끔하고 매콤한 중화풍 라면+히레까스</span>
+				<h3>나가사끼 짬뽕 <span>7,000</span></h3>
+				<span>야채와 핸산물을 넣은 담백한 짬뽕</span>
+				<h3>(냉)모밀정식 <span>8,000</span></h3>
+				<span>쫄깃한 면발과 얼음이 떠있는 시원한 가쓰오육수의 환상적인 조합</span>
+				<h3>회덮밥 <span>7,000</span></h3>
+				<span>싱싱한 활어회와 신선한 야채의 맛있는 조화</span>
+				</figcaption>
+			</fieldset>
+				<br>
+				<hr>
+				<h3>위치</h3>
+			<table cellpadding="0" cellspacing="0" width="462"> <tr> <td style="border:1px solid #cecece;"><a href="http://map.naver.com/?edid=13149957&sText=7KSR7JWZ7KCV67O06riw7Iig7J247J6s6rCc67Cc7JuQ&elng=5194cad926228bdf6dbd729b07e0f89f&sdid=37325329&dtPathType=0&menu=location&lng=4e3b24cb70c3fe64567dc7d343838d7a&pathType=3&mapMode=0&elat=265edbe123a792566d06fa6cd61bdcc8&eText=7ZWY66Oo&slng=d3707c7284e7ccb7bfda5d8ab07a6c4a&eType=SITE&sType=SITE&slat=ba035afb3cc70fe7071822275422e0c1&dlevel=14&lat=a6aed0383e573f0a85d2a5a71bd88543&enc=b64" target="_blank"><img src="http://prt.map.naver.com/mashupmap/print?key=p1479802047637_589181073" width="460" height="340" alt="지도 크게 보기" title="지도 크게 보기" border="0" style="vertical-align:top;"/></a></td> </tr> <tr> <td> <table cellpadding="0" cellspacing="0" width="100%"> <tr> <td height="30" bgcolor="#f9f9f9" align="left" style="padding-left:9px; border-left:1px solid #cecece; border-bottom:1px solid #cecece;"> <span style="font-family: tahoma; font-size: 11px; color:#666;">2016.11.22</span>&nbsp;<span style="font-size: 11px; color:#e5e5e5;">|</span>&nbsp;<a style="font-family: dotum,sans-serif; font-size: 11px; color:#666; text-decoration: none; letter-spacing: -1px;" href="http://map.naver.com/?edid=13149957&sText=7KSR7JWZ7KCV67O06riw7Iig7J247J6s6rCc67Cc7JuQ&elng=5194cad926228bdf6dbd729b07e0f89f&sdid=37325329&dtPathType=0&menu=location&lng=4e3b24cb70c3fe64567dc7d343838d7a&pathType=3&mapMode=0&elat=265edbe123a792566d06fa6cd61bdcc8&eText=7ZWY66Oo&slng=d3707c7284e7ccb7bfda5d8ab07a6c4a&eType=SITE&sType=SITE&slat=ba035afb3cc70fe7071822275422e0c1&dlevel=14&lat=a6aed0383e573f0a85d2a5a71bd88543&enc=b64" target="_blank">지도 크게 보기</a> </td> <td width="98" bgcolor="#f9f9f9" align="right" style="text-align:right; padding-right:9px; border-right:1px solid #cecece; border-bottom:1px solid #cecece;"> <span style="float:right;"><span style="font-size:9px; font-family:Verdana, sans-serif; color:#444;">&copy;&nbsp;</span>&nbsp;<a style="font-family:tahoma; font-size:9px; font-weight:bold; color:#2db400; text-decoration:none;" href="http://www.nhncorp.com" target="_blank">NAVER Corp.</a></span> </td> </tr> </table> </td> </tr> </table>
+		</article>
+		<article id="article_5">
+			<h2>강남불백</h2>
+			<fieldset>
+			<legend><h3>메뉴</h3></legend>
+			<figcaption>
+			<div id="bulgogi">
+			<table>
+				<tr><td colspan="2">불백정식</td><td id="price">7000</td><td>&nbsp&nbsp&nbsp&nbsp</td><td>해물파전</td><td id="price">8000</td></tr>
+				<tr><td rowspan="2">토핑</td><td>치즈&nbsp<span id="price">2000</span></td><td>당면&nbsp<span id="price">1000</span></td><td>&nbsp&nbsp&nbsp&nbsp</td><td>계란말이</td><td id="price">8000</td></tr>
+				<tr><td>낙지&nbsp<span id="price">3000</span></td><td>떡&nbsp<span id="price">2000</span></td><td>&nbsp&nbsp&nbsp&nbsp</td><td>볶음밥</td><td id="price">2000</td></tr>
+				<tr><td></td><td></td><td></td><td>&nbsp&nbsp&nbsp&nbsp</td><td>계란탕</td><td id="price">2000</td></tr>
+				<tr><td colspan="2">우삼겹정식</td><td id="price">8000</td><td></td><td>&nbsp&nbsp&nbsp&nbsp</td><td></td></tr>
+				<tr><td rowspan="2">토핑</td><td>치즈&nbsp<span id="price">2000</span></td><td>당면&nbsp<span id="price">1000</span></td><td>&nbsp&nbsp&nbsp&nbsp</td><td>음료수</td><td id="price">1500</td></tr>
+				<tr><td>낙지&nbsp<span id="price">3000</span></td><td>떡&nbsp<span id="price">2000</span></td><td>&nbsp&nbsp&nbsp&nbsp</td><td>소주</td><td id="price">4000</td></tr>
+				<tr><td></td><td></td><td></td><td>&nbsp&nbsp&nbsp&nbsp</td><td>맥주</td><td id="price">4000</td></tr>
+				<tr><td colspan="2">불낙정식</td><td id="price">8000</td><td>&nbsp&nbsp&nbsp&nbsp</td><td></td><td></td></tr>
+				<tr><td rowspan="2">토핑</td><td>치즈&nbsp<span id="price">2000</span></td><td>당면&nbsp<span id="price">1000</span></td><td>&nbsp&nbsp&nbsp&nbsp</td><td></td><td></td></tr>
+				<tr><td>낙지&nbsp<span id="price">3000</span></td><td>떡&nbsp<span id="price">2000</span></td><td><td>&nbsp&nbsp&nbsp&nbsp</td></td><td></td></tr>
+			</table>
+			</div>
+			</figcaption>
+			</fieldset>
+			<hr>
+			<h3>위치</h3>
+			<table cellpadding="0" cellspacing="0" width="462"> <tr> <td style="border:1px solid #cecece;"><a href="http://map.naver.com/?edid=35964491&sText=7KSR7JWZ7KCV67O06riw7Iig7J247J6s6rCc67Cc7JuQ&elng=622e8a6cb48d24dc016ce98cbf369d82&sdid=37325329&dtPathType=0&menu=location&lng=294f4dfa18283f54d071109232d7c778&mapMode=0&elat=3c739f3979b669cfabbcb7956fb3d330&pathType=3&eText=6rCV64Ko67aI67Cx&slng=d3707c7284e7ccb7bfda5d8ab07a6c4a&eType=SITE&slat=ba035afb3cc70fe7071822275422e0c1&sType=SITE&lat=10337e4c48ebd642c868ff0b01de69db&dlevel=13&enc=b64" target="_blank"><img src="http://prt.map.naver.com/mashupmap/print?key=p1479795978832_947277342" width="460" height="340" alt="지도 크게 보기" title="지도 크게 보기" border="0" style="vertical-align:top;"/></a></td> </tr> <tr> <td> <table cellpadding="0" cellspacing="0" width="100%"> <tr> <td height="30" bgcolor="#f9f9f9" align="left" style="padding-left:9px; border-left:1px solid #cecece; border-bottom:1px solid #cecece;"> <span style="font-family: tahoma; font-size: 11px; color:#666;">2016.11.22</span>&nbsp;<span style="font-size: 11px; color:#e5e5e5;">|</span>&nbsp;<a style="font-family: dotum,sans-serif; font-size: 11px; color:#666; text-decoration: none; letter-spacing: -1px;" href="http://map.naver.com/?edid=35964491&sText=7KSR7JWZ7KCV67O06riw7Iig7J247J6s6rCc67Cc7JuQ&elng=622e8a6cb48d24dc016ce98cbf369d82&sdid=37325329&dtPathType=0&menu=location&lng=294f4dfa18283f54d071109232d7c778&mapMode=0&elat=3c739f3979b669cfabbcb7956fb3d330&pathType=3&eText=6rCV64Ko67aI67Cx&slng=d3707c7284e7ccb7bfda5d8ab07a6c4a&eType=SITE&slat=ba035afb3cc70fe7071822275422e0c1&sType=SITE&lat=10337e4c48ebd642c868ff0b01de69db&dlevel=13&enc=b64" target="_blank">지도 크게 보기</a> </td> <td width="98" bgcolor="#f9f9f9" align="right" style="text-align:right; padding-right:9px; border-right:1px solid #cecece; border-bottom:1px solid #cecece;"> <span style="float:right;"><span style="font-size:9px; font-family:Verdana, sans-serif; color:#444;">&copy;&nbsp;</span>&nbsp;<a style="font-family:tahoma; font-size:9px; font-weight:bold; color:#2db400; text-decoration:none;" href="http://www.nhncorp.com" target="_blank">NAVER Corp.</a></span> </td> </tr> </table> </td> </tr> </table>
+		</article>
+		<article id="article_6">
+			<h2>편의점</h2>
+			<p>라면</p>
+			<img src="img/ramen_1.png"><br><img src="img/ramen_2.png">
+		</article>
+		<article id="article_7">
+			<h2>편의점</h2>
+			<p>김밥</p>
+			<img src="img/gimbab_1.png"><br><img src="img/gimbab_2.png"><br><img src="img/gimbab_3.png">
+		</article>
+		<article id="article_8">
+			<h2>편의점</h2>
+			<p>도시락</p>
+			<img src="img/dosirak_1.png" >
+		</article>
+		<article id="article_9">
+			<h2>편의점</h2>
+			<p>샌드위치/햄버거</p>
+			<img src="img/hamburger_1.png"><br><img src="img/hamburger_2.png"><br><img src="img/hamburger_3.png">
+		</article>
+		<article id="article_10">
+			<h2>지도</h2>
+			<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1330.8725471010719!2d127.0285240344747!3d37.499280207559195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sko!2skr!4v1479884117391" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+		</article>
+		<article id="article_11">
+			<h2>주사위</h2>
+			<br>
+			<br>
+			<fieldset class="wrap">
+				<div class="cube">
+					<span class="face front"><img src="img/1.png"></span>
+					<span class="face back"><img src="img/2.png"></span>
+					<span class="face left"><img src="img/3.png"></span>
+					<span class="face right"><img src="img/4.png"></span>
+					<span class="face top"><img src="img/5.png"></span>
+					<span class="face bottom"><img src="img/6.png"></span>
+				</div>
+			</fieldset>
+			<input type="button" value="random" onclick="randomNumber(event)">
+		</article>
+		<article id="article_12">
+			<h2>제비뽑기</h2>
+			<p>인원을 선택하세요. <input type="text" id="inputnum" style="width:50px" oninput="inputnumber(event)"></p><br>
+			<p class="clickbtn" style="display:none">각자 번호를 선택하신후 뽑기 버튼을 눌러주세요.<br>
+			<input type="button" onclick="selectnumber(event)" value="뽑기"><br><br><span id="result"></span></p>
+		</article>
+		<aside>
+			<br>
+			<br>
+			<img src="img/unknown.png">
+			
+		</aside>
+	</section>
+	<footer>
+		<hr>
+		Copyright © All Rights Reserved.
+
+	</footer>
+</div>
+<script src="js/storyboard.js"></script>
+</body>
+
+</html>

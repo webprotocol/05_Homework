@@ -1,0 +1,25 @@
+@import url(http://fonts.googleapis.com/earlyaccess/nanumbrushscript.css);
+
+*{
+   margin: 10px auto;
+   text-align: center;
+   font-family: 'Nanum Brush Script', cursive;
+   font-weight: bold;
+}
+table{
+    width:400px;
+    height:200px;
+    border-collapse: collapse;
+}
+
+table, tr,td{
+    border:1px solid black;
+    
+}
+input[type=text], input[type=password], input[type=email]{
+    width:70%;
+}
+iframe{
+    width:90%;
+    height:300px;
+}

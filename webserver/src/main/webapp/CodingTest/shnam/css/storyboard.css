@@ -1,0 +1,198 @@
+/*
+▣ 실기시험 1 (40점 만점)
+	-작성자 : 남상혁 (5강의실)
+	-주제 : 홈페이지 만들기
+	-목적 : FC파라볼라 홍보
+	-기능 : FC파라볼라의 신입회원 모집 및 경기신청을 하는 홈페이지
+*/
+@import url('https://fonts.googleapis.com/css?family=Anton');
+@import url('http://fonts.googleapis.com/earlyaccess/nanumpenscript.css');
+header {
+background-color: orangered;
+padding: 15px;
+background-image: url('../img/b.png');
+background-repeat: no-repeat;
+background-position: right;
+}
+header background-image{
+width:40%;
+}
+h1 {
+letter-spacing: 0.3em;
+font-family: 'Anton', sans-serif;
+}
+
+h2 {
+font-size: 50px;
+font-family: 'Nanum Pen Script', cursive;
+}
+
+#menu {
+font-size: 25px;
+font-family: 'Anton', sans-serif;
+background-image: none;
+}
+
+.menu ul {
+text-align: center;
+list-style-type: none;
+list-style-image: none;
+padding: 0px;
+}
+
+.menu ul li {
+padding: 10px;
+}
+
+.menu {
+float: left;
+width: 9.5%;
+height: 700px;
+background-color: darkorange;
+}
+
+.menu li:hover {
+background-image: linear-gradient(to right, red, transparent);
+}
+
+article {
+float: left;
+width: 80%;
+padding-left: 20px;
+}
+
+.menu ul li a {
+text-decoration: none;
+color: black;
+}
+
+.log1 figure img{
+
+padding-left: 120px;
+width:70%;
+}
+
+.log2 {
+display: none;
+}
+
+.log2 p{
+width:100%;
+font-family: 'Nanum Pen Script', cursive;
+font-size: 60px;
+}
+
+.log3 {
+display: none;
+}
+
+.log3 table {
+width: 100%;
+margin: 20px;
+}
+.log3 th{
+background-color: gray;
+height:50px;
+}
+.log3 table,
+th,
+td,
+tr {
+border: 1px solid black;
+text-align: center;
+border-collapse: collapse;
+
+}
+
+.log4 {
+display: none;
+}
+
+.log4 fieldset {
+margin: 20px;
+}
+
+.log4 ul {
+list-style-type: none;
+}
+
+.log4 ul li {
+padding-bottom: 20px;
+}
+
+.log5 {
+display: none;
+}
+
+.log5 ul li {
+list-style-type: none;
+padding-bottom: 10px;
+float: left;
+}
+
+.lop5 fieldset {
+width: 100%;
+}
+
+.log5 figure {
+float: left;
+width: 35%;
+}
+
+.log5 figure img {
+width: 100%;
+}
+
+.log6 {
+display: none;
+}
+
+.log6 fieldset {
+margin: 20px;
+}
+
+.log6 ul li {
+list-style-type: none;
+padding-bottom: 10px;
+}
+
+footer {
+background-color: orangered;
+padding: 15px;
+text-align: center;
+clear: both;
+}
+
+@media screen and (max-width: 964px) {
+section aside:nth-of-type(1) {
+width: 100%;
+text-align: center;
+height: 320px;
+}
+.log1 figure{
+display: none;
+}
+.log2 p{
+width:100%;
+font-size:30px;
+}
+.log3 table{
+width:100%;
+}
+
+.log4 fieldset {
+width: 100%;
+}
+.log4 ul {
+padding: 0px;
+}
+.log5 fieldset {
+width: 100%;
+}
+.log5 figure {
+width: 75%;
+}
+.log6 fieldset {
+width: 100%;
+}
+}

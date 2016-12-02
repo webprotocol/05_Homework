@@ -1,0 +1,95 @@
+
+/*hover_css*/
+
+/*font*/
+@font-face {
+        font-family: 'y220';
+        src: url(../fonts/y220.woff);
+}
+@font-face {
+        font-family: 'y120';
+        src: url(../fonts/y120.woff);
+}
+
+/*content*/
+header h1 {
+        margin: 45px 0px;
+        background-color: papayawhip;
+        
+        text-align: center;
+        font-family: 'y220';
+        font-weight: bold;
+}
+
+footer h1 {
+        text-align: right;
+
+        font-family: 'y220';
+        font-style: italic;
+}
+
+span {
+        color : red;
+}
+
+table {
+        width:360px;
+        height: 360px;
+        margin:60px auto;
+        border: 5px double salmon;
+        border-collapse: collapse;
+}
+td {
+    width: 25%;
+    height: 25%;
+        
+    background-color: black;
+
+    text-align: center;
+
+    font-family: 'y120';
+    font-size: 15pt;
+    font-weight: bold;
+}
+
+#one {
+    background-color: steelblue;
+}
+#one:hover {
+    background-color: hotpink;
+}
+#one:hover::after {
+    color: black;
+    content:"Hello";
+}
+
+
+#two {
+    background-color: gold;
+}
+#two:hover {
+    background-color: saddlebrown;
+}
+#two:hover::after {
+    color: #ffcc00;
+    content:"I am"
+}
+    
+#three:hover {
+    background-color: tomato;
+}
+#three:hover #dd {
+    display: none;
+}
+#three:hover::after {
+    color: oldlace;
+    content: "Hyejin Choi ! ";
+
+    font-family: 'y120';
+}
+
+img{
+    display: block;
+    width: 98%;
+    height: 97%;
+}

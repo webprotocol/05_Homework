@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<!--
+▣ 실기시험 1 (40점 만점)
+	- 작성자 : 남기훈 (5강의실)
+	- 주  제 : 성경 대역본 함께보기 및 구절암송
+	- 목  적 : DOM에 JSON파싱 연습과 Drag And Drop 연습
+	- 기  능 : 선택한 구절 사이에 번역본 삽입 및 드래그 앤 드롭 퀴즈
+-->
+<html lang="ko">
+
+<head>
+	<title>wireframe.html</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="css/gridsystem.css" rel="stylesheet">
+	<link href="css/wireframe.css" rel="stylesheet">
+	<script src="js/data.js"></script>
+	<script src="js/wireframe.js"></script>
+</head>
+
+<body>
+	<fieldset>
+		<legend>실기시험 2</legend>
+		<ol>
+			<li>작성자 : 남기훈</li> 
+			<li>주  제 : 성경 대역본 함께보기 및 구절암송</li>
+			<li>목  적 : DOM에 JSON파싱 연습과 Drag And Drop 연습</li>
+			<li>기  능 : 선택한 구절 사이에 번역본 삽입 및 드래그 앤 드롭 퀴즈 </li>
+		</ol>
+	</fieldset>
+	<section class="row">
+		<div class="col-8">
+			<table cellspacing="0" cellpadding="0">
+				<tr id="trHead">
+					<td id="tdBible" style="padding-left:100px; padding-top:30px"></td>
+				</tr>
+				<tr class="trContent">
+					<td></td>
+				</tr>
+				<tr id="trBottom">
+					<td></td>
+				</tr>
+			</table>
+		</div>
+		<div class="col-4">
+			<div>
+				<select id="selBible" onchange="wireframe.changeBible()">
+					<option value="">--성경선택--</option>
+				</select>
+				<select id="selChap" onchange="wireframe.changeChapter()">
+					<option value="">--장--</option>
+				</select>
+				<select id="selVerse" onchange="wireframe.changeVerse()">
+					<option value="">--절--</option>
+				</select>
+				<button onclick="wireframe.showNiv(this)" data-show="on">번역본 보기</button>
+			</div>
+		</div>
+	</section>
+	<aside>
+		<select id="selWords" onchange="wireframe.showWords(this)">
+			<option value="">--말씀선택--</option>
+			<option value="galatians6-9@9">갈라디아서 6장9절</option>
+			<option value="romans8-9@15">로마서 8장9절</option>
+		</select>
+		<button onclick="wireframe.shuffle()">말씀섞기</button>
+		<button onclick="wireframe.testEnd()">정답제출</button>
+		<div id="dvRanWords"  ondrop="wireframe.drop(event);" ondragover="event.preventDefault()"  style="height:400px; width:100%; border:1px solid blue;"></div>
+		<div id="dvWords" ondrop="wireframe.drop(event);" ondragover="event.preventDefault()" style="height:400px; width:100%; border:1px solid blue; margin-top:10px"></div>
+	</aside>
+</body>
+
+</html>

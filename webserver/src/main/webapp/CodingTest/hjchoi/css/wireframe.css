@@ -1,0 +1,470 @@
+/*
+▣ 실기시험2 (40점 만점)
+    -작성자 : 최혜진 (5강의실)
+    -주 제 : 3D Dice
+    -목 적 : HTML5 / CSS3 / Javascript를 이용하여 3D Dice를 완성 및 응용
+    -기 능 : 3D Dice를 통해 시각적인 효과를 얻을 수 있다.
+*/
+
+/*wireframe_css*/
+
+/*all*/
+* {
+    box-sizing: border-box;
+}
+fieldset {
+    font-family: 'y220';
+    font-size: 8pt;
+}
+footer {
+height: 25px;  
+
+color: black;
+
+margin-top: 15px;
+
+padding-top: 10px;
+padding-right: 10px;
+
+text-align: right;
+}
+
+/*font*/
+@font-face {
+        font-family: 'y220';
+        src: url(../fonts/y220.woff);
+}
+
+/*For mobile*/
+
+[class*="col-"] {
+	width:100%;
+}
+
+body {
+    background-image: url(../img/back.png);
+}
+
+fieldset {
+    background-color: white;
+}
+
+/*dynamic*/
+@keyframes box {
+    from {
+        background-color: black;
+    }
+    to {
+        background-image: linear-gradient(45deg, red 10%, orange 20%, yellow 35%, green 50%, blue 65% ,#2a365c 80%, purple 90%);
+        border-radius: 0px;
+
+        transform: rotateZ(90deg) scaleY(7.5);
+    }
+}
+.box {
+    width: 10px;
+    height: 45px;
+    display: inline-block;
+
+    background-color: white;
+    transform-origin: bottom;
+
+    animation: box 1s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes letter {
+        50% {
+            transform: translate(160px,32px) scale(1.7);
+            font-weight: bold;
+            color: black;
+        }
+        to {
+            transform: translate(215px,32px) scale(1.7);
+            font-weight: bold;
+            color: black;
+        }
+    }
+    .letter {
+        transform: translate(160px,18px);
+        transform-origin: left;
+        
+        animation: letter 1.5s;
+        animation-delay: 1.5s;
+        animation-fill-mode: forwards;
+        
+        font-weight: bold;
+        color:white;
+    }
+
+/*cube*/
+.space_3d {
+    width:100%;
+    height: 260px;
+    margin-top: 12px;
+    margin-bottom: 12px; 
+
+    perspective: 1000px;
+
+    border: 5px solid rosybrown;
+    border-radius: 15px;
+}
+
+.cube_3d {
+    width: 120px;
+    height: 120px;
+    margin: 50px auto;
+
+    position: relative;
+    transform-style: preserve-3d;
+    transform: rotateX(-15deg) rotateY(15deg);
+}
+
+.face {
+    width: 120px;
+    height: 120px;
+
+    opacity: 0.85;
+
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+.front_3d {
+    transform: translateZ(60px);
+    background-image: url(../img/one.jpg);
+    background-size: 120px 120px;
+}
+.back_3d {
+    transform: translateZ(-60px) rotateY(180deg);
+    background-image: url(../img/six.jpg);
+    background-size: 120px 120px;
+}
+.left_3d {
+    transform: translateX(-60px) rotateY(-90deg);
+    background-image: url(../img/two.jpg);
+    background-size: 120px 120px;
+}
+.right_3d {
+    transform: translateX(60px) rotateY(90deg);
+    background-image: url(../img/five.jpg);
+    background-size: 120px 120px;
+}
+.top_3d {
+    transform: translateY(-60px) rotateX(90deg);
+    background-image: url(../img/three.jpg);
+    background-size: 120px 120px;
+}
+.bottom_3d {
+    transform: translateY(60px) rotateX(-90deg);
+    background-image: url(../img/four.jpg);
+    background-size: 120px 120px;
+}
+
+/*select*/
+.dir {
+    border-color: lightsteelblue;
+    background-image: url(../img/dirback.png);
+    text-align: center;
+    line-height: 25px;
+}
+legend { 
+    font-weight: bold;
+}
+input[type=range] {
+    width: 160px;
+}
+
+
+/*For tablet*/
+@media screen and (min-width:600px) {
+
+    .col-t-1 {width: 8.33%;}
+    .col-t-2 {width: 16.66%;}
+    .col-t-3 {width: 25%;}
+    .col-t-4 {width: 33.33%;}
+    .col-t-5 {width: 41.66%;}
+    .col-t-6 {width: 50%;}
+    .col-t-7 {width: 58.33%;}
+    .col-t-8 {width: 66.66%;}
+    .col-t-9 {width: 75%;}
+    .col-t-10 {width: 83.33%;}
+    .col-t-11 {width: 91.66%;}
+    .col-t-12 {width: 100%;}
+
+    /*content*/
+    fieldset {
+        font-size: 12pt;
+    }
+    footer {
+    height: 35px;  
+    margin-top: 25px;
+    padding-top: 15px;
+
+    color: black;
+
+    text-align: right;
+    }
+
+    /*dynamic*/
+    @keyframes box {
+        from {
+            background-color: black;
+        }
+        to {
+            background-image: linear-gradient(to top right, red 10%, orange 20%, yellow 35%, green 50%, blue 65%, #2a365c 80%, purple 90%);
+            border-radius: 0px;
+        
+            transform: rotateZ(90deg) scaleY(7);
+            }
+    }
+    .box {
+        width: 13px;
+        height: 75px;
+        display: inline-block;
+
+        border-radius: 20px;
+        background-color: white;
+        transform-origin: bottom;
+
+        animation: box 1s;
+        animation-delay: 0.5s;
+        animation-fill-mode: forwards;
+    }
+
+    @keyframes letter {
+        50% {
+            transform: translate(220px,50px) scale(2.5);
+            font-weight: bold;
+            color: black;
+        }
+        to {
+            transform: translate(330px,50px) scale(2.5);
+            font-weight: bold;
+            color: black;
+        }
+    }
+    .letter {
+        transform: translate(210px,40px);
+        transform-origin: left;
+        
+        animation: letter 1.5s;
+        animation-delay: 1.5s;
+        animation-fill-mode: forwards;
+        
+        font-weight: bold;
+        color:white;
+    }
+
+
+    /*cube*/
+    .space_3d {
+        width:100%;
+        height: 380px;
+        margin-top: 15px;
+        margin-bottom: 15px; 
+    }
+
+    .cube_3d {
+        width: 200px;
+        height: 200px;
+        margin: 70px auto;
+    }
+
+    .face {
+        width:200px;
+        height:200px;
+        left: 0px;
+        top: 0px;
+    }
+    .front_3d {
+        transform: translateZ(100px);
+        background-image: url(../img/one.jpg);
+        background-size: 200px 200px;
+    }
+    .back_3d {
+        transform: translateZ(-100px) rotateY(180deg);
+        background-image: url(../img/six.jpg);
+        background-size: 200px 200px;
+    }
+    .left_3d {
+        transform: translateX(-100px) rotateY(-90deg);
+        background-image: url(../img/two.jpg);
+        background-size: 200px 200px;
+    }
+    .right_3d {
+        transform: translateX(100px) rotateY(90deg);
+        background-image: url(../img/five.jpg);
+        background-size: 200px 200px;
+    }
+    .top_3d {
+        transform: translateY(-100px) rotateX(90deg);
+        background-image: url(../img/three.jpg);
+        background-size: 200px 200px;
+    }
+    .bottom_3d {
+        transform: translateY(100px) rotateX(-90deg);
+        background-image: url(../img/four.jpg);
+        background-size: 200px 200px;
+    }
+
+    /*select*/
+    .dir {
+        line-height: 30px;
+    }
+    input[type=range] {
+        width:300px;
+    }
+    legend { 
+        font-size: 12pt;
+    }
+
+}
+
+
+
+/*For desktop */
+@media screen and (min-width:786px) {
+	
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+
+    /*content*/
+    fieldset {
+        font-size: 12pt;
+    }
+    footer {
+        height: 50px;  
+        margin-top: 35px;
+        padding-top: 25px;
+
+        color: black;
+
+        text-align: right;
+    }
+
+    /*dynamic*/
+    @keyframes box {
+        from {
+            background-color: black;
+        }
+        to {
+            background-image: linear-gradient(45deg, red 10%, orange 20%, yellow 35%, green 50%, blue 65% ,#2a365c 80%, purple 90%);
+            border-radius: 0px;
+
+            transform: rotateZ(90deg) scaleY(9.2);
+        }
+    }
+    .box {
+        width: 15px;
+        height: 110px;
+        display: inline-block;
+
+        border-radius: 20px;
+        background-color: white;
+        transform-origin: bottom;
+
+        animation: box 1s;
+        animation-delay: 0.5s;
+        animation-fill-mode: forwards;
+    }
+
+
+    @keyframes letter {
+        50% {
+            transform: translate(500px,68px) scale(4);
+            font-weight: bold;
+            color: black;
+        }
+        to {
+            transform: translate(720px,68px) scale(4);
+            font-weight: bold;
+            color: black;
+        }
+    }
+    .letter {
+        transform: translate(500px,30px);
+        transform-origin: left;
+        
+        animation: letter 1.5s;
+        animation-delay: 1.5s;
+        animation-fill-mode: forwards;
+        
+        font-weight: bold;
+        color:white;
+    }
+
+    /*cube*/
+    .space_3d {
+        width:100%;
+        height: 500px;
+        margin-top: 23px;
+        margin-bottom: 20px; 
+    }
+
+    .cube_3d {
+        width: 250px;
+        height: 250px;
+        margin: 100px auto;
+    }
+
+    .face {
+        width:250px;
+        height:250px;
+        left: 0px;
+        top: 0px;
+    }
+    .front_3d {
+        transform: translateZ(125px);
+        background-image: url(../img/one.jpg);
+        background-size: 250px 250px;
+    }
+    .back_3d {
+        transform: translateZ(-125px) rotateY(180deg);
+        background-image: url(../img/six.jpg);
+        background-size: 250px 250px;
+    }
+    .left_3d {
+        transform: translateX(-125px) rotateY(-90deg);
+        background-image: url(../img/two.jpg);
+        background-size: 250px 250px;
+    }
+    .right_3d {
+        transform: translateX(125px) rotateY(90deg);
+        background-image: url(../img/five.jpg);
+        background-size: 250px 250px;
+    }
+    .top_3d {
+        transform: translateY(-125px) rotateX(90deg);
+        background-image: url(../img/three.jpg);
+        background-size: 250px 250px;
+    }
+    .bottom_3d {
+        transform: translateY(125px) rotateX(-90deg);
+        background-image: url(../img/four.jpg);
+        background-size: 250px 250px;
+    }
+
+    /*select*/
+    .dir {
+        line-height: 45px;
+    }
+    input[type=range] {
+        width:300px;
+    }
+    legend {
+        font-size: 15pt;
+    }
+
+}

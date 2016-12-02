@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<!--
+▣ 실기시험 1 (40점 만점)
+	- 작성자 : 강승구 (5강의실)
+	- 주제 : 
+	- 목적 :
+	- 기능 : 
+-->
+<html lang="ko">
+
+<head>
+	<title>wireframe.html</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="css/wireframe.css" rel="stylesheet">
+</head>
+
+<body>
+	<fieldset>
+		<legend>실기시험 2</legend>
+		<ol>
+			<li>작성자 : 강승구(5강의실) </li>
+			<li>주제 : wireframe</li>
+			<li>목적 : 움직이는 큐브 </li>
+			<li>기능 : 움직이는 큐브</li>
+		</ol>
+	</fieldset>
+
+<script src="js/wireframe.js"></script>
+
+
+<style class="cp-pen-styles">body {
+  overflow: hidden;
+  height: 100vh;
+  perspective: 32em;
+  background-color : cadetblue 
+}
+
+div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-style: preserve-3d;
+}
+
+.a3d {
+  transform: rotateX(-35deg) rotateY(45deg);
+}
+
+.cube__face {
+  margin: -2.5em;
+  width: 5em;
+  height: 5em;
+  box-shadow: inset 0 0 0 2px #aaa;
+}
+.cube__face:nth-child(1) {
+  transform: rotateY(0deg) translateZ(2.5em);
+  background: rgba(255, 0, 0, 0.7);
+}
+.cube__face:nth-child(2) {
+  transform: rotateY(90deg) translateZ(2.5em);
+  background: rgba(255, 255, 0, 0.7);
+}
+.cube__face:nth-child(3) {
+  transform: rotateY(180deg) translateZ(2.5em);
+  background: rgba(0, 255, 0, 0.7);
+}
+.cube__face:nth-child(4) {
+  transform: rotateY(270deg) translateZ(2.5em);
+  background: rgba(0, 255, 255, 0.7);
+}
+.cube__face:nth-child(5) {
+  transform: rotateX(90deg) translateZ(2.5em);
+  background: rgba(0, 0, 255, 0.7);
+}
+.cube__face:nth-child(6) {
+  transform: rotateX(-90deg) translateZ(2.5em);
+  background: rgba(255, 0, 255, 0.7);
+}
+</style>
+</body>
+<div class='a3d'>
+  <div class='cube'>
+    <div class='cube__face'></div>
+    <div class='cube__face'></div>
+    <div class='cube__face'></div>
+    <div class='cube__face'></div>
+    <div class='cube__face'></div>
+    <div class='cube__face'></div>
+  </div>
+</div>
+<script>
+var DATA = {
+		'axis': [2, 0, 2, 0, 1, 1],
+		'dir': [1, 1, -1, -1, -1, 1]
+	},
+	edge = null,
+	drag = false,
+	x0, y0,
+	a3d = document.querySelector('.a3d'),
+	s = document.createElement('style');
+
+var createCube = function(d) {
+	var cube = document.createElement('div'),
+		face, t;
+
+	for (var i = 0; i < 6; i++) {
+		face = document.createElement('div');
+		face.classList.add('cube__face');
+		face.dataset.axis = DATA.axis[i];
+		face.dataset.dir = DATA.dir[i];
+		cube.appendChild(face);
+	}
+
+	for (var i = 0; i < 3; i++)
+		cube.dataset['v' + i] = d[i];
+
+	t = 'translate3d(' + d.map(function(v) {
+		return edge * v + (v ? 'px' : '')
+	}) + ')';
+	cube.style.transform = t;
+	cube.classList.add('cube');
+	a3d.appendChild(cube);
+};
+
+(function init() {
+	document.body.appendChild(s);
+})();
+
+addEventListener('dblclick', function(e) {
+	var t = e.target,
+		d, p, axis, dir, v,
+		compstyle, faces
+
+	if (t.classList.contains('cube__face')) {
+		d = [];
+		p = t.parentNode;
+
+		if (!edge) {
+			compstyle = getComputedStyle(t);
+			edge = ~~compstyle.width.split('px')[0];
+			faces = p.querySelectorAll('div');
+
+			for (var i = 0; i < 6; i++) {
+				faces[i].dataset.axis = DATA.axis[i];
+				faces[i].dataset.dir = DATA.dir[i];
+			}
+		}
+
+		axis = ~~t.dataset.axis;
+		dir = ~~t.dataset.dir;
+
+		for (var i = 0; i < 3; i++) {
+			v = ~~p.dataset['v' + i];
+			d.push(v + (axis === i ? dir : 0));
+		}
+
+		createCube(d);
+	}
+}, false);
+
+addEventListener('mousedown', function(e) {
+	drag = true;
+	x0 = e.clientX;
+	y0 = e.clientY;
+}, false);
+
+addEventListener('mouseup', function(e) {
+	if (drag) drag = false;
+}, false);
+
+addEventListener('mousemove', function(e) {
+	var x, y, dx, dy, d, i, j, t, a;
+	if (drag) {
+		x = e.clientX;
+		y = e.clientY;
+		dx = x - x0;
+		dy = y - y0;
+		d = Math.hypot(dx, dy);
+		if (d) {
+			i = (-dy / d).toFixed(5);
+			j = (dx / d).toFixed(5);
+			a = (.5 * d).toFixed(5);
+			t = 'rotate3d(' + [i, j, 0, a] + 'deg)' +
+				getComputedStyle(a3d).transform
+				.replace('none', '');
+			s.textContent = '.a3d{transform:' + t + '}';
+			x0 = x;
+			y0 = y;
+		}
+	}
+}, false);
+</script>
+
+</html>

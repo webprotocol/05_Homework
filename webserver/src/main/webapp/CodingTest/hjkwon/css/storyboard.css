@@ -1,0 +1,295 @@
+﻿/*
+▣ 실기시험 1 (40점 만점)
+	- 작성자 : 권혁준 (5강의실)
+	- 주제 : 
+	- 목적 :
+	- 기능 :
+*/
+
+/* If Debug is Required.. */
+#DebugModeBox {
+	width: 100%;
+	height: 300px;
+	border: 1px solid black;
+	background-color: green;
+
+	/* Set Display Mode */
+	/*display: none;*/
+}
+
+* {
+	box-sizing: border-box;
+
+	/* Prevent Dragable Elements */
+	-o-user-select: none;
+    -ms-user-select: none; 
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+	user-select: none;
+}
+
+fieldset {
+	/* Make a gap between Box and top */
+	margin-bottom: 10px;	
+}
+
+.Filter {
+	background-color: rgba(255, 255, 255, 0.3);
+}
+
+#Buttons {
+	border: 1px solid black;
+	background-image: url("../img/Farm_Left.gif");
+
+	clear: both;
+	float: left;
+}
+
+#Buttons div {
+	clear: none;
+	float: left;
+}
+
+.BlockerX {
+	/*background-color: rgba(0, 0, 192, 0.5);*/
+}
+
+.BlockerY {
+	/*background-color: rgba(192, 0, 0, 0.5);*/
+}
+
+#Buttons #Button_Contents {
+	/*background-color: rgba(0, 192, 0, 0.5);*/
+}
+
+#Buttons #Button_Contents #PlayButton {
+	/*background-color: rgba(0, 0, 0, 0.50);*/
+}
+
+#PlayButtonContents {
+	padding-left: 12px;
+}
+
+#PlayButtonContents #PlayTriangle {
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 40px 0 40px 80px;
+	border-color: transparent transparent transparent #000000;
+	transition: 1000ms;	
+}
+
+#PlayButtonContents #Left, #PlayButtonContents #Right {
+	width: 30%;
+	height: 100%;
+	margin-left : 10%;
+	margin-right : 10%;
+	background-color : black;
+	transition: 1000ms;
+	display: none;
+}
+
+#StopButtonContents {
+	background-color:black;
+	clear: none;
+	float: left;	
+}
+
+#Buttons .OuterCircle {
+	border-radius: 100%;
+	border: 10px solid orange;
+	box-shadow: 10px 10px 5px;
+	transition: 0.5s;
+	background-color: rgba(128	, 192, 64, 1.50);
+}
+
+#Buttons .OuterCircle:hover {
+	transition: 0.5s;
+	border: 10px solid brown;
+}
+
+#Buttons .OuterCircle:active {
+	border: 10px solid brown;
+  	transform: translateX(2px) translateY(2px);
+ 	box-shadow: 5px 5px 2px;
+}
+
+#Buttons #Button_Contents #StopButton {
+	/*background-color: rgba(0, 0, 0, 0.50);*/
+}
+
+#Buttons #Button_Contents #ScoreBoard {
+	background-image: url("../img/Sign.png");
+    background-size: 100% 100%;
+	font-family: 'Permanent Marker', cursive;
+}
+
+#Buttons #Button_Contents #ScoreValue {
+	width: 100%;
+	text-align: center;
+}
+
+#GameScreen {
+	border: 1px solid black;
+	background-image: url("../img/Farm_Right.gif");
+	
+	clear: none;
+	float: left;
+
+  /*	cursor: url("../img/hammer.cur"), url("../img/hammer.cur"), progress !important; */
+}
+
+#GameScreen div {
+	clear: none;
+	float: left;
+}
+
+#GameScreen .Mole{
+	/*background-color: rgba(192, 192, 192, 0.5);*/
+	/*, url("../img/HoleFront.png");*/
+	
+	clear: none;
+	float: left;	
+}
+
+#GameScreen .HoleBack {
+	background-image: url("../img/HoleBack.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+#GameScreen .Mobile {
+	position: relative;
+	/*background-color: rgba(255, 0, 0, 0.5);*/
+}
+
+#GameScreen .MobileBox {
+	text-align: center;
+	overflow: hidden;
+}
+
+#GameScreen .MobileBox img {
+	width: 50%;
+	height: 100%;
+	position: relative;
+	transition: 1000ms;
+}
+
+#GameScreen .HoleFront {	
+	top: -100%;
+	position: relative;
+	background-image: url("../img/HoleFront.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+	pointer-events: none;
+	/*background-color: rgba(0, 0, 255, 0.5);*/
+}
+
+#DebugModeBox table {
+	border:1px solid black;
+	width: 100%;
+}
+#DebugModeBox td {
+	border: 1px solid black;
+}
+
+@media screen and ( min-width: 320px ) {
+	body {
+		width: 320px;
+		height: 240px;
+		margin: 4px auto;
+	}
+
+	#Buttons .OuterCircle {
+		border: 4px solid orange;
+	}
+
+	#Buttons .OuterCircle:hover {
+		border: 4px solid brown;
+	}
+
+	#PlayButtonContents {
+		padding-left: 2px;
+	}
+
+	#PlayButtonContents #PlayTriangle {
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 15px 0 15px 30px;
+		border-color: transparent transparent transparent #000000;
+		transition: 1000ms;	
+	}
+
+	#Buttons #Button_Contents #ScoreBoard {
+		font-size: 4pt;
+	}
+}
+
+@media screen and ( min-width: 600px ) {
+	body {
+		width: 600px;
+		height: 450px;
+		margin: 8px auto;
+	}
+
+	#Buttons .OuterCircle {
+		border: 6px solid orange;
+	}
+
+	#Buttons .OuterCircle:hover {
+		border: 6px solid brown;
+	}
+
+
+	#PlayButtonContents {
+		padding-left: 4px;
+	}
+
+	#PlayButtonContents #PlayTriangle {
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 30px 0 30px 60px;
+		border-color: transparent transparent transparent #000000;
+		transition: 1000ms;	
+	}
+
+	#Buttons #Button_Contents #ScoreBoard {
+		font-size: 10pt;
+	}
+}
+
+@media screen and ( min-width: 800px ) {
+	body {
+		width: 800px;
+		height: 600px;
+		margin: 10px auto;
+	}
+
+	#Buttons .OuterCircle {
+		border: 8px solid orange;
+	}
+
+	#Buttons .OuterCircle:hover {
+		border: 8px solid brown;
+	}
+
+	#PlayButtonContents {
+		padding-left: 6px;
+	}
+
+	#PlayButtonContents #PlayTriangle {
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 40px 0 40px 80px;
+		border-color: transparent transparent transparent #000000;
+		transition: 1000ms;	
+	}
+
+	#Buttons #Button_Contents #ScoreBoard {
+		font-size: 12pt;
+	}
+}

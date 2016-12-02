@@ -1,0 +1,244 @@
+<!--
+▣ 실기시험 1 (40점 만점)
+	-작성자 : 남상혁 (5강의실)
+	-주제 : 홈페이지 만들기
+	-목적 : FC파라볼라 홍보
+	-기능 : FC파라볼라의 신입회원 모집 및 경기신청을 하는 홈페이지
+-->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>srotyboard.html</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="css/storyboard.css" rel="stylesheet">
+	<script src="js/storyboard.js"></script>
+</head>
+<body>
+	<fieldset>
+		<legend>실기시험 1</legend>
+		<ol>
+			<li>작성자 : 남상혁</li>
+			<li>주제 : 홈페이지 만들기</li>
+			<li>목적 : FC파라볼라 홍보</li>
+			<li>기능 : FC파라볼라 신입회원 모집 및 경기신청을 하는 홈페이지</li>
+		</ol>
+	</fieldset>
+	<!DOCTYPE html>
+	<html lang="ko">
+	<head>
+		<title>파라볼라FC</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	</head>
+	<body>
+		<header>
+			<h1>FC PARABOLA</h1>
+		</header>
+		<section>
+			<aside class="menu">
+				<ul>
+					<li id="menu">Menu</li>
+					<li><a href="#" onclick="chapClick(log1)">Home</a></li>
+					<li><a href="#" onclick="chapClick(log2)">파라볼라FC</a></li>
+					<li><a href="#" onclick="chapClick(log3)">선수명단</a></li>
+					<li><a href="#" onclick="chapClick(log4)">신입모집</a></li>
+					<li><a href="#" onclick="chapClick(log5)">경기장소</a></li>
+					<li><a href="#" onclick="chapClick(log6)">경기신청</a></li>
+				</ul>
+			</aside>
+			<article class="log1" id="log1">
+				<figure>
+					<img src="img/ilovesoccer.jpg">
+				</figure>
+			</article>
+			<article class="log2" id="log2">
+				<h2>파라볼라FC</h2>
+				<p> 2005년부터 현재까지 분당에서 축구팀으로 활동하고있습니다.
+					<br>
+					<br>매주 일요일 풋살 시합 가능하니 많은 시합 신청해주세요.
+				</p>
+				<br>
+				<a href="http://cafe.naver.com/pabol" title="파라볼라FC" target="_blank"><img src="img/banner.png"></a>
+			</article>
+			<article class="log3" id="log3">
+				<h2>선수 명단</h2>
+				<table>
+					<tr>
+						<th style="width:50px;">위치</th>
+						<th style="width:50px;">번호</th>
+						<th style="width:100px;">이름</th>
+						<th>생년월일</th>
+						<th>체격</th>
+					</tr>
+					<tr>
+						<td>GK</td>
+						<td>1</td>
+						<td>박해완</td>
+						<td>1988.06.08</td>
+						<td>187/78kg</td>
+					</tr>
+					<tr>
+						<td rowspan="2">DF</td>
+						<td>3</td>
+						<td>임상원</td>
+						<td>1988.03.10</td>
+						<td>178/66kg</td>
+					</tr>
+					<tr>
+						<td>99</td>
+						<td>김석만</td>
+						<td>1988.03.04</td>
+						<td>176/69kg
+						</td>
+					</tr>
+					<tr>
+						<td rowspan="4">MF</td>
+						<td>6</td>
+						<td>이민형</td>
+						<td>1988.08.10</td>
+						<td>175/61kg</td>
+					</tr>
+					<tr>
+
+						<td>10</td>
+						<td>정석민</td>
+						<td>1988.11.01</td>
+						<td>170/56kg</td>
+					</tr>
+					<tr>
+
+						<td>16</td>
+						<td>이민수</td>
+						<td>1988.09.05</td>
+						<td>177/64kg</td>
+					</tr>
+					<tr>
+
+						<td>19</td>
+						<td>임웅배</td>
+						<td>1994.10.24</td>
+						<td>179/74kg</td>
+					</tr>
+					<tr>
+						<td rowspan="5">FW</td>
+						<td>8</td>
+						<td>현재우</td>
+						<td>1989.01.13</td>
+						<td>177/62kg</td>
+					</tr>
+					<tr>
+
+						<td>9</td>
+						<td>남상혁</td>
+						<td>1989.01.17</td>
+						<td>180/66kg</td>
+					</tr>
+					<tr>
+
+						<td>14</td>
+						<td>김민수</td>
+						<td>1987.12.05</td>
+						<td>171/60kg</td>
+					</tr>
+					<tr>
+
+						<td>20</td>
+						<td>채승연</td>
+						<td>1987.01.18</td>
+						<td>178/75kg</td>
+					</tr>
+					<tr>
+
+						<td>23</td>
+						<td>강종정</td>
+						<td>1986.10.15</td>
+						<td>174/67kg</td>
+					</tr>
+				</table>
+
+			</article>
+			<article class="log4" id="log4">
+				<h2>신입 모집</h2>
+				<form>
+					<fieldset>
+						<legend> 신입 정보 </legend>
+						<ul>
+							<li>아이디 : <input type="text" id="user_id"></li>
+							<li>비밀번호 : <input type="password" id="pw"></li>
+						</ul>
+					</fieldset>
+					<fieldset>
+						<legend> 가입자 정보</legend>
+						<ul>
+							<li>이름 : <input type="text" id="user_name"></li>
+							<li>메일 주소 : <input type="text" id="user_mail"></li>
+							<li>생년월일 : <input type="text" id="birth"></li>
+						</ul>
+					</fieldset>
+					<fieldset>
+						<input type="submit" value="가입하기" onclick="agree(event)"></input>
+					</fieldset>
+				</form>
+			</article>
+			<article class="log5" id="log5">
+				<h2>경기 장소</h2>
+				<fieldset>
+					<figure>
+						<figcaption>화랑 공원</figcaption>
+						<img src="img/hw.jpg" title="화랑 공원"><br>
+						<a href="http://map.naver.com/?mapmode=0&lng=80cfed95f279e08bb35c7eef8fa56838&pinId=21667954&lat=58d994381b377b8f662cd951a117ee9e&dlevel=12&enc=b64&pinType=site"
+							target="_blank">화랑 공원 위치</a>
+					</figure>
+					<figure>
+						<figcaption>불꽃 교회</figcaption>
+						<img src="img/bk.jpg" title="불꽃 교회"><br>
+						<a href="http://map.naver.com/?mapmode=0&pinId=11780819&pinType=site&lng=12a88c0ea863bcc25ca85f4827c5336b&lat=2851743d81c80f907ee969eec68a73e6&dlevel=12&enc=b64"
+							target="_blank">불꽃 교회 위치</a>
+					</figure>
+				</fieldset>
+			</article>
+			<article class="log6" id="log6">
+				<h2>경기 신청</h2>
+				<form>
+					<fieldset>
+						<legend>경기 날짜</legend>
+						<ul>
+							<li>
+								<input type="date" id="selectW">
+							</li>
+						</ul>
+					</fieldset>
+					<fieldset>
+						<legend>경기 시간</legend>
+						<ul>
+							<li>
+								<label>시작</label><input type="time" value="10:00" id="start">
+								<label>끝</label><input type="time" value="15:00" id="stop">
+							</li>
+						</ul>
+					</fieldset>
+					<fieldset>
+						<legend>경기 장소</legend>
+						<ul>
+							<li>
+								<input type="radio" name="a" value="hw">화랑 공원
+								<input type="radio" name="a" value="bk">불꽃 교회
+							</li>
+						</ul>
+					</fieldset>
+					<fieldset>
+						<ul>
+							<li>
+								<input type="submit" value="수락하기" onclick="ok(event)">
+							</li>
+						</ul>
+					</fieldset>
+				</form>
+			</article>
+		</section>
+		<footer>
+			<p>Copyright (c) 2016 FC PARABOLA footballclub. All rights reserved.</p>
+		</footer>
+	</body>
+</html>

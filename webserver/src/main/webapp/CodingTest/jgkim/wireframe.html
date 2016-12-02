@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!--
+▣  실기시험 : (40점 만점)
+	- 작성자 : 김진곤 (5강의실)
+	- 주 제 : 주제 : 오디오 비주얼 이퀄라이저
+	- 목 적 : 목적 : 제곧내
+	- 기 능 : 기능 : 오디오 스펙트럼을 그래프형태로 나타내고 웨이브폼을 보여준다. <br>
+			이퀄라이저 기능
+-->
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<link rel="stylesheet" href="css/wireframe.css">
+</head>
+<body>
+<fieldset>
+	<legend>실기시험 1</legend>
+	<ol>
+		<li>작성자 : 김진곤</li>
+		<li>주제 : 오디오 비주얼 이퀄라이저</li>
+		<li>목적 : 제곧내</li>
+		<li>기능 : 오디오 스펙트럼을 그래프형태로 나타내고 웨이브폼을 보여준다. <br>
+			이퀄라이저 기능</li>
+	</ol>
+</fieldset>
+<canvas></canvas>
+
+<div class="controls">
+	<label for="i0">60Hz</label>
+	<input id="i0" type="range" value="0" step="1" min="-30" max="30" data-n="0">
+	<span id="freqText0">0 dB</span>
+</div>
+<div class="controls">
+	<label for="i1">170Hz</label>
+	<input id="i1" type="range" value="0" step="1" min="-30" max="30" data-n="1">
+	<span id="freqText1">0 dB</span>
+</div>
+<div class="controls">
+	<label for="i2">350Hz</label>
+	<input id="i2" type="range" value="0" step="1" min="-30" max="30" data-n="2">
+	<span id="freqText2">0 dB</span>
+</div>
+<div class="controls">
+	<label for="i3">1000Hz</label>
+	<input id="i3" type="range" value="0" step="1" min="-30" max="30" data-n="3">
+	<span id="freqText3">0 dB</span>
+</div>
+<div class="controls">
+	<label for="i4">3500Hz</label>
+	<input id="i4" type="range" value="0" step="1" min="-30" max="30" data-n="4">
+	<span id="freqText4">0 dB</span>
+</div>
+<div class="controls">
+	<label for="i5">10000Hz</label>
+	<input id="i5" type="range" value="0" step="1" min="-30" max="30" data-n="5">
+	<span id="freqText5">0 dB</span>
+</div>
+
+<script src="js/wireframe.js"></script>
+</body>
+</html>
